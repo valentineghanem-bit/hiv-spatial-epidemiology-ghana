@@ -1,0 +1,144 @@
+{
+ "Dataset": {
+ "N_Districts": 261,
+ "N_Predictors": 19,
+ "N_Districts_Predictors": 7,
+ "N_Regional_Predictors": 12,
+ "N_Regions": 16,
+ "Outcome_Variable": "HIV_Prev_Total_pct",
+ "Outcome_Mean": 1.906130268199234,
+ "Outcome_Std": 0.8338746252628362,
+ "Outcome_Range": [
+ 0.3,
+ 2.8
+ ]
+ },
+ "LASSO_Results": {
+ "Optimal_Alpha": 0.010900224384764345,
+ "N_Selected_Features": 13,
+ "R2": 0.9327589674211316,
+ "RMSE": 0.21581636121400333,
+ "MAE": 0.15949889888884775,
+ "Top_5_Features": [
+ {
+ "Feature": "Latitude",
+ "Coefficient": -0.3654575229317548
+ },
+ {
+ "Feature": "Wife_Beating_Accept_pct",
+ "Coefficient": -0.36223819052389
+ },
+ {
+ "Feature": "Unmet_FP_Need_pct",
+ "Coefficient": 0.132233961449123
+ },
+ {
+ "Feature": "Condom_Use_Women_pct",
+ "Coefficient": -0.08906109974592913
+ },
+ {
+ "Feature": "Illiteracy_Rate_pct",
+ "Coefficient": 0.08544690029891186
+ }
+ ]
+ },
+ "Random_Forest_Spatial_LOOCV": {
+ "N_Folds": 16,
+ "N_Trees": 500,
+ "CV_Strategy": "Leave-one-region-out (train on 15 regions, test on 1)",
+ "Overall_R2_Aggregated": 0.6108,
+ "Overall_RMSE_Aggregated": 0.5192,
+ "Overall_MAE_Aggregated": 0.3798,
+ "Per_Fold_R2_Mean": -178.8259,
+ "Per_Fold_R2_Std": 710.7135,
+ "Per_Fold_RMSE_Mean": 0.3633,
+ "Per_Fold_RMSE_Std": 0.4057,
+ "Per_Fold_MAE_Mean": 0.3631,
+ "Per_Fold_MAE_Std": 0.4059,
+ "Interpretation_Note": "Per-fold R\u00b2 varies widely due to low outcome variance in some regions. Aggregated R\u00b2 (0.6108) across all 261 districts is more stable and represents overall cross-validated performance."
+ },
+ "SHAP_Feature_Importance": {
+ "Top_10_Features": [
+ {
+ "Feature": "VCT_Women_pct",
+ "Mean_Abs_SHAP": 0.6393843909004029
+ },
+ {
+ "Feature": "Wife_Beating_Accept_pct",
+ "Mean_Abs_SHAP": 0.24063967959209276
+ },
+ {
+ "Feature": "Edu_Secondary_Women_pct",
+ "Mean_Abs_SHAP": 0.0284279099023182
+ },
+ {
+ "Feature": "No_Insurance_Women_pct",
+ "Mean_Abs_SHAP": 0.007071364207713212
+ },
+ {
+ "Feature": "Literacy_Women_pct",
+ "Mean_Abs_SHAP": 0.006339319818271265
+ },
+ {
+ "Feature": "PMTCT_Knowledge_Women_pct",
+ "Mean_Abs_SHAP": 0.005767275540514621
+ },
+ {
+ "Feature": "No_Education_Women_pct",
+ "Mean_Abs_SHAP": 0.005190005824707107
+ },
+ {
+ "Feature": "HIV_Awareness_Women_pct",
+ "Mean_Abs_SHAP": 0.004293437134321562
+ },
+ {
+ "Feature": "Modern_Contraception_pct",
+ "Mean_Abs_SHAP": 0.0037149912949188345
+ },
+ {
+ "Feature": "Adolescent_Fertility_Rate",
+ "Mean_Abs_SHAP": 0.0036652166098400225
+ }
+ ],
+ "Top_3_Features_Public_Health": [
+ {
+ "Rank": 1,
+ "Feature": "VCT_Women_pct",
+ "SHAP_Importance": 0.6393843909004029,
+ "Public_Health_Interpretation": "VCT (Voluntary Counseling and Testing) uptake among women enables early diagnosis and linkage to treatment."
+ },
+ {
+ "Rank": 2,
+ "Feature": "Wife_Beating_Accept_pct",
+ "SHAP_Importance": 0.24063967959209276,
+ "Public_Health_Interpretation": "Acceptance of intimate partner violence indicates gender inequalities affecting women's ability to negotiate safe sex."
+ },
+ {
+ "Rank": 3,
+ "Feature": "Edu_Secondary_Women_pct",
+ "SHAP_Importance": 0.0284279099023182,
+ "Public_Health_Interpretation": "Secondary education among women improves health literacy and access to employment opportunities."
+ }
+ ]
+ },
+ "Model_Comparison": {
+ "LASSO_vs_RF": {
+ "LASSO_R2": 0.9328,
+ "RF_Overall_R2_Aggregated": 0.6108,
+ "LASSO_RMSE": 0.2158,
+ "RF_RMSE": 0.5192,
+ "LASSO_MAE": 0.1595,
+ "RF_MAE": 0.3798,
+ "LASSO_Selected_Features": 13,
+ "RF_All_Features": 19,
+ "Key_Finding": "LASSO demonstrates superior predictive accuracy (R\u00b2=0.93) compared to RF spatial CV (R\u00b2=0.61). LASSO also provides feature selection and regularization."
+ }
+ },
+ "Important_Notes": [
+ "District-level predictors (261 districts) may dominate over regional-level predictors (16 regions) due to their higher variance.",
+ "Random Forest spatial CV uses leave-one-region-out, training on 15 regions and testing on held-out region.",
+ "LASSO uses 10-fold CV on standardized features; RF uses full 16 regions in spatial CV.",
+ "SHAP values computed from RF trained on full dataset.",
+ "All figures saved at 300 DPI with white background for publication."
+ ]
+}

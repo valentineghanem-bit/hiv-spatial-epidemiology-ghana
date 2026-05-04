@@ -1,0 +1,147 @@
+{
+ "analysis_date": "2026-04-13",
+ "dataset_info": {
+ "total_districts": 260,
+ "total_variables": 48,
+ "crs": "EPSG:32630"
+ },
+ "morans_i_analysis": {
+ "description": "Global spatial autocorrelation test (KNN with k=4)",
+ "variables_tested": [
+ "HIV_Prev_Total_pct",
+ "HIV_Prev_Women_pct",
+ "Poverty_Incidence_pct",
+ "Illiteracy_Rate_pct",
+ "VCT_Women_pct",
+ "Condom_Use_Women_pct"
+ ],
+ "results": {
+ "HIV_Prev_Total_pct": {
+ "morans_i": 0.9066144445166742,
+ "p_value": 1.4274500089068274e-110,
+ "z_score": 22.342524214591226,
+ "significant": true
+ },
+ "HIV_Prev_Women_pct": {
+ "morans_i": 0.9179655209089403,
+ "p_value": 2.6886223234154183e-113,
+ "z_score": 22.6210728559717,
+ "significant": true
+ },
+ "Poverty_Incidence_pct": {
+ "morans_i": 0.6673770200010114,
+ "p_value": 5.852217992416494e-61,
+ "z_score": 16.47178057202308,
+ "significant": true
+ },
+ "Illiteracy_Rate_pct": {
+ "morans_i": 0.7914623549788923,
+ "p_value": 7.909673360739273e-85,
+ "z_score": 19.516760649584647,
+ "significant": true
+ },
+ "VCT_Women_pct": {
+ "morans_i": 0.8439978308855818,
+ "p_value": 3.823118672921405e-96,
+ "z_score": 20.80594987996067,
+ "significant": true
+ },
+ "Condom_Use_Women_pct": {
+ "morans_i": 0.8498417349522532,
+ "p_value": 1.9018647792128195e-97,
+ "z_score": 20.949355798648543,
+ "significant": true
+ }
+ }
+ },
+ "lisa_analysis": {
+ "description": "Local spatial autocorrelation (Rook contiguity weights)",
+ "variable": "HIV_Prev_Total_pct",
+ "cluster_counts": {
+ "High-High": 0,
+ "Low-Low": 12,
+ "High-Low": 88,
+ "Low-High": 150,
+ "Non-significant": 147
+ },
+ "significant_districts": 113
+ },
+ "bivariate_lisa_analysis": {
+ "description": "Bivariate local spatial association",
+ "variable_pairs": [
+ "HIV_Prev_Total_pct vs Poverty_Incidence_pct",
+ "HIV_Prev_Total_pct vs Illiteracy_Rate_pct",
+ "HIV_Prev_Total_pct vs Condom_Use_Women_pct",
+ "HIV_Prev_Total_pct vs VCT_Women_pct"
+ ],
+ "total_significant_locations": 4
+ },
+ "getis_ord_analysis": {
+ "description": "Hotspot/Coldspot analysis (Getis-Ord Gi*)",
+ "variable": "HIV_Prev_Total_pct",
+ "classifications": {
+ "Hotspot": 0,
+ "Coldspot": 0,
+ "Not Significant": 260
+ }
+ },
+ "spatial_lag_regression": {
+ "description": "Spatial Lag Model (ML estimation with Queen weights)",
+ "dependent_variable": "HIV_Prev_Total_pct",
+ "independent_variables": [
+ "Condom_Use_Women_pct",
+ "VCT_Women_pct",
+ "PMTCT_Knowledge_Women_pct",
+ "Modern_Contraception_pct"
+ ],
+ "spatial_autocorrelation_coefficient": {
+ "rho": 0.5955635564634463,
+ "std_error": 0.0350446409990157,
+ "t_statistic": 16.994425951750298,
+ "p_value": 0.0
+ },
+ "regression_coefficients": {
+ "Constant": {
+ "coefficient": -0.793229181366401,
+ "std_error": 0.1382867859435758,
+ "t_statistic": -5.736116982934701,
+ "p_value": 9.687176394379549e-09
+ },
+ "Condom_Use_Women_pct": {
+ "coefficient": -0.0154731570459287,
+ "std_error": 0.0033928479741453,
+ "t_statistic": -4.560521769274558,
+ "p_value": 5.102667183676246e-06
+ },
+ "VCT_Women_pct": {
+ "coefficient": 0.0387594791499719,
+ "std_error": 0.0043763490239953,
+ "t_statistic": 8.856578608665734,
+ "p_value": 0.0
+ },
+ "PMTCT_Knowledge_Women_pct": {
+ "coefficient": 0.0018413681371821,
+ "std_error": 0.0026593864934868,
+ "t_statistic": 0.692403357575851,
+ "p_value": 0.4886840578755516
+ },
+ "Modern_Contraception_pct": {
+ "coefficient": -0.0250304786684675,
+ "std_error": 0.004703054916168,
+ "t_statistic": -5.322174440791343,
+ "p_value": 1.0253417648264929e-07
+ },
+ "W_HIV_Prev_Total_pct": {
+ "coefficient": 0.5955635564634463,
+ "std_error": 0.0350446409990157,
+ "t_statistic": 16.994425951750298,
+ "p_value": 0.0
+ }
+ },
+ "model_fit": {
+ "pseudo_r_squared": 0.9269265113607791,
+ "log_likelihood": 8.442655054530888,
+ "aic": -4.885310109061777
+ }
+ }
+}

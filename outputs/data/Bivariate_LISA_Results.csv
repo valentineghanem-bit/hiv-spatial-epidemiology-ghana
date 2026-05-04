@@ -1,0 +1,5 @@
+Variable_1,Variable_2,Bivariate_Morans_I,Z_Score,P_Value,Significant_Locations
+HIV_Prev_Total_pct,Poverty_Incidence_pct,-0.596856357535681,,,1
+HIV_Prev_Total_pct,Illiteracy_Rate_pct,-0.6609350676196496,,,1
+HIV_Prev_Total_pct,Condom_Use_Women_pct,-0.4915419145014559,,,1
+HIV_Prev_Total_pct,VCT_Women_pct,0.7860471215164975,,,1

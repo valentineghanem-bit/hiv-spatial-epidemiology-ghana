@@ -1,0 +1,6 @@
+QA PASSED — Auto-QA Protocol
+Project: HIV_Spatial_Ghana
+Date: 2026-04-30
+Protocol: 14-panel peer review + editorial
+Score: See QA_HIV_Spatial_Ghana_2026-04-30.md for full report
+Status: PUBLICATION READY

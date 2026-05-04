@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HIV Spatial Epidemiology Dashboard — Ghana</title>
+ <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+ color: #333;
+ padding: 20px;
+ min-height: 100vh;
+ }
+ 
+ .container {
+ max-width: 1600px;
+ margin: 0 auto;
+ }
+ 
+ header {
+ background: linear-gradient(135deg, #2E86AB 0%, #A23B72 100%);
+ color: white;
+ padding: 30px 20px;
+ border-radius: 8px;
+ margin-bottom: 30px;
+ box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ }
+ 
+ header h1 {
+ font-size: 2.2em;
+ font-weight: 600;
+ text-align: center;
+ margin-bottom: 10px;
+ }
+ 
+ header p {
+ text-align: center;
+ font-size: 0.95em;
+ opacity: 0.95;
+ }
+ 
+ .kpi-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 20px;
+ margin-bottom: 30px;
+ }
+ 
+ .kpi-card {
+ background: white;
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ border-left: 4px solid;
+ transition: transform 0.2s;
+ }
+ 
+ .kpi-card:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+ }
+ 
+ .kpi-card.primary {
+ border-left-color: #2E86AB;
+ }
+ 
+ .kpi-card.secondary {
+ border-left-color: #A23B72;
+ }
+ 
+ .kpi-card.success {
+ border-left-color: #18A558;
+ }
+ 
+ .kpi-card.warning {
+ border-left-color: #F18F01;
+ }
+ 
+ .kpi-label {
+ font-size: 0.9em;
+ color: #666;
+ font-weight: 500;
+ margin-bottom: 8px;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+ 
+ .kpi-value {
+ font-size: 2em;
+ font-weight: 600;
+ color: #2E86AB;
+ }
+ 
+ .kpi-card.secondary .kpi-value {
+ color: #A23B72;
+ }
+ 
+ .kpi-card.success .kpi-value {
+ color: #18A558;
+ }
+ 
+ .kpi-card.warning .kpi-value {
+ color: #F18F01;
+ }
+ 
+ .charts-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+ gap: 20px;
+ margin-bottom: 30px;
+ }
+ 
+ .chart-container {
+ background: white;
+ border-radius: 8px;
+ padding: 15px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ min-height: 400px;
+ }
+ 
+ .chart-container.full-width {
+ grid-column: 1 / -1;
+ }
+ 
+ .chart-title {
+ font-size: 1.2em;
+ font-weight: 600;
+ color: #2E86AB;
+ margin-bottom: 15px;
+ padding-bottom: 10px;
+ border-bottom: 2px solid #f0f0f0;
+ }
+ 
+ .table-container {
+ background: white;
+ border-radius: 8px;
+ padding: 15px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ overflow-x: auto;
+ margin-bottom: 30px;
+ }
+ 
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 0.9em;
+ }
+ 
+ th {
+ background: #f8f9fa;
+ color: #2E86AB;
+ padding: 12px;
+ text-align: left;
+ font-weight: 600;
+ border-bottom: 2px solid #dee2e6;
+ }
+ 
+ td {
+ padding: 12px;
+ border-bottom: 1px solid #dee2e6;
+ }
+ 
+ tr:hover {
+ background: #f8f9fa;
+ }
+ 
+ .selector-group {
+ background: white;
+ padding: 20px;
+ border-radius: 8px;
+ margin-bottom: 20px;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ }
+ 
+ .selector-group label {
+ font-weight: 600;
+ color: #2E86AB;
+ margin-bottom: 10px;
+ display: block;
+ }
+ 
+ .selector-group select {
+ width: 100%;
+ max-width: 400px;
+ padding: 10px;
+ border: 1px solid #dee2e6;
+ border-radius: 4px;
+ font-size: 0.95em;
+ cursor: pointer;
+ }
+ 
+ footer {
+ text-align: center;
+ padding: 20px;
+ color: #666;
+ font-size: 0.9em;
+ margin-top: 40px;
+ }
+ 
+ @media (max-width: 768px) {
+ .charts-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .kpi-grid {
+ grid-template-columns: repeat(2, 1fr);
+ }
+ 
+ header h1 {
+ font-size: 1.6em;
+ }
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <header>
+ <h1>HIV Spatial Epidemiology Dashboard</h1>
+ <p>Ghana 260 Districts — Interactive Spatial Analysis & ML Feature Importance</p>
+ </header>
+ 
+ <!-- KPI Cards -->
+ <div class="kpi-grid">
+ <div class="kpi-card primary">
+ <div class="kpi-label">Mean HIV Prevalence</div>
+ <div class="kpi-value">1.91%</div>
+ </div>
+ <div class="kpi-card secondary">
+ <div class="kpi-label">Moran's I (HIV Prev.)</div>
+ <div class="kpi-value">0.907</div>
+ </div>
+ <div class="kpi-card success">
+ <div class="kpi-label">Spatial Lag ρ</div>
+ <div class="kpi-value">0.596</div>
+ </div>
+ <div class="kpi-card warning">
+ <div class="kpi-label">LASSO R²</div>
+ <div class="kpi-value">0.9328</div>
+ </div>
+ </div>
+ 
+ <!-- Main Charts Grid -->
+ <div class="charts-grid">
+ <div class="chart-container">
+ <div class="chart-title">Regional HIV Prevalence (%)</div>
+ <div id="choropleth-chart"></div>
+ </div>
+ 
+ <div class="chart-container">
+ <div class="chart-title">Top 5 LASSO Features (Absolute Coefficients)</div>
+ <div id="lasso-chart"></div>
+ </div>
+ </div>
+ 
+ <!-- Correlation Heatmap (Full Width) -->
+ <div class="chart-container full-width">
+ <div class="chart-title">Correlation Matrix: Key Variables</div>
+ <div id="correlation-chart"></div>
+ </div>
+ 
+ <!-- Spatial Lag Regression Table -->
+ <div class="table-container">
+ <div class="chart-title">Spatial Lag Regression Coefficients</div>
+ <table>
+ <thead>
+ <tr>
+ <th>Variable</th>
+ <th>Coefficient</th>
+ <th>Std Error</th>
+ <th>T-Statistic</th>
+ <th>P-Value</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Constant</td>
+ <td>-0.793229</td>
+ <td>0.138287</td>
+ <td>-5.736117</td>
+ <td>9.69e-09</td>
+ </tr>
+ <tr>
+ <td>Condom_Use_Women_pct</td>
+ <td>-0.015473</td>
+ <td>0.003393</td>
+ <td>-4.560522</td>
+ <td>5.10e-06</td>
+ </tr>
+ <tr>
+ <td>VCT_Women_pct</td>
+ <td>0.038759</td>
+ <td>0.004376</td>
+ <td>8.856579</td>
+ <td>0.00e+00</td>
+ </tr>
+ <tr>
+ <td>PMTCT_Knowledge_Women_pct</td>
+ <td>0.001841</td>
+ <td>0.002659</td>
+ <td>0.692403</td>
+ <td>4.89e-01</td>
+ </tr>
+ <tr>
+ <td>Modern_Contraception_pct</td>
+ <td>-0.025030</td>
+ <td>0.004703</td>
+ <td>-5.322174</td>
+ <td>1.03e-07</td>
+ </tr>
+ <tr>
+ <td>W_HIV_Prev_Total_pct</td>
+ <td>0.595564</td>
+ <td>0.035045</td>
+ <td>16.994426</td>
+ <td>0.00e+00</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ 
+ <!-- Scatter Plot with Selector -->
+ <div class="selector-group">
+ <label for="region-select">Filter by Region (optional):</label>
+ <select id="region-select">
+ <option value="">All Regions</option>
+ <option value="Ahafo">Ahafo</option>
+ <option value="Ashanti">Ashanti</option>
+ <option value="Bono">Bono</option>
+ <option value="Bono East">Bono East</option>
+ <option value="Central">Central</option>
+ <option value="Eastern">Eastern</option>
+ <option value="Greater Accra">Greater Accra</option>
+ <option value="North East">North East</option>
+ <option value="Northern">Northern</option>
+ <option value="Oti">Oti</option>
+ <option value="Savannah">Savannah</option>
+ <option value="Upper East">Upper East</option>
+ <option value="Upper West">Upper West</option>
+ <option value="Volta">Volta</option>
+ <option value="Western">Western</option>
+ <option value="Western North">Western North</option>
+ </select>
+ </div>
+ 
+ <div class="chart-container full-width">
+ <div class="chart-title">HIV Prevalence vs VCT Uptake by Region</div>
+ <div id="scatter-chart"></div>
+ </div>
+ 
+ <footer>
+ <p>Data Source: Ghana DHS Spatial Analysis | Generated: 2026</p>
+ </footer>
+ </div>
+ 
+ <script>
+ // Color scheme
+ const colorPrimary = '#2E86AB';
+ const colorSecondary = '#A23B72';
+ const colorSuccess = '#18A558';
+ 
+ // Regional HIV data for choropleth
+ const regionalData = [{"Region": "Ahafo", "HIV_Prev_Total_pct": 2.2, "Total_Pop": 564668, "VCT_Women_pct": 57.4, "VCT_Men_pct": 26.0, "VCT_uptake": 41.7}, {"Region": "Ashanti", "HIV_Prev_Total_pct": 1.9000000000000001, "Total_Pop": 5440427, "VCT_Women_pct": 62.9, "VCT_Men_pct": 23.7, "VCT_uptake": 43.3}, {"Region": "Bono", "HIV_Prev_Total_pct": 2.2, "Total_Pop": 1208649, "VCT_Women_pct": 54.5, "VCT_Men_pct": 25.3, "VCT_uptake": 39.9}, {"Region": "Bono East", "HIV_Prev_Total_pct": 2.2, "Total_Pop": 1203400, "VCT_Women_pct": 53.1, "VCT_Men_pct": 20.8, "VCT_uptake": 36.95}, {"Region": "Central", "HIV_Prev_Total_pct": 2.1, "Total_Pop": 2857261, "VCT_Women_pct": 57.4, "VCT_Men_pct": 20.9, "VCT_uptake": 39.15}, {"Region": "Eastern", "HIV_Prev_Total_pct": 2.8, "Total_Pop": 2925653, "VCT_Women_pct": 66.2, "VCT_Men_pct": 28.0, "VCT_uptake": 47.1}, {"Region": "Greater Accra", "HIV_Prev_Total_pct": 2.5, "Total_Pop": 5445135, "VCT_Women_pct": 62.1, "VCT_Men_pct": 39.1, "VCT_uptake": 50.6}, {"Region": "North East", "HIV_Prev_Total_pct": 0.3, "Total_Pop": 658946, "VCT_Women_pct": 38.9, "VCT_Men_pct": 13.5, "VCT_uptake": 26.2}, {"Region": "Northern", "HIV_Prev_Total_pct": 0.3, "Total_Pop": 2303508, "VCT_Women_pct": 39.6, "VCT_Men_pct": 15.3, "VCT_uptake": 27.450000000000003}, {"Region": "Oti", "HIV_Prev_Total_pct": 2.1, "Total_Pop": 747248, "VCT_Women_pct": 57.5, "VCT_Men_pct": 21.1, "VCT_uptake": 39.3}, {"Region": "Savannah", "HIV_Prev_Total_pct": 0.3, "Total_Pop": 653277, "VCT_Women_pct": 31.3, "VCT_Men_pct": 14.4, "VCT_uptake": 22.85}, {"Region": "Upper East", "HIV_Prev_Total_pct": 0.6, "Total_Pop": 1301226, "VCT_Women_pct": 51.5, "VCT_Men_pct": 32.4, "VCT_uptake": 41.95}, {"Region": "Upper West", "HIV_Prev_Total_pct": 0.4, "Total_Pop": 901502, "VCT_Women_pct": 49.6, "VCT_Men_pct": 24.6, "VCT_uptake": 37.1}, {"Region": "Volta", "HIV_Prev_Total_pct": 2.1, "Total_Pop": 1659040, "VCT_Women_pct": 61.400000000000006, "VCT_Men_pct": 32.3, "VCT_uptake": 46.85}, {"Region": "Western", "HIV_Prev_Total_pct": 2.7, "Total_Pop": 2060585, "VCT_Women_pct": 61.1, "VCT_Men_pct": 28.3, "VCT_uptake": 44.7}, {"Region": "Western North", "HIV_Prev_Total_pct": 2.7, "Total_Pop": 880921, "VCT_Women_pct": 58.5, "VCT_Men_pct": 22.0, "VCT_uptake": 40.25}];
+ const regions = regionalData.map(d => d.Region);
+ const hivPrev = regionalData.map(d => d.HIV_Prev_Total_pct);
+ 
+ // Create choropleth chart
+ const choroData = [{
+ type: 'bar',
+ x: regions,
+ y: hivPrev,
+ marker: {
+ color: hivPrev,
+ colorscale: 'YlOrRd',
+ showscale: true,
+ colorbar: {
+ title: 'HIV Prev. (%)',
+ thickness: 15,
+ len: 0.7
+ }
+ },
+ hovertemplate: '<b>%{x}</b><br>HIV Prevalence: %{y:.2f}%<extra></extra>'
+ }];
+ 
+ const choroLayout = {
+ title: 'HIV Prevalence by Region (%)',
+ xaxis: { title: 'Region', tickangle: -45 },
+ yaxis: { title: 'HIV Prevalence (%)' },
+ hovermode: 'closest',
+ margin: { b: 120, l: 60, r: 50, t: 50 },
+ height: 450
+ };
+ 
+ Plotly.newPlot('choropleth-chart', choroData, choroLayout, {responsive: true});
+ 
+ // LASSO features chart
+ const lassoFeatures = [{"Feature": "Illiteracy_Rate_pct", "Coefficient": 0.08544690029891186}, {"Feature": "Condom_Use_Women_pct", "Coefficient": 0.08906109974592913}, {"Feature": "Unmet_FP_Need_pct", "Coefficient": 0.132233961449123}, {"Feature": "Wife_Beating_Accept_pct", "Coefficient": 0.36223819052389}, {"Feature": "Latitude", "Coefficient": 0.3654575229317548}];
+ const lassoData = [{
+ type: 'bar',
+ y: lassoFeatures.map(d => d.Feature),
+ x: lassoFeatures.map(d => d.Coefficient),
+ orientation: 'h',
+ marker: {
+ color: lassoFeatures.map(d => d.Coefficient),
+ colorscale: 'Viridis',
+ showscale: false
+ },
+ hovertemplate: '%{y}: %{x:.4f}<extra></extra>'
+ }];
+ 
+ const lassoLayout = {
+ title: 'Top 5 LASSO Features',
+ xaxis: { title: 'Absolute Coefficient' },
+ margin: { l: 200, r: 80, t: 50, b: 50 },
+ height: 350
+ };
+ 
+ Plotly.newPlot('lasso-chart', lassoData, lassoLayout, {responsive: true});
+ 
+ // Correlation heatmap
+ const corrMatrix = [[1.0, 0.8516575302422368, -0.5605785891720927, -0.6191296202876877, -0.6812744831371009, 0.329399875308351, 0.691861401732556, 0.5493118407939364], [0.8516575302422368, 1.0, -0.4285363175616847, -0.6047832194037692, -0.7196330845344191, 0.5685279540217314, 0.840157294385784, 0.40414443150521095], [-0.5605785891720927, -0.4285363175616847, 1.0, 0.4529705373851281, 0.4109182755804725, -0.26113377137736926, -0.2999055490089469, -0.25719545431770224], [-0.6191296202876877, -0.6047832194037692, 0.4529705373851281, 1.0, 0.8812276690971805, -0.179155515747518, -0.5004049567544305, -0.3521765090578558], [-0.6812744831371009, -0.7196330845344191, 0.4109182755804725, 0.8812276690971805, 1.0, -0.27738723206349064, -0.6145425885787611, -0.34425154781153533], [0.329399875308351, 0.5685279540217314, -0.26113377137736926, -0.179155515747518, -0.27738723206349064, 1.0, 0.6504944163041432, -0.3371389334537292], [0.691861401732556, 0.840157294385784, -0.2999055490089469, -0.5004049567544305, -0.6145425885787611, 0.6504944163041432, 1.0, 0.1447472048869814], [0.5493118407939364, 0.40414443150521095, -0.25719545431770224, -0.3521765090578558, -0.34425154781153533, -0.3371389334537292, 0.1447472048869814, 1.0]];
+ const corrLabels = ["HIV_Prev_Total_pct", "VCT_Women_pct", "Condom_Use_Women_pct", "Poverty_Incidence_pct", "Illiteracy_Rate_pct", "Modern_Contraception_pct", "HIV_Awareness_Women_pct", "Unmet_FP_Need_pct"];
+ 
+ const corrData = [{
+ type: 'heatmap',
+ z: corrMatrix,
+ x: corrLabels,
+ y: corrLabels,
+ colorscale: 'RdBu',
+ zmid: 0,
+ zmin: -1,
+ zmax: 1,
+ text: corrMatrix.map(row => row.map(v => v.toFixed(2))),
+ texttemplate: '%{text}',
+ textfont: { size: 10 },
+ hovertemplate: '%{x} vs %{y}: %{z:.2f}<extra></extra>',
+ colorbar: { title: 'Correlation' }
+ }];
+ 
+ const corrLayout = {
+ title: 'Correlation Matrix',
+ xaxis: { tickangle: -45 },
+ margin: { b: 150, l: 120, r: 80, t: 50 },
+ height: 600
+ };
+ 
+ Plotly.newPlot('correlation-chart', corrData, corrLayout, {responsive: true});
+ 
+ // Scatter plot
+ const scatterRegions = ["Ahafo", "Ashanti", "Bono", "Bono East", "Central", "Eastern", "Greater Accra", "North East", "Northern", "Oti", "Savannah", "Upper East", "Upper West", "Volta", "Western", "Western North"];
+ const scatterX = [57.4, 62.9, 54.5, 53.1, 57.4, 66.2, 62.1, 38.9, 39.6, 57.5, 31.3, 51.5, 49.6, 61.400000000000006, 61.1, 58.5];
+ const scatterY = [2.2, 1.9000000000000001, 2.2, 2.2, 2.1, 2.8, 2.5, 0.3, 0.3, 2.1, 0.3, 0.6, 0.4, 2.1, 2.7, 2.7];
+ const scatterSizes = [67, 77, 70, 70, 74, 74, 77, 68, 73, 68, 68, 71, 69, 72, 73, 69];
+ 
+ function updateScatterPlot(selectedRegion = '') {
+ const scatterData = [{
+ type: 'scatter',
+ mode: 'markers',
+ x: scatterX,
+ y: scatterY,
+ marker: {
+ size: scatterSizes,
+ color: scatterRegions.map(r => r === selectedRegion && selectedRegion ? colorSuccess : colorPrimary),
+ opacity: 0.7,
+ line: { width: 1, color: 'white' }
+ },
+ text: scatterRegions,
+ hovertemplate: '<b>%{text}</b><br>VCT Uptake: %{x:.1f}%<br>HIV Prev: %{y:.2f}%<extra></extra>'
+ }];
+ 
+ const scatterLayout = {
+ title: 'HIV Prevalence vs VCT Uptake by Region (bubble size = population)',
+ xaxis: { title: 'VCT Uptake (%)' },
+ yaxis: { title: 'HIV Prevalence (%)' },
+ hovermode: 'closest',
+ margin: { l: 60, r: 50, t: 50, b: 60 },
+ height: 500
+ };
+ 
+ Plotly.newPlot('scatter-chart', scatterData, scatterLayout, {responsive: true});
+ }
+ 
+ updateScatterPlot();
+ 
+ document.getElementById('region-select').addEventListener('change', function(e) {
+ updateScatterPlot(e.target.value);
+ });
+ </script>
+</body>
+</html>
