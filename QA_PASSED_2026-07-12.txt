@@ -1,0 +1,7 @@
+QA PASSED — Auto-QA Protocol
+Project: HIV_Spatial_Ghana
+Date: 2026-07-12
+Protocol: 14-panel peer review + editorial (adapted for repo-only deliverable)
+Score: See QA_HIV_Spatial_Ghana_2026-07-12.md for full report
+Supersedes: QA_PASSED_2026-04-30.txt (invalidated — certified a corrupted spatial pipeline)
+Status: PUBLICATION READY (pending user confirmation to commit/push)

@@ -1,10 +1,11 @@
 {
  "project": "P2",
  "repo": "aipoch-hiv-spatial-epidemiology-ghana",
- "date": "2026-04-30",
+ "date": "2026-07-12",
  "reporting": "STROBE",
- "scope": "260 districts Ghana",
- "N": "260",
- "qa_badge": "QA_PASSED_2026-04-30.txt",
+ "scope": "261 districts Ghana (260 unique GSS boundary polygons)",
+ "N": "261",
+ "data_correction": "DATA_CORRECTION_NOTE.md",
+ "qa_badge": "QA_PASSED_2026-07-12.txt",
  "sync_status": "VERIFIED"
 }

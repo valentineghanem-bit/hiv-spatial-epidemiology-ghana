@@ -1,0 +1,1041 @@
+District,Region,Variable_2,Local_Bivariate_I,P_Value,Significant
+Adentan Municipal,Greater Accra,Poverty_Incidence_pct,-0.9095889201922094,0.002,1
+Ledzokuku Municipal,Greater Accra,Poverty_Incidence_pct,-0.9183986311279264,0.001,1
+Chereponi,North East,Poverty_Incidence_pct,-2.472496130053924,0.035,1
+Wa East,Upper West,Poverty_Incidence_pct,-2.1024581203334094,0.002,1
+Wa Municipal,Upper West,Poverty_Incidence_pct,-2.663072484923299,0.004,1
+Saboba,Northern,Poverty_Incidence_pct,-3.5428247232335908,0.064,0
+Jirapa Municipal,Upper West,Poverty_Incidence_pct,-1.5369688482253474,0.03,1
+Gushegu Municipal,Northern,Poverty_Incidence_pct,-3.381086180264218,0.001,1
+Sissala West,Upper West,Poverty_Incidence_pct,-1.7229800252913192,0.026,1
+Nanumba North Municipal,Northern,Poverty_Incidence_pct,-2.9462949206347897,0.001,1
+Lambussie Karni,Upper West,Poverty_Incidence_pct,-1.4519925191340577,0.047,1
+Bolgatanga Municipal,Upper East,Poverty_Incidence_pct,-1.700045654351513,0.016,1
+Nanumba South,Northern,Poverty_Incidence_pct,-3.154652220107099,0.001,1
+Wenchi Municipal,Bono,Poverty_Incidence_pct,-0.17393711972877604,0.098,0
+Bongo,Upper East,Poverty_Incidence_pct,-1.198163944218499,0.093,0
+Tano South Municipal,Ahafo,Poverty_Incidence_pct,0.026196605202930042,0.419,0
+Kasena Nankana West,Upper East,Poverty_Incidence_pct,-0.0,0.001,1
+Wa West,Upper West,Poverty_Incidence_pct,-1.6627605794785947,0.033,1
+Sunyani Municipal,Bono,Poverty_Incidence_pct,-0.16367944789476271,0.191,0
+Sawla Tuna Kalba,Savannah,Poverty_Incidence_pct,-3.0832969805617876,0.003,1
+Asante Akim South Municipal,Ashanti,Poverty_Incidence_pct,0.00044264053351680864,0.476,0
+Sissala East Municipal,Upper West,Poverty_Incidence_pct,-2.1793096035610775,0.01,1
+Ada East,Greater Accra,Poverty_Incidence_pct,0.3766288764225027,0.18,0
+Shai-Osudoku,Greater Accra,Poverty_Incidence_pct,-0.02509394224620191,0.495,0
+Kasena Nankana Municipal,Upper East,Poverty_Incidence_pct,-1.7365988887311437,0.014,1
+Ada West,Greater Accra,Poverty_Incidence_pct,0.04256463774010621,0.422,0
+Bunkpurugu Nakpanduri,North East,Poverty_Incidence_pct,-3.531407884906341,0.001,1
+Garu,Upper East,Poverty_Incidence_pct,-1.99691980658819,0.003,1
+Ningo-Prampram,Greater Accra,Poverty_Incidence_pct,-0.15195377972052965,0.399,0
+East Mamprusi Municipal,North East,Poverty_Incidence_pct,-2.9719828068711016,0.001,1
+La Dade-Kotopon Municipal,Greater Accra,Poverty_Incidence_pct,-0.8417541459871871,0.001,1
+Bawku West,Upper East,Poverty_Incidence_pct,-3.2521075903119883,0.001,1
+Aowin Municipal,Western North,Poverty_Incidence_pct,0.1377609760415827,0.364,0
+Dormaa East,Bono,Poverty_Incidence_pct,-0.2900452349563307,0.028,1
+Suaman,Western North,Poverty_Incidence_pct,-0.19776592538530283,0.38,0
+Berekum East Municipal,Bono,Poverty_Incidence_pct,-0.2704028846358797,0.022,1
+Bia East,Western North,Poverty_Incidence_pct,-0.310785513234359,0.273,0
+Jaman South,Bono,Poverty_Incidence_pct,-0.3563927293720762,0.019,1
+Bia West,Western North,Poverty_Incidence_pct,-0.1182990276789353,0.484,0
+Sunyani West Municipal,Bono,Poverty_Incidence_pct,-0.21867802879202547,0.024,1
+Asunafo North Municipal,Ahafo,Poverty_Incidence_pct,-0.06306696458667496,0.368,0
+Bodi,Western North,Poverty_Incidence_pct,0.06888966469606406,0.424,0
+Juaboso,Western North,Poverty_Incidence_pct,0.061321388724029084,0.419,0
+Nkoranza North,Bono East,Poverty_Incidence_pct,-0.12018567218519273,0.181,0
+Kintampo South,Bono East,Poverty_Incidence_pct,0.03994625042724577,0.366,0
+Shama,Western,Poverty_Incidence_pct,-0.10063971707752023,0.451,0
+Tano North Municipal,Ahafo,Poverty_Incidence_pct,-0.11307701206921997,0.193,0
+Wassa East,Western,Poverty_Incidence_pct,-0.00628854329281698,0.495,0
+Ketu North Municipal,Volta,Poverty_Incidence_pct,0.0428227673388695,0.342,0
+Mpohor,Western,Poverty_Incidence_pct,-0.47854896394780183,0.097,0
+Wassa Amenfi West Municipal,Western,Poverty_Incidence_pct,0.3714525196669749,0.168,0
+Ketu South Municipal,Volta,Poverty_Incidence_pct,-0.02378343398275023,0.497,0
+Wassa Amenfi Central,Western,Poverty_Incidence_pct,0.2772695297927614,0.224,0
+Keta Municipal,Volta,Poverty_Incidence_pct,0.031231558277704526,0.372,0
+Kadjebi,Oti,Poverty_Incidence_pct,0.15325258539648964,0.107,0
+Mfantsiman Municipal,Central,Poverty_Incidence_pct,0.03676765812781318,0.369,0
+South Tongu,Volta,Poverty_Incidence_pct,0.09039862542574073,0.158,0
+Ekumfi,Central,Poverty_Incidence_pct,-0.004753090748001715,0.474,0
+Twifo Heman Lower Denkyira,Central,Poverty_Incidence_pct,0.00014866432761532163,0.496,0
+Jasikan Municipal,Oti,Poverty_Incidence_pct,-0.014556600899235786,0.488,0
+Twifo Ati Morkwa,Central,Poverty_Incidence_pct,0.035037626924654196,0.325,0
+Krachi East Municipal,Oti,Poverty_Incidence_pct,0.21005911697756835,0.022,1
+Awutu Senya West,Central,Poverty_Incidence_pct,-0.18856890608364055,0.042,1
+Nkwanta South Municipal,Oti,Poverty_Incidence_pct,0.272856177323684,0.014,1
+Awutu Senya East Municipal,Central,Poverty_Incidence_pct,-0.18597385927890214,0.044,1
+Afigya Kwabre South,Ashanti,Poverty_Incidence_pct,0.005451525341082122,0.008,1
+La Nkwantanang Madina Municipal,Greater Accra,Poverty_Incidence_pct,-0.9527565037772237,0.001,1
+Atwima Kwanwoma,Ashanti,Poverty_Incidence_pct,0.004726690133434445,0.045,1
+Sekyere South,Ashanti,Poverty_Incidence_pct,0.003721494137923044,0.036,1
+Ga East Municipal,Greater Accra,Poverty_Incidence_pct,-0.8998982381629206,0.001,1
+Ayawaso West Municipal,Greater Accra,Poverty_Incidence_pct,-0.860915267272372,0.001,1
+Sekyere East,Ashanti,Poverty_Incidence_pct,0.0026397117808488707,0.19,0
+Ga South Municipal,Greater Accra,Poverty_Incidence_pct,-0.7968246202150292,0.004,1
+Ga West Municipal,Greater Accra,Poverty_Incidence_pct,-0.8536472557504051,0.001,1
+Sekyere Central,Ashanti,Poverty_Incidence_pct,-0.0012278994780711868,0.309,0
+Ga Central Municipal,Greater Accra,Poverty_Incidence_pct,-0.885362215118987,0.001,1
+Offinso North,Ashanti,Poverty_Incidence_pct,0.0029675971412894938,0.091,0
+Krachi West Municipal,Oti,Poverty_Incidence_pct,0.3028028914882215,0.022,1
+Offinso Municipal,Ashanti,Poverty_Incidence_pct,0.0018068350988537098,0.268,0
+Obuasi Municipal,Ashanti,Poverty_Incidence_pct,0.0014239032910398424,0.375,0
+Krachi Nchumuru,Oti,Poverty_Incidence_pct,0.3223163592198651,0.002,1
+Kwabre East,Ashanti,Poverty_Incidence_pct,0.0059791962548256345,0.007,1
+Agortime-Ziope,Volta,Poverty_Incidence_pct,0.04576382038423973,0.302,0
+Adaklu,Volta,Poverty_Incidence_pct,-0.04915722496241489,0.417,0
+Ejura Sekyedumase Municipal,Ashanti,Poverty_Incidence_pct,0.00040807030086694547,0.43,0
+Atwima Nwabiagya South Municipal,Ashanti,Poverty_Incidence_pct,0.004077073673750206,0.038,1
+Akatsi South Municipal,Volta,Poverty_Incidence_pct,0.05868138670115988,0.263,0
+Atwima Mponua,Ashanti,Poverty_Incidence_pct,0.00011555294767579718,0.474,0
+Akatsi North,Volta,Poverty_Incidence_pct,0.0015903569969144393,0.445,0
+Ho Municipal,Volta,Poverty_Incidence_pct,0.0324425801199158,0.376,0
+Adansi South,Ashanti,Poverty_Incidence_pct,-0.0026686804049708608,0.194,0
+Hohoe Municipal,Volta,Poverty_Incidence_pct,0.04325527513965925,0.317,0
+Adansi Asokwa,Ashanti,Poverty_Incidence_pct,0.0003788185655478303,0.467,0
+Ho West,Volta,Poverty_Incidence_pct,0.0,0.001,1
+Bosome Freho,Ashanti,Poverty_Incidence_pct,0.0025726987144814436,0.132,0
+Afadzato South,Volta,Poverty_Incidence_pct,-0.03892120701039106,0.425,0
+Ahafo Ano South East,Ashanti,Poverty_Incidence_pct,0.001966390018776155,0.257,0
+North Dayi,Volta,Poverty_Incidence_pct,0.012547221283587805,0.425,0
+Bekwai Municipal,Ashanti,Poverty_Incidence_pct,0.0019903232567645207,0.253,0
+Kpando Municipal,Volta,Poverty_Incidence_pct,0.022927408502541553,0.383,0
+Bosomtwi,Ashanti,Poverty_Incidence_pct,0.0056760419069729895,0.007,1
+North Tongu,Volta,Poverty_Incidence_pct,0.09385868783205865,0.202,0
+Central Tongu,Volta,Poverty_Incidence_pct,0.07586636331920553,0.217,0
+Mampong Municipal,Ashanti,Poverty_Incidence_pct,-0.00011979055920980847,0.449,0
+Ajumako Enyan Essiam,Central,Poverty_Incidence_pct,0.0079338047418306,0.448,0
+Gomoa West,Central,Poverty_Incidence_pct,-0.06097910485066771,0.296,0
+Agona West Municipal,Central,Poverty_Incidence_pct,-0.05492399563961138,0.375,0
+Agona East,Central,Poverty_Incidence_pct,-0.14315558700071804,0.159,0
+Assin North,Central,Poverty_Incidence_pct,0.03474928839079439,0.337,0
+Assin South,Central,Poverty_Incidence_pct,0.015718945156045914,0.413,0
+Asikuma Odoben Brakwa,Central,Poverty_Incidence_pct,-0.026378480787488646,0.42,0
+Effutu Municipal,Central,Poverty_Incidence_pct,-0.22446705354918883,0.037,1
+Gomoa East,Central,Poverty_Incidence_pct,-0.1364517160884771,0.035,1
+Abura Asebu Kwamankese,Central,Poverty_Incidence_pct,-0.04108374601433975,0.38,0
+Jomoro Municipal,Western,Poverty_Incidence_pct,0.2961061277676041,0.26,0
+Ellembelle,Western,Poverty_Incidence_pct,0.38145946234111017,0.201,0
+Dormaa Central Municipal,Bono,Poverty_Incidence_pct,0.0,0.001,1
+Dormaa West,Bono,Poverty_Incidence_pct,0.050422170598152925,0.37,0
+Nadowli Kaleo,Upper West,Poverty_Incidence_pct,-1.903638362729493,0.028,1
+Prestea/Huni Valley Municipal,Western,Poverty_Incidence_pct,0.42560773884464775,0.132,0
+Ahanta West Municipal,Western,Poverty_Incidence_pct,-0.4333411288081794,0.187,0
+Daffiama Bussie Issa,Upper West,Poverty_Incidence_pct,-1.1497801151479767,0.066,0
+Nzema East Municipal,Western,Poverty_Incidence_pct,0.1119783825635168,0.379,0
+Lawra Municipal,Upper West,Poverty_Incidence_pct,-1.9348632605583136,0.045,1
+Nandom,Upper West,Poverty_Incidence_pct,-1.9103294122642405,0.064,0
+Tarkwa-Nsuaem Municipal,Western,Poverty_Incidence_pct,0.3733361794644593,0.189,0
+Talensi,Upper East,Poverty_Incidence_pct,-1.6291771387175364,0.004,1
+Sefwi Akontombra,Western North,Poverty_Incidence_pct,0.19109209405785607,0.313,0
+Effia Kwesimintsim Municipal,Western,Poverty_Incidence_pct,-0.33021075489591567,0.305,0
+Nabdam,Upper East,Poverty_Incidence_pct,-2.1003906023188876,0.008,1
+Builsa South,Upper East,Poverty_Incidence_pct,-1.170313860881639,0.056,0
+Builsa North Municipal,Upper East,Poverty_Incidence_pct,-1.9582391352869943,0.044,1
+Binduri,Upper East,Poverty_Incidence_pct,-1.2832614210811304,0.077,0
+Pusiga,Upper East,Poverty_Incidence_pct,-1.1111324337908097,0.144,0
+Bawku Municipal,Upper East,Poverty_Incidence_pct,-2.3121672776929345,0.003,1
+North Gonja,Savannah,Poverty_Incidence_pct,-2.952954742992352,0.001,1
+West Gonja,Savannah,Poverty_Incidence_pct,-3.614179962778902,0.001,1
+Mion,Northern,Poverty_Incidence_pct,-2.233456077577132,0.002,1
+Yendi Municipal,Northern,Poverty_Incidence_pct,-2.6104495931748586,0.016,1
+Tolon,Northern,Poverty_Incidence_pct,-1.9130710520186853,0.024,1
+Kumbungu,Northern,Poverty_Incidence_pct,-2.289351015220959,0.003,1
+West Mamprusi Municipal,North East,Poverty_Incidence_pct,-2.8595983045872377,0.001,1
+Mamprugu Moagduri,North East,Poverty_Incidence_pct,-2.665155276826264,0.001,1
+Zabzugu,Northern,Poverty_Incidence_pct,-2.4689283680766585,0.011,1
+Tatale Sanguli,Northern,Poverty_Incidence_pct,-2.6294776570536085,0.107,0
+Sene East,Bono East,Poverty_Incidence_pct,0.3816574671958369,0.004,1
+Bibiani Anhwiaso Bekwai Municipal,Western North,Poverty_Incidence_pct,0.24548277071021443,0.249,0
+Sene West,Bono East,Poverty_Incidence_pct,0.4275552967508118,0.012,1
+Upper Denkyira East Municipal,Central,Poverty_Incidence_pct,0.08693856301942283,0.192,0
+Asutifi North,Ahafo,Poverty_Incidence_pct,-0.19157158534980312,0.127,0
+Ahafo Ano North Municipal,Ashanti,Poverty_Incidence_pct,0.001184570911156176,0.413,0
+Amansie Central,Ashanti,Poverty_Incidence_pct,0.001369198747066433,0.322,0
+Amansie West,Ashanti,Poverty_Incidence_pct,0.002851919824345721,0.154,0
+Asutifi South,Ahafo,Poverty_Incidence_pct,-0.033759330775208395,0.423,0
+Techiman Municipal,Bono East,Poverty_Incidence_pct,-0.13596190910923744,0.187,0
+Upper Denkyira West,Central,Poverty_Incidence_pct,0.04628282974518742,0.284,0
+Techiman North,Bono East,Poverty_Incidence_pct,-0.16433419290544443,0.208,0
+Cape Cape Metropolitan Area (CCMA)-Cape Coast South & Cape Coast North,Central,Poverty_Incidence_pct,0.01427725248674678,0.405,0
+Komenda Edina Eguafo Abirem Municipal,Central,Poverty_Incidence_pct,-0.02291841838117073,0.472,0
+Banda,Bono,Poverty_Incidence_pct,-0.07895544351255084,0.349,0
+Sefwi Wiawso Municipal,Western North,Poverty_Incidence_pct,-0.16774509736289725,0.343,0
+Jaman North,Bono,Poverty_Incidence_pct,-0.16302470288408102,0.217,0
+Asunafo South,Ahafo,Poverty_Incidence_pct,-0.0590511951878272,0.394,0
+Tain,Bono,Poverty_Incidence_pct,-0.17742909311907842,0.145,0
+Nkoranza South Municipal,Bono East,Poverty_Incidence_pct,-0.10082392686931961,0.341,0
+Sekyere Kumawu,Ashanti,Poverty_Incidence_pct,-0.0010571757137541706,0.313,0
+Bole,Savannah,Poverty_Incidence_pct,-1.9040327216762793,0.011,1
+Sekyere Afram Plains,Ashanti,Poverty_Incidence_pct,-0.002341592819129849,0.173,0
+Asante Akim North Municipal,Ashanti,Poverty_Incidence_pct,0.0004474271811144819,0.465,0
+Asante Akim Central Municipal,Ashanti,Poverty_Incidence_pct,0.0025407877304969542,0.178,0
+Kintampo North Municipal,Bono East,Poverty_Incidence_pct,0.3364147912639191,0.024,1
+Asokore Mampong Municipal,Ashanti,Poverty_Incidence_pct,0.00820179628934529,0.001,1
+Atebubu Amantin Municipal,Bono East,Poverty_Incidence_pct,0.16266417242930134,0.13,0
+Kwadaso Municipal,Ashanti,Poverty_Incidence_pct,0.008393262193252224,0.001,1
+Kpandai,Northern,Poverty_Incidence_pct,-3.2545495554705344,0.001,1
+Ejisu Municipal,Ashanti,Poverty_Incidence_pct,0.005191678757208426,0.009,1
+Nkwanta North (Kpassa),Oti,Poverty_Incidence_pct,0.31703271303956365,0.011,1
+Biakoye,Oti,Poverty_Incidence_pct,0.06396503288146131,0.219,0
+Wassa Amenfi East Municipal,Western,Poverty_Incidence_pct,0.12186759650030923,0.348,0
+Central Gonja,Savannah,Poverty_Incidence_pct,-1.8282602530162586,0.01,1
+Tema West Municipal,Greater Accra,Poverty_Incidence_pct,-0.8443970592679021,0.146,0
+Ashaiman Municipal,Greater Accra,Poverty_Incidence_pct,-0.9025411514436356,0.092,0
+Pru East,Bono East,Poverty_Incidence_pct,0.2892731504948369,0.047,1
+Kpone Katamanso Municipal,Greater Accra,Poverty_Incidence_pct,-0.7175372217935744,0.003,1
+Savelugu Municipal,Northern,Poverty_Incidence_pct,-1.6476295609101284,0.038,1
+Tamale Metropolitan Area (TMA)-Tamale Central & Tamale South,Northern,Poverty_Incidence_pct,-3.0029034106740697,0.001,1
+Sagnarigu Municipal,Northern,Poverty_Incidence_pct,-1.9016542136914358,0.024,1
+Karaga,Northern,Poverty_Incidence_pct,-2.7745666441290746,0.001,1
+North East Gonja,Savannah,Poverty_Incidence_pct,-2.1001515164265734,0.002,1
+South Dayi,Volta,Poverty_Incidence_pct,0.06444815737835645,0.306,0
+Tempane,Upper East,Poverty_Incidence_pct,-1.020232856233,0.125,0
+Bolgatanga East,Upper East,Poverty_Incidence_pct,-2.5732618089760044,0.001,1
+Yunyoo Nasuan,North East,Poverty_Incidence_pct,-2.93868369508329,0.006,1
+Nanton,Northern,Poverty_Incidence_pct,-1.3365207164925716,0.073,0
+Assin Central Municipal,Central,Poverty_Incidence_pct,0.052337938956243744,0.307,0
+Gomoa Central,Central,Poverty_Incidence_pct,-0.10567157759894069,0.238,0
+Pru West,Bono East,Poverty_Incidence_pct,0.05391414398845533,0.323,0
+Berekum West,Bono,Poverty_Incidence_pct,-0.3057591152126915,0.064,0
+Ahafo Ano South West,Ashanti,Poverty_Incidence_pct,0.0007250527417795352,0.423,0
+Amansie South,Ashanti,Poverty_Incidence_pct,0.00027510786759824115,0.495,0
+Atwima Nwabiagya North,Ashanti,Poverty_Incidence_pct,0.004630957181480979,0.049,1
+Akrofuom,Ashanti,Poverty_Incidence_pct,0.0011785876016590841,0.311,0
+Adansi North,Ashanti,Poverty_Incidence_pct,0.002357299572586143,0.184,0
+Obuasi East,Ashanti,Poverty_Incidence_pct,0.0012085041491445426,0.397,0
+Afigya Kwabre North,Ashanti,Poverty_Incidence_pct,0.0031351298072080603,0.197,0
+"Kumasi Metropolitan Area (KMA)-Bantama, Manhyia North, Manhyia South, Nhyiaeso, & Subin",Ashanti,Poverty_Incidence_pct,0.008811296083449027,0.001,1
+Oforikrom Municipal,Ashanti,Poverty_Incidence_pct,0.007828437776726767,0.001,1
+Asokwa Municipal,Ashanti,Poverty_Incidence_pct,0.007873910928904665,0.002,1
+Old Tafo Municipal,Ashanti,Poverty_Incidence_pct,0.008173076403759248,0.001,1
+Suame Municipal,Ashanti,Poverty_Incidence_pct,0.007885877547898849,0.001,1
+Juaben Municipal,Ashanti,Poverty_Incidence_pct,0.005454260568280793,0.023,1
+Ablekuma Central Municipal,Greater Accra,Poverty_Incidence_pct,-0.9589233014322257,0.001,1
+Korle Klottey Municipal,Greater Accra,Poverty_Incidence_pct,-0.8665975308259096,0.001,1
+Ablekuma North Municipal,Greater Accra,Poverty_Incidence_pct,-0.9084877063252447,0.001,1
+Ayawaso North Municipal,Greater Accra,Poverty_Incidence_pct,-0.8623688695767653,0.002,1
+Ayawaso East Municipal,Greater Accra,Poverty_Incidence_pct,-0.8771691839487702,0.001,1
+Okaikoi North Municipal,Greater Accra,Poverty_Incidence_pct,-0.9060650358179224,0.001,1
+Ga North Municipal,Greater Accra,Poverty_Incidence_pct,-0.8990172670693488,0.005,1
+Weija Gbawe Municipal,Greater Accra,Poverty_Incidence_pct,-0.8734691053557688,0.001,1
+Krowor Municipal,Greater Accra,Poverty_Incidence_pct,-0.8602545389521931,0.142,0
+Tema Metropolitan Area (TMA)-Tema Central & Tema East,Greater Accra,Poverty_Incidence_pct,-1.0241151623565332,0.005,1
+East Gonja Municipal,Savannah,Poverty_Incidence_pct,-2.3126603934724272,0.01,1
+Ablekuma West Municipal,Greater Accra,Poverty_Incidence_pct,-0.9620067002597267,0.001,1
+Ayawaso Central Municipal,Greater Accra,Poverty_Incidence_pct,-0.8206108397414655,0.005,1
+"Accra Metropolitan Area (AMA)-Ablekuma South, Ashiedu Keteke & Okaikoi South",Greater Accra,Poverty_Incidence_pct,-0.948351648309365,0.002,1
+Anloga,Volta,Poverty_Incidence_pct,0.017737314893064658,0.386,0
+"Sekondi Takoradi Metropolitan Area (STMA)- Takoradi, Sekondi & Essikado-Ketan",Western,Poverty_Incidence_pct,-0.3602315829183211,0.261,0
+Kwahu South Municipal,Eastern,Poverty_Incidence_pct,-0.11091912640234514,0.42,0
+Asene Manso Akroso,Eastern,Poverty_Incidence_pct,-0.3611632393238902,0.202,0
+Upper Manya Krobo,Eastern,Poverty_Incidence_pct,0.09403261983424738,0.387,0
+Achiase,Eastern,Poverty_Incidence_pct,-0.18090264950752302,0.492,0
+Okere,Eastern,Poverty_Incidence_pct,-0.8648325343990342,0.085,0
+Yilo Krobo Municipal,Eastern,Poverty_Incidence_pct,-0.6819210535559556,0.043,1
+Atiwa West,Eastern,Poverty_Incidence_pct,-0.4694710727009512,0.128,0
+New Juaben North Municipal,Eastern,Poverty_Incidence_pct,-0.8505177228547932,0.039,1
+Fanteakwa North,Eastern,Poverty_Incidence_pct,0.044953265968278526,0.417,0
+Birim North,Eastern,Poverty_Incidence_pct,-0.6680038756657212,0.117,0
+Asuogyaman,Eastern,Poverty_Incidence_pct,0.4844709981970095,0.19,0
+Kwahu East,Eastern,Poverty_Incidence_pct,0.007310613388978295,0.442,0
+Kwahu West Municipal,Eastern,Poverty_Incidence_pct,-0.3061572505196311,0.318,0
+Lower Manya Krobo Municipal,Eastern,Poverty_Incidence_pct,-0.17825175848081154,0.452,0
+Nsawam Adoagyiri Municipal,Eastern,Poverty_Incidence_pct,-0.11993215589316342,0.493,0
+Akwapim South Municipal,Eastern,Poverty_Incidence_pct,-0.5440747201669688,0.221,0
+Denkyembuor,Eastern,Poverty_Incidence_pct,-0.5573291753005253,0.104,0
+Kwaebibirem Municipal,Eastern,Poverty_Incidence_pct,-0.6453387573873398,0.092,0
+Kwahu Afram Plains South,Eastern,Poverty_Incidence_pct,0.4839408199916671,0.145,0
+Kwahu Afram Plains North,Eastern,Poverty_Incidence_pct,0.2883050622203745,0.272,0
+Suhum Municipal,Eastern,Poverty_Incidence_pct,-0.7709909920534548,0.054,0
+Ayensuano,Eastern,Poverty_Incidence_pct,-0.5676013780290315,0.063,0
+Abuakwa South Municipal,Eastern,Poverty_Incidence_pct,-0.6872228356093781,0.057,0
+Upper West Akim,Eastern,Poverty_Incidence_pct,-0.37375497170076877,0.284,0
+West Akim Municipal,Eastern,Poverty_Incidence_pct,-0.2604293803088614,0.321,0
+Akyemansa,Eastern,Poverty_Incidence_pct,-0.7169128151085445,0.073,0
+Atiwa East,Eastern,Poverty_Incidence_pct,-0.4740154573181706,0.126,0
+New Juaben South Municipal,Eastern,Poverty_Incidence_pct,-0.7010074689482769,0.078,0
+Birim South,Eastern,Poverty_Incidence_pct,-0.3817076447809027,0.281,0
+Abuakwa North Municipal,Eastern,Poverty_Incidence_pct,-0.7037909045263236,0.105,0
+Akwapim North Municipal,Eastern,Poverty_Incidence_pct,-0.6246618073789919,0.101,0
+Fanteakwa South,Eastern,Poverty_Incidence_pct,-0.4069857842141853,0.159,0
+Birim Central Municipal,Eastern,Poverty_Incidence_pct,-0.3578496255405011,0.29,0
+Adentan Municipal,Greater Accra,Illiteracy_Rate_pct,-1.0407802207196046,0.001,1
+Ledzokuku Municipal,Greater Accra,Illiteracy_Rate_pct,-1.110977792350772,0.001,1
+Chereponi,North East,Illiteracy_Rate_pct,-2.6299423369635813,0.029,1
+Wa East,Upper West,Illiteracy_Rate_pct,-2.794104320190268,0.001,1
+Wa Municipal,Upper West,Illiteracy_Rate_pct,-3.0197612193755945,0.001,1
+Saboba,Northern,Illiteracy_Rate_pct,-3.353047329048596,0.077,0
+Jirapa Municipal,Upper West,Illiteracy_Rate_pct,-2.4699130498143234,0.002,1
+Gushegu Municipal,Northern,Illiteracy_Rate_pct,-3.3184895611671665,0.001,1
+Sissala West,Upper West,Illiteracy_Rate_pct,-2.5911572308707003,0.002,1
+Nanumba North Municipal,Northern,Illiteracy_Rate_pct,-3.458676732761646,0.001,1
+Lambussie Karni,Upper West,Illiteracy_Rate_pct,-2.2279749638637005,0.006,1
+Bolgatanga Municipal,Upper East,Illiteracy_Rate_pct,-0.9063271387163783,0.127,0
+Nanumba South,Northern,Illiteracy_Rate_pct,-3.3809543566962414,0.001,1
+Wenchi Municipal,Bono,Illiteracy_Rate_pct,0.06371225310202681,0.311,0
+Bongo,Upper East,Illiteracy_Rate_pct,-0.7078604113491624,0.187,0
+Tano South Municipal,Ahafo,Illiteracy_Rate_pct,0.0069339570077880715,0.456,0
+Kasena Nankana West,Upper East,Illiteracy_Rate_pct,-0.0,0.001,1
+Wa West,Upper West,Illiteracy_Rate_pct,-2.210549552062859,0.006,1
+Sunyani Municipal,Bono,Illiteracy_Rate_pct,-0.12875958940078258,0.249,0
+Sawla Tuna Kalba,Savannah,Illiteracy_Rate_pct,-3.100840826849783,0.001,1
+Asante Akim South Municipal,Ashanti,Illiteracy_Rate_pct,0.0019848017891669406,0.303,0
+Sissala East Municipal,Upper West,Illiteracy_Rate_pct,-3.1451630425458563,0.001,1
+Ada East,Greater Accra,Illiteracy_Rate_pct,0.09075311282132063,0.375,0
+Shai-Osudoku,Greater Accra,Illiteracy_Rate_pct,-0.3079320632146379,0.204,0
+Kasena Nankana Municipal,Upper East,Illiteracy_Rate_pct,-1.3100116433042632,0.034,1
+Ada West,Greater Accra,Illiteracy_Rate_pct,-0.16768987337672914,0.314,0
+Bunkpurugu Nakpanduri,North East,Illiteracy_Rate_pct,-3.462588932899166,0.001,1
+Garu,Upper East,Illiteracy_Rate_pct,-2.0810451590279406,0.002,1
+Ningo-Prampram,Greater Accra,Illiteracy_Rate_pct,-0.3716492397582948,0.188,0
+East Mamprusi Municipal,North East,Illiteracy_Rate_pct,-2.86744548697888,0.001,1
+La Dade-Kotopon Municipal,Greater Accra,Illiteracy_Rate_pct,-0.8916506319045389,0.001,1
+Bawku West,Upper East,Illiteracy_Rate_pct,-2.0898109200942043,0.002,1
+Aowin Municipal,Western North,Illiteracy_Rate_pct,0.6005951443362151,0.102,0
+Dormaa East,Bono,Illiteracy_Rate_pct,-0.22279976411197808,0.067,0
+Suaman,Western North,Illiteracy_Rate_pct,1.1371440828981323,0.013,1
+Berekum East Municipal,Bono,Illiteracy_Rate_pct,-0.06512083181851497,0.346,0
+Bia East,Western North,Illiteracy_Rate_pct,-0.06988931873890242,0.469,0
+Jaman South,Bono,Illiteracy_Rate_pct,-0.18326436046701178,0.193,0
+Bia West,Western North,Illiteracy_Rate_pct,0.953507183023407,0.083,0
+Sunyani West Municipal,Bono,Illiteracy_Rate_pct,-0.07003683111153564,0.275,0
+Asunafo North Municipal,Ahafo,Illiteracy_Rate_pct,0.10894343523821706,0.218,0
+Bodi,Western North,Illiteracy_Rate_pct,0.8326424747578803,0.04,1
+Juaboso,Western North,Illiteracy_Rate_pct,0.3882577749229468,0.137,0
+Nkoranza North,Bono East,Illiteracy_Rate_pct,0.14402067852750744,0.14,0
+Kintampo South,Bono East,Illiteracy_Rate_pct,0.2414574654422029,0.036,1
+Shama,Western,Illiteracy_Rate_pct,-0.36099737442783425,0.238,0
+Tano North Municipal,Ahafo,Illiteracy_Rate_pct,-0.07769074713628209,0.285,0
+Wassa East,Western,Illiteracy_Rate_pct,-0.3054406422287271,0.191,0
+Ketu North Municipal,Volta,Illiteracy_Rate_pct,0.01493513416789309,0.43,0
+Mpohor,Western,Illiteracy_Rate_pct,-0.6455431273092919,0.043,1
+Wassa Amenfi West Municipal,Western,Illiteracy_Rate_pct,0.2812476708282349,0.228,0
+Ketu South Municipal,Volta,Illiteracy_Rate_pct,-0.010398408113774788,0.485,0
+Wassa Amenfi Central,Western,Illiteracy_Rate_pct,-0.11908353720898329,0.383,0
+Keta Municipal,Volta,Illiteracy_Rate_pct,0.01660295863635858,0.435,0
+Kadjebi,Oti,Illiteracy_Rate_pct,0.08950584905845785,0.224,0
+Mfantsiman Municipal,Central,Illiteracy_Rate_pct,-0.017565047219977217,0.47,0
+South Tongu,Volta,Illiteracy_Rate_pct,0.023048417042588143,0.376,0
+Ekumfi,Central,Illiteracy_Rate_pct,-0.04754900053930958,0.385,0
+Twifo Heman Lower Denkyira,Central,Illiteracy_Rate_pct,-0.06733630189503767,0.244,0
+Jasikan Municipal,Oti,Illiteracy_Rate_pct,-0.05793008806814695,0.359,0
+Twifo Ati Morkwa,Central,Illiteracy_Rate_pct,-0.05440605137529924,0.243,0
+Krachi East Municipal,Oti,Illiteracy_Rate_pct,0.1832325874431438,0.032,1
+Awutu Senya West,Central,Illiteracy_Rate_pct,-0.2159913674729578,0.017,1
+Nkwanta South Municipal,Oti,Illiteracy_Rate_pct,0.23902655166085562,0.017,1
+Awutu Senya East Municipal,Central,Illiteracy_Rate_pct,-0.19887838181311035,0.029,1
+Afigya Kwabre South,Ashanti,Illiteracy_Rate_pct,0.0053602538164607486,0.009,1
+La Nkwantanang Madina Municipal,Greater Accra,Illiteracy_Rate_pct,-1.0573233410982799,0.001,1
+Atwima Kwanwoma,Ashanti,Illiteracy_Rate_pct,0.005602071649589721,0.014,1
+Sekyere South,Ashanti,Illiteracy_Rate_pct,0.003592781030325253,0.044,1
+Ga East Municipal,Greater Accra,Illiteracy_Rate_pct,-1.0494744153711713,0.001,1
+Ayawaso West Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9375366592322515,0.001,1
+Sekyere East,Ashanti,Illiteracy_Rate_pct,0.003842862534883503,0.083,0
+Ga South Municipal,Greater Accra,Illiteracy_Rate_pct,-0.7798336284691132,0.003,1
+Ga West Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9509402093200834,0.001,1
+Sekyere Central,Ashanti,Illiteracy_Rate_pct,-0.0021459716765927614,0.225,0
+Ga Central Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9110918171670698,0.001,1
+Offinso North,Ashanti,Illiteracy_Rate_pct,0.0007289268089083065,0.371,0
+Krachi West Municipal,Oti,Illiteracy_Rate_pct,0.2578141018665356,0.032,1
+Offinso Municipal,Ashanti,Illiteracy_Rate_pct,0.0011224014979778739,0.35,0
+Obuasi Municipal,Ashanti,Illiteracy_Rate_pct,0.002506397231555594,0.249,0
+Krachi Nchumuru,Oti,Illiteracy_Rate_pct,0.2924136931889331,0.004,1
+Kwabre East,Ashanti,Illiteracy_Rate_pct,0.00546210473842463,0.013,1
+Agortime-Ziope,Volta,Illiteracy_Rate_pct,-0.019693960601525628,0.45,0
+Adaklu,Volta,Illiteracy_Rate_pct,-0.0589313097079841,0.372,0
+Ejura Sekyedumase Municipal,Ashanti,Illiteracy_Rate_pct,-0.00011081390855481465,0.481,0
+Atwima Nwabiagya South Municipal,Ashanti,Illiteracy_Rate_pct,0.004156163469071788,0.037,1
+Akatsi South Municipal,Volta,Illiteracy_Rate_pct,0.0319427280761787,0.352,0
+Atwima Mponua,Ashanti,Illiteracy_Rate_pct,0.001296631142605251,0.267,0
+Akatsi North,Volta,Illiteracy_Rate_pct,0.02079755034851826,0.408,0
+Ho Municipal,Volta,Illiteracy_Rate_pct,0.006912187080251009,0.447,0
+Adansi South,Ashanti,Illiteracy_Rate_pct,0.00018382129940989166,0.479,0
+Hohoe Municipal,Volta,Illiteracy_Rate_pct,-0.08825656458005515,0.257,0
+Adansi Asokwa,Ashanti,Illiteracy_Rate_pct,0.002124039706003045,0.223,0
+Ho West,Volta,Illiteracy_Rate_pct,0.0,0.001,1
+Bosome Freho,Ashanti,Illiteracy_Rate_pct,0.0037770343469761707,0.042,1
+Afadzato South,Volta,Illiteracy_Rate_pct,-0.160463088368834,0.075,0
+Ahafo Ano South East,Ashanti,Illiteracy_Rate_pct,0.0015736489876194907,0.299,0
+North Dayi,Volta,Illiteracy_Rate_pct,-0.14593220062225065,0.144,0
+Bekwai Municipal,Ashanti,Illiteracy_Rate_pct,0.003167959585109337,0.111,0
+Kpando Municipal,Volta,Illiteracy_Rate_pct,-0.11868843284352516,0.161,0
+Bosomtwi,Ashanti,Illiteracy_Rate_pct,0.005709233815950491,0.008,1
+North Tongu,Volta,Illiteracy_Rate_pct,0.009323023397227199,0.437,0
+Central Tongu,Volta,Illiteracy_Rate_pct,0.007655198928761693,0.455,0
+Mampong Municipal,Ashanti,Illiteracy_Rate_pct,0.0009908180215961106,0.423,0
+Ajumako Enyan Essiam,Central,Illiteracy_Rate_pct,-0.025522124462893186,0.409,0
+Gomoa West,Central,Illiteracy_Rate_pct,-0.09800530159952174,0.165,0
+Agona West Municipal,Central,Illiteracy_Rate_pct,-0.0928015838661578,0.248,0
+Agona East,Central,Illiteracy_Rate_pct,-0.14877777791441926,0.14,0
+Assin North,Central,Illiteracy_Rate_pct,-0.07513529151061095,0.231,0
+Assin South,Central,Illiteracy_Rate_pct,-0.07863956725004083,0.217,0
+Asikuma Odoben Brakwa,Central,Illiteracy_Rate_pct,-0.08462054915117302,0.206,0
+Effutu Municipal,Central,Illiteracy_Rate_pct,-0.21838902982098876,0.041,1
+Gomoa East,Central,Illiteracy_Rate_pct,-0.15036524117231895,0.019,1
+Abura Asebu Kwamankese,Central,Illiteracy_Rate_pct,-0.11059434632357885,0.15,0
+Jomoro Municipal,Western,Illiteracy_Rate_pct,0.1705491529775658,0.342,0
+Ellembelle,Western,Illiteracy_Rate_pct,0.17942439857783793,0.349,0
+Dormaa Central Municipal,Bono,Illiteracy_Rate_pct,0.0,0.001,1
+Dormaa West,Bono,Illiteracy_Rate_pct,0.13084107103430917,0.282,0
+Nadowli Kaleo,Upper West,Illiteracy_Rate_pct,-2.218803694494836,0.007,1
+Prestea/Huni Valley Municipal,Western,Illiteracy_Rate_pct,0.03650604972981656,0.456,0
+Ahanta West Municipal,Western,Illiteracy_Rate_pct,-0.618347223215367,0.075,0
+Daffiama Bussie Issa,Upper West,Illiteracy_Rate_pct,-2.0456705094092884,0.006,1
+Nzema East Municipal,Western,Illiteracy_Rate_pct,-0.20782677217731654,0.34,0
+Lawra Municipal,Upper West,Illiteracy_Rate_pct,-2.2869767968033896,0.014,1
+Nandom,Upper West,Illiteracy_Rate_pct,-2.3395587411848746,0.043,1
+Tarkwa-Nsuaem Municipal,Western,Illiteracy_Rate_pct,-0.025158080913529998,0.483,0
+Talensi,Upper East,Illiteracy_Rate_pct,-1.3273714857845706,0.014,1
+Sefwi Akontombra,Western North,Illiteracy_Rate_pct,0.7823279006094275,0.038,1
+Effia Kwesimintsim Municipal,Western,Illiteracy_Rate_pct,-0.5616317143612629,0.168,0
+Nabdam,Upper East,Illiteracy_Rate_pct,-1.4150417199510454,0.034,1
+Builsa South,Upper East,Illiteracy_Rate_pct,-1.6775373834938112,0.015,1
+Builsa North Municipal,Upper East,Illiteracy_Rate_pct,-1.3649390332114144,0.103,0
+Binduri,Upper East,Illiteracy_Rate_pct,-2.0453458901693677,0.013,1
+Pusiga,Upper East,Illiteracy_Rate_pct,-2.0356257922128256,0.042,1
+Bawku Municipal,Upper East,Illiteracy_Rate_pct,-2.589141188574464,0.002,1
+North Gonja,Savannah,Illiteracy_Rate_pct,-3.2313344358812954,0.001,1
+West Gonja,Savannah,Illiteracy_Rate_pct,-3.535942685477673,0.002,1
+Mion,Northern,Illiteracy_Rate_pct,-3.1328230629740115,0.001,1
+Yendi Municipal,Northern,Illiteracy_Rate_pct,-3.585605892778973,0.003,1
+Tolon,Northern,Illiteracy_Rate_pct,-2.1843427413000107,0.011,1
+Kumbungu,Northern,Illiteracy_Rate_pct,-2.707751650809819,0.002,1
+West Mamprusi Municipal,North East,Illiteracy_Rate_pct,-2.6811269554294723,0.001,1
+Mamprugu Moagduri,North East,Illiteracy_Rate_pct,-3.013337950440577,0.001,1
+Zabzugu,Northern,Illiteracy_Rate_pct,-3.2255748079010576,0.003,1
+Tatale Sanguli,Northern,Illiteracy_Rate_pct,-2.202860488617607,0.173,0
+Sene East,Bono East,Illiteracy_Rate_pct,0.3922902872517953,0.003,1
+Bibiani Anhwiaso Bekwai Municipal,Western North,Illiteracy_Rate_pct,0.0850240590113052,0.408,0
+Sene West,Bono East,Illiteracy_Rate_pct,0.4850562703981987,0.005,1
+Upper Denkyira East Municipal,Central,Illiteracy_Rate_pct,0.00028831549459183004,0.479,0
+Asutifi North,Ahafo,Illiteracy_Rate_pct,-0.12855616874038173,0.238,0
+Ahafo Ano North Municipal,Ashanti,Illiteracy_Rate_pct,0.0004353243429096621,0.485,0
+Amansie Central,Ashanti,Illiteracy_Rate_pct,0.0024584398189130916,0.168,0
+Amansie West,Ashanti,Illiteracy_Rate_pct,0.002912082575635658,0.149,0
+Asutifi South,Ahafo,Illiteracy_Rate_pct,-0.04538275989614623,0.394,0
+Techiman Municipal,Bono East,Illiteracy_Rate_pct,0.03798552252191863,0.378,0
+Upper Denkyira West,Central,Illiteracy_Rate_pct,-0.0460998639553348,0.343,0
+Techiman North,Bono East,Illiteracy_Rate_pct,0.0993706982781768,0.276,0
+Cape Cape Metropolitan Area (CCMA)-Cape Coast South & Cape Coast North,Central,Illiteracy_Rate_pct,-0.043017155222152145,0.412,0
+Komenda Edina Eguafo Abirem Municipal,Central,Illiteracy_Rate_pct,-0.10513241879888852,0.214,0
+Banda,Bono,Illiteracy_Rate_pct,0.19624679631378422,0.101,0
+Sefwi Wiawso Municipal,Western North,Illiteracy_Rate_pct,0.4142149867304964,0.112,0
+Jaman North,Bono,Illiteracy_Rate_pct,0.019378515055840408,0.423,0
+Asunafo South,Ahafo,Illiteracy_Rate_pct,0.06112761412281596,0.32,0
+Tain,Bono,Illiteracy_Rate_pct,-0.036705757608795464,0.425,0
+Nkoranza South Municipal,Bono East,Illiteracy_Rate_pct,0.09332790807215138,0.298,0
+Sekyere Kumawu,Ashanti,Illiteracy_Rate_pct,0.0007185386397202719,0.415,0
+Bole,Savannah,Illiteracy_Rate_pct,-2.2704546132158754,0.005,1
+Sekyere Afram Plains,Ashanti,Illiteracy_Rate_pct,-0.003037969137538611,0.114,0
+Asante Akim North Municipal,Ashanti,Illiteracy_Rate_pct,0.0011336280106442405,0.37,0
+Asante Akim Central Municipal,Ashanti,Illiteracy_Rate_pct,0.003057152447103641,0.128,0
+Kintampo North Municipal,Bono East,Illiteracy_Rate_pct,0.47778099030856813,0.004,1
+Asokore Mampong Municipal,Ashanti,Illiteracy_Rate_pct,0.007399771664866338,0.001,1
+Atebubu Amantin Municipal,Bono East,Illiteracy_Rate_pct,0.3115435753282119,0.019,1
+Kwadaso Municipal,Ashanti,Illiteracy_Rate_pct,0.007501247675461027,0.001,1
+Kpandai,Northern,Illiteracy_Rate_pct,-3.0609363854470746,0.002,1
+Ejisu Municipal,Ashanti,Illiteracy_Rate_pct,0.004942852492093428,0.017,1
+Nkwanta North (Kpassa),Oti,Illiteracy_Rate_pct,0.3359188875183028,0.012,1
+Biakoye,Oti,Illiteracy_Rate_pct,0.004957690804121313,0.467,0
+Wassa Amenfi East Municipal,Western,Illiteracy_Rate_pct,-0.2594430490138092,0.262,0
+Central Gonja,Savannah,Illiteracy_Rate_pct,-2.37145768502027,0.001,1
+Tema West Municipal,Greater Accra,Illiteracy_Rate_pct,-0.8528890140829714,0.142,0
+Ashaiman Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9538382742039389,0.093,0
+Pru East,Bono East,Illiteracy_Rate_pct,0.4888375014974147,0.004,1
+Kpone Katamanso Municipal,Greater Accra,Illiteracy_Rate_pct,-0.7721296059861973,0.002,1
+Savelugu Municipal,Northern,Illiteracy_Rate_pct,-2.500187699069155,0.006,1
+Tamale Metropolitan Area (TMA)-Tamale Central & Tamale South,Northern,Illiteracy_Rate_pct,-3.0883217864097174,0.001,1
+Sagnarigu Municipal,Northern,Illiteracy_Rate_pct,-2.6011224626171807,0.005,1
+Karaga,Northern,Illiteracy_Rate_pct,-3.2595892146522756,0.001,1
+North East Gonja,Savannah,Illiteracy_Rate_pct,-2.746182101655663,0.001,1
+South Dayi,Volta,Illiteracy_Rate_pct,-0.15338866704524806,0.209,0
+Tempane,Upper East,Illiteracy_Rate_pct,-2.1499694899925124,0.012,1
+Bolgatanga East,Upper East,Illiteracy_Rate_pct,-1.1700952514461824,0.069,0
+Yunyoo Nasuan,North East,Illiteracy_Rate_pct,-2.764913241708033,0.011,1
+Nanton,Northern,Illiteracy_Rate_pct,-2.2698895176404563,0.005,1
+Assin Central Municipal,Central,Illiteracy_Rate_pct,-0.040593144936230716,0.397,0
+Gomoa Central,Central,Illiteracy_Rate_pct,-0.1264347265833175,0.198,0
+Pru West,Bono East,Illiteracy_Rate_pct,0.3106090938630652,0.015,1
+Berekum West,Bono,Illiteracy_Rate_pct,-0.16954343749095407,0.229,0
+Ahafo Ano South West,Ashanti,Illiteracy_Rate_pct,0.00013024021622950606,0.496,0
+Amansie South,Ashanti,Illiteracy_Rate_pct,0.001550904364555164,0.314,0
+Atwima Nwabiagya North,Ashanti,Illiteracy_Rate_pct,0.004405354559128205,0.067,0
+Akrofuom,Ashanti,Illiteracy_Rate_pct,0.0023297983553590166,0.142,0
+Adansi North,Ashanti,Illiteracy_Rate_pct,0.003071003339354353,0.113,0
+Obuasi East,Ashanti,Illiteracy_Rate_pct,0.002980972539724725,0.199,0
+Afigya Kwabre North,Ashanti,Illiteracy_Rate_pct,0.0026398031937598194,0.234,0
+"Kumasi Metropolitan Area (KMA)-Bantama, Manhyia North, Manhyia South, Nhyiaeso, & Subin",Ashanti,Illiteracy_Rate_pct,0.0075353646100575185,0.001,1
+Oforikrom Municipal,Ashanti,Illiteracy_Rate_pct,0.006592337546082728,0.007,1
+Asokwa Municipal,Ashanti,Illiteracy_Rate_pct,0.00796182629251365,0.001,1
+Old Tafo Municipal,Ashanti,Illiteracy_Rate_pct,0.006842528399790325,0.005,1
+Suame Municipal,Ashanti,Illiteracy_Rate_pct,0.007295525475821505,0.002,1
+Juaben Municipal,Ashanti,Illiteracy_Rate_pct,0.005692175348652247,0.023,1
+Ablekuma Central Municipal,Greater Accra,Illiteracy_Rate_pct,-0.886538767456627,0.008,1
+Korle Klottey Municipal,Greater Accra,Illiteracy_Rate_pct,-0.8463200670128987,0.001,1
+Ablekuma North Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9456874667180953,0.001,1
+Ayawaso North Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9309435616214802,0.001,1
+Ayawaso East Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9812732884377712,0.001,1
+Okaikoi North Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9755737608328554,0.001,1
+Ga North Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9831409302518114,0.002,1
+Weija Gbawe Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9106088063530938,0.001,1
+Krowor Municipal,Greater Accra,Illiteracy_Rate_pct,-0.9881320419962293,0.058,0
+Tema Metropolitan Area (TMA)-Tema Central & Tema East,Greater Accra,Illiteracy_Rate_pct,-1.1359333510728613,0.011,1
+East Gonja Municipal,Savannah,Illiteracy_Rate_pct,-2.700231532767697,0.004,1
+Ablekuma West Municipal,Greater Accra,Illiteracy_Rate_pct,-0.8752282642293577,0.001,1
+Ayawaso Central Municipal,Greater Accra,Illiteracy_Rate_pct,-0.8016898678015235,0.006,1
+"Accra Metropolitan Area (AMA)-Ablekuma South, Ashiedu Keteke & Okaikoi South",Greater Accra,Illiteracy_Rate_pct,-0.9298487371098014,0.006,1
+Anloga,Volta,Illiteracy_Rate_pct,-0.020568712139488576,0.489,0
+"Sekondi Takoradi Metropolitan Area (STMA)- Takoradi, Sekondi & Essikado-Ketan",Western,Illiteracy_Rate_pct,-0.5623847655031042,0.141,0
+Kwahu South Municipal,Eastern,Illiteracy_Rate_pct,-0.22482469746392617,0.337,0
+Asene Manso Akroso,Eastern,Illiteracy_Rate_pct,-0.5265760911844451,0.107,0
+Upper Manya Krobo,Eastern,Illiteracy_Rate_pct,-0.147358135922767,0.369,0
+Achiase,Eastern,Illiteracy_Rate_pct,-0.4892719933816356,0.322,0
+Okere,Eastern,Illiteracy_Rate_pct,-1.023277731084842,0.047,1
+Yilo Krobo Municipal,Eastern,Illiteracy_Rate_pct,-0.7791746643863086,0.024,1
+Atiwa West,Eastern,Illiteracy_Rate_pct,-0.5694688826747814,0.075,0
+New Juaben North Municipal,Eastern,Illiteracy_Rate_pct,-0.9006586771382042,0.032,1
+Fanteakwa North,Eastern,Illiteracy_Rate_pct,-0.10956956931732342,0.425,0
+Birim North,Eastern,Illiteracy_Rate_pct,-0.5702994006221539,0.18,0
+Asuogyaman,Eastern,Illiteracy_Rate_pct,0.2508752198422915,0.31,0
+Kwahu East,Eastern,Illiteracy_Rate_pct,-0.15171835514647194,0.448,0
+Kwahu West Municipal,Eastern,Illiteracy_Rate_pct,-0.4919971303964512,0.217,0
+Lower Manya Krobo Municipal,Eastern,Illiteracy_Rate_pct,-0.28833855748922904,0.357,0
+Nsawam Adoagyiri Municipal,Eastern,Illiteracy_Rate_pct,-0.3910459436476142,0.306,0
+Akwapim South Municipal,Eastern,Illiteracy_Rate_pct,-0.716366744616272,0.133,0
+Denkyembuor,Eastern,Illiteracy_Rate_pct,-0.547287132497044,0.104,0
+Kwaebibirem Municipal,Eastern,Illiteracy_Rate_pct,-0.518267451219274,0.148,0
+Kwahu Afram Plains South,Eastern,Illiteracy_Rate_pct,0.12559158748116728,0.364,0
+Kwahu Afram Plains North,Eastern,Illiteracy_Rate_pct,0.18183841546696214,0.346,0
+Suhum Municipal,Eastern,Illiteracy_Rate_pct,-0.94048201271471,0.024,1
+Ayensuano,Eastern,Illiteracy_Rate_pct,-0.6948381621992286,0.032,1
+Abuakwa South Municipal,Eastern,Illiteracy_Rate_pct,-0.7883103618074048,0.037,1
+Upper West Akim,Eastern,Illiteracy_Rate_pct,-0.4689243036710122,0.23,0
+West Akim Municipal,Eastern,Illiteracy_Rate_pct,-0.36173558108826376,0.232,0
+Akyemansa,Eastern,Illiteracy_Rate_pct,-0.7268312707531641,0.073,0
+Atiwa East,Eastern,Illiteracy_Rate_pct,-0.5634476275563316,0.078,0
+New Juaben South Municipal,Eastern,Illiteracy_Rate_pct,-0.8583645506682654,0.036,1
+Birim South,Eastern,Illiteracy_Rate_pct,-0.4632923538403932,0.231,0
+Abuakwa North Municipal,Eastern,Illiteracy_Rate_pct,-0.8667943078340951,0.051,0
+Akwapim North Municipal,Eastern,Illiteracy_Rate_pct,-0.7694160785046831,0.059,0
+Fanteakwa South,Eastern,Illiteracy_Rate_pct,-0.4526772963255398,0.127,0
+Birim Central Municipal,Eastern,Illiteracy_Rate_pct,-0.43476925308532277,0.249,0
+Adentan Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.278,0
+Ledzokuku Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.278,0
+Chereponi,North East,Condom_Use_Women_pct,-3.398320599586936,0.026,1
+Wa East,Upper West,Condom_Use_Women_pct,-0.28504436988162674,0.317,0
+Wa Municipal,Upper West,Condom_Use_Women_pct,0.44539151541862676,0.415,0
+Saboba,Northern,Condom_Use_Women_pct,-1.4428688415678954,0.161,0
+Jirapa Municipal,Upper West,Condom_Use_Women_pct,0.4453915154186268,0.365,0
+Gushegu Municipal,Northern,Condom_Use_Women_pct,-4.050137852259949,0.001,1
+Sissala West,Upper West,Condom_Use_Women_pct,0.44539151541862676,0.423,0
+Nanumba North Municipal,Northern,Condom_Use_Women_pct,-1.0216946167637946,0.118,0
+Lambussie Karni,Upper West,Condom_Use_Women_pct,0.44539151541862676,0.423,0
+Bolgatanga Municipal,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Nanumba South,Northern,Condom_Use_Women_pct,-0.2846397233566177,0.35,0
+Wenchi Municipal,Bono,Condom_Use_Women_pct,-0.14927670884423103,0.153,0
+Bongo,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Tano South Municipal,Ahafo,Condom_Use_Women_pct,-0.2407166558514103,0.017,1
+Kasena Nankana West,Upper East,Condom_Use_Women_pct,-0.0,0.001,1
+Wa West,Upper West,Condom_Use_Women_pct,0.489469542979849,0.412,0
+Sunyani Municipal,Bono,Condom_Use_Women_pct,-0.20448573345233922,0.066,0
+Sawla Tuna Kalba,Savannah,Condom_Use_Women_pct,0.5877925994518772,0.312,0
+Asante Akim South Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.008,1
+Sissala East Municipal,Upper West,Condom_Use_Women_pct,-1.7831935580767675,0.029,1
+Ada East,Greater Accra,Condom_Use_Women_pct,0.43692276817129905,0.17,0
+Shai-Osudoku,Greater Accra,Condom_Use_Women_pct,-0.015749790809509924,0.405,0
+Kasena Nankana Municipal,Upper East,Condom_Use_Women_pct,-4.50007939040859,0.001,1
+Ada West,Greater Accra,Condom_Use_Women_pct,0.1472123304235813,0.285,0
+Bunkpurugu Nakpanduri,North East,Condom_Use_Women_pct,-4.6167174641988,0.001,1
+Garu,Upper East,Condom_Use_Women_pct,-4.475617323891629,0.001,1
+Ningo-Prampram,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.288,0
+East Mamprusi Municipal,North East,Condom_Use_Women_pct,-4.460657371972281,0.001,1
+La Dade-Kotopon Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.257,0
+Bawku West,Upper East,Condom_Use_Women_pct,-4.50007939040859,0.001,1
+Aowin Municipal,Western North,Condom_Use_Women_pct,-0.3467787058186028,0.302,0
+Dormaa East,Bono,Condom_Use_Women_pct,-0.20448573345233922,0.044,1
+Suaman,Western North,Condom_Use_Women_pct,-0.1978729031549584,0.433,0
+Berekum East Municipal,Bono,Condom_Use_Women_pct,-0.20448573345233922,0.026,1
+Bia East,Western North,Condom_Use_Women_pct,-0.37469854381803597,0.267,0
+Jaman South,Bono,Condom_Use_Women_pct,-0.2044857334523392,0.087,0
+Bia West,Western North,Condom_Use_Women_pct,-0.1978729031549584,0.414,0
+Sunyani West Municipal,Bono,Condom_Use_Women_pct,-0.19672196436682401,0.02,1
+Asunafo North Municipal,Ahafo,Condom_Use_Women_pct,-0.16077858897092026,0.119,0
+Bodi,Western North,Condom_Use_Women_pct,-0.1978729031549584,0.433,0
+Juaboso,Western North,Condom_Use_Women_pct,-0.29891612639100273,0.245,0
+Nkoranza North,Bono East,Condom_Use_Women_pct,-0.11674281934302443,0.233,0
+Kintampo South,Bono East,Condom_Use_Women_pct,-0.12955920005562097,0.195,0
+Shama,Western,Condom_Use_Women_pct,-0.3886584628177527,0.25,0
+Tano North Municipal,Ahafo,Condom_Use_Women_pct,-0.21828798960436627,0.011,1
+Wassa East,Western,Condom_Use_Women_pct,-0.31221128734311376,0.233,0
+Ketu North Municipal,Volta,Condom_Use_Women_pct,0.2615296070958011,0.028,1
+Mpohor,Western,Condom_Use_Women_pct,-0.49568450848224715,0.058,0
+Wassa Amenfi West Municipal,Western,Condom_Use_Women_pct,-0.3467787058186027,0.219,0
+Ketu South Municipal,Volta,Condom_Use_Women_pct,0.2615296070958011,0.123,0
+Wassa Amenfi Central,Western,Condom_Use_Women_pct,-0.41059547838873606,0.128,0
+Keta Municipal,Volta,Condom_Use_Women_pct,0.2615296070958011,0.027,1
+Kadjebi,Oti,Condom_Use_Women_pct,-0.27183930198533796,0.001,1
+Mfantsiman Municipal,Central,Condom_Use_Women_pct,-0.01655161900633119,0.452,0
+South Tongu,Volta,Condom_Use_Women_pct,0.15993552917558415,0.056,0
+Ekumfi,Central,Condom_Use_Women_pct,-0.01655161900633119,0.457,0
+Twifo Heman Lower Denkyira,Central,Condom_Use_Women_pct,-0.03402666873406082,0.429,0
+Jasikan Municipal,Oti,Condom_Use_Women_pct,-0.09404966562495826,0.296,0
+Twifo Ati Morkwa,Central,Condom_Use_Women_pct,-0.05587048089372288,0.302,0
+Krachi East Municipal,Oti,Condom_Use_Women_pct,-0.2368892025298787,0.001,1
+Awutu Senya West,Central,Condom_Use_Women_pct,-0.03592613066098797,0.459,0
+Nkwanta South Municipal,Oti,Condom_Use_Women_pct,-0.1824886129426856,0.002,1
+Awutu Senya East Municipal,Central,Condom_Use_Women_pct,-0.03592613066098797,0.457,0
+Afigya Kwabre South,Ashanti,Condom_Use_Women_pct,0.0046202491119873715,0.002,1
+La Nkwantanang Madina Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.247,0
+Atwima Kwanwoma,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.005,1
+Sekyere South,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.002,1
+Ga East Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.246,0
+Ayawaso West Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.127,0
+Sekyere East,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.005,1
+Ga South Municipal,Greater Accra,Condom_Use_Women_pct,-0.2281576838697356,0.34,0
+Ga West Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.247,0
+Sekyere Central,Ashanti,Condom_Use_Women_pct,0.004040049832489589,0.02,1
+Ga Central Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.246,0
+Offinso North,Ashanti,Condom_Use_Women_pct,0.003563908032466949,0.018,1
+Krachi West Municipal,Oti,Condom_Use_Women_pct,-0.20193910307441942,0.006,1
+Offinso Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.002,1
+Obuasi Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.014,1
+Krachi Nchumuru,Oti,Condom_Use_Women_pct,-0.13051933462195922,0.03,1
+Kwabre East,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.002,1
+Agortime-Ziope,Volta,Condom_Use_Women_pct,0.2615296070958011,0.028,1
+Adaklu,Volta,Condom_Use_Women_pct,0.2615296070958011,0.052,0
+Ejura Sekyedumase Municipal,Ashanti,Condom_Use_Women_pct,0.003653250312824398,0.009,1
+Atwima Nwabiagya South Municipal,Ashanti,Condom_Use_Women_pct,0.0046202491119873715,0.002,1
+Akatsi South Municipal,Volta,Condom_Use_Women_pct,0.2615296070958011,0.014,1
+Atwima Mponua,Ashanti,Condom_Use_Women_pct,0.003695293738874962,0.008,1
+Akatsi North,Volta,Condom_Use_Women_pct,0.2615296070958011,0.048,1
+Ho Municipal,Volta,Condom_Use_Women_pct,0.2615296070958011,0.12,0
+Adansi South,Ashanti,Condom_Use_Women_pct,0.0035796743172359113,0.077,0
+Hohoe Municipal,Volta,Condom_Use_Women_pct,-0.005154847444768417,0.426,0
+Adansi Asokwa,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.003,1
+Ho West,Volta,Condom_Use_Women_pct,0.0,0.001,1
+Bosome Freho,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.003,1
+Afadzato South,Volta,Condom_Use_Women_pct,0.2615296070958011,0.027,1
+Ahafo Ano South East,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.004,1
+North Dayi,Volta,Condom_Use_Women_pct,0.2615296070958011,0.05,0
+Bekwai Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.004,1
+Kpando Municipal,Volta,Condom_Use_Women_pct,0.12818737982551637,0.128,0
+Bosomtwi,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.003,1
+North Tongu,Volta,Condom_Use_Women_pct,0.0837399707354214,0.24,0
+Central Tongu,Volta,Condom_Use_Women_pct,0.2615296070958011,0.028,1
+Mampong Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.011,1
+Ajumako Enyan Essiam,Central,Condom_Use_Women_pct,-0.016551619006331193,0.492,0
+Gomoa West,Central,Condom_Use_Women_pct,-0.016551619006331193,0.492,0
+Agona West Municipal,Central,Condom_Use_Women_pct,-0.016551619006331193,0.468,0
+Agona East,Central,Condom_Use_Women_pct,-0.01655161900633119,0.448,0
+Assin North,Central,Condom_Use_Women_pct,-0.06669741387720753,0.286,0
+Assin South,Central,Condom_Use_Women_pct,-0.016551619006331193,0.492,0
+Asikuma Odoben Brakwa,Central,Condom_Use_Women_pct,-0.016551619006331193,0.492,0
+Effutu Municipal,Central,Condom_Use_Women_pct,-0.01655161900633119,0.448,0
+Gomoa East,Central,Condom_Use_Women_pct,-0.02623887483365958,0.448,0
+Abura Asebu Kwamankese,Central,Condom_Use_Women_pct,-0.016551619006331193,0.477,0
+Jomoro Municipal,Western,Condom_Use_Women_pct,-0.3964139733731509,0.288,0
+Ellembelle,Western,Condom_Use_Women_pct,-0.49568450848224715,0.103,0
+Dormaa Central Municipal,Bono,Condom_Use_Women_pct,0.0,0.001,1
+Dormaa West,Bono,Condom_Use_Women_pct,-0.13892501673021077,0.336,0
+Nadowli Kaleo,Upper West,Condom_Use_Women_pct,0.44539151541862676,0.403,0
+Prestea/Huni Valley Municipal,Western,Condom_Use_Women_pct,-0.4243338113725841,0.126,0
+Ahanta West Municipal,Western,Condom_Use_Women_pct,-0.49568450848224727,0.073,0
+Daffiama Bussie Issa,Upper West,Condom_Use_Women_pct,0.44539151541862676,0.324,0
+Nzema East Municipal,Western,Condom_Use_Women_pct,-0.49568450848224727,0.073,0
+Lawra Municipal,Upper West,Condom_Use_Women_pct,0.44539151541862676,0.485,0
+Nandom,Upper West,Condom_Use_Women_pct,0.44539151541862676,0.461,0
+Tarkwa-Nsuaem Municipal,Western,Condom_Use_Women_pct,-0.49568450848224727,0.071,0
+Talensi,Upper East,Condom_Use_Women_pct,-4.484353776219114,0.001,1
+Sefwi Akontombra,Western North,Condom_Use_Women_pct,-0.2574352242204162,0.327,0
+Effia Kwesimintsim Municipal,Western,Condom_Use_Women_pct,-0.49568450848224715,0.137,0
+Nabdam,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Builsa South,Upper East,Condom_Use_Women_pct,-3.478788113325478,0.001,1
+Builsa North Municipal,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Binduri,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Pusiga,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Bawku Municipal,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+North Gonja,Savannah,Condom_Use_Women_pct,-1.0730879001476281,0.102,0
+West Gonja,Savannah,Condom_Use_Women_pct,0.6630022824526096,0.324,0
+Mion,Northern,Condom_Use_Women_pct,-1.1796349510653323,0.064,0
+Yendi Municipal,Northern,Condom_Use_Women_pct,-1.4428688415678954,0.105,0
+Tolon,Northern,Condom_Use_Women_pct,-0.6005203919596934,0.215,0
+Kumbungu,Northern,Condom_Use_Women_pct,-2.395524826243838,0.005,1
+West Mamprusi Municipal,North East,Condom_Use_Women_pct,-3.97179443246752,0.001,1
+Mamprugu Moagduri,North East,Condom_Use_Women_pct,-1.7938473622379796,0.023,1
+Zabzugu,Northern,Condom_Use_Women_pct,-1.4428688415678954,0.091,0
+Tatale Sanguli,Northern,Condom_Use_Women_pct,-1.4428688415678954,0.168,0
+Sene East,Bono East,Condom_Use_Women_pct,-0.3020874019559591,0.001,1
+Bibiani Anhwiaso Bekwai Municipal,Western North,Condom_Use_Women_pct,-0.4367426282612211,0.112,0
+Sene West,Bono East,Condom_Use_Women_pct,-0.1313337758465959,0.238,0
+Upper Denkyira East Municipal,Central,Condom_Use_Women_pct,-0.06760915560213256,0.303,0
+Asutifi North,Ahafo,Condom_Use_Women_pct,-0.20448573345233922,0.044,1
+Ahafo Ano North Municipal,Ashanti,Condom_Use_Women_pct,0.003958065151690987,0.049,1
+Amansie Central,Ashanti,Condom_Use_Women_pct,0.004025634943557965,0.007,1
+Amansie West,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.003,1
+Asutifi South,Ahafo,Condom_Use_Women_pct,-0.2251891176803798,0.007,1
+Techiman Municipal,Bono East,Condom_Use_Women_pct,-0.15732802493291348,0.123,0
+Upper Denkyira West,Central,Condom_Use_Women_pct,-0.1145638544357713,0.086,0
+Techiman North,Bono East,Condom_Use_Women_pct,-0.12167219654017693,0.327,0
+Cape Cape Metropolitan Area (CCMA)-Cape Coast South & Cape Coast North,Central,Condom_Use_Women_pct,-0.01655161900633119,0.448,0
+Komenda Edina Eguafo Abirem Municipal,Central,Condom_Use_Women_pct,-0.06897676818952012,0.368,0
+Banda,Bono,Condom_Use_Women_pct,-0.16583941622666348,0.131,0
+Sefwi Wiawso Municipal,Western North,Condom_Use_Women_pct,-0.3770251969846554,0.122,0
+Jaman North,Bono,Condom_Use_Women_pct,-0.20448573345233922,0.066,0
+Asunafo South,Ahafo,Condom_Use_Women_pct,-0.16169873938105545,0.145,0
+Tain,Bono,Condom_Use_Women_pct,-0.20448573345233922,0.045,1
+Nkoranza South Municipal,Bono East,Condom_Use_Women_pct,-0.1734306571102784,0.143,0
+Sekyere Kumawu,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.003,1
+Bole,Savannah,Condom_Use_Women_pct,0.688072176786187,0.22,0
+Sekyere Afram Plains,Ashanti,Condom_Use_Women_pct,0.0031697509132429112,0.084,0
+Asante Akim North Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.004,1
+Asante Akim Central Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.003,1
+Kintampo North Municipal,Bono East,Condom_Use_Women_pct,-0.11063039161855531,0.292,0
+Asokore Mampong Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.004,1
+Atebubu Amantin Municipal,Bono East,Condom_Use_Women_pct,-0.1620930895568276,0.083,0
+Kwadaso Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.004,1
+Kpandai,Northern,Condom_Use_Women_pct,1.189470063457736,0.02,1
+Ejisu Municipal,Ashanti,Condom_Use_Women_pct,0.0046202491119873715,0.002,1
+Nkwanta North (Kpassa),Oti,Condom_Use_Women_pct,0.02599632815683657,0.33,0
+Biakoye,Oti,Condom_Use_Women_pct,-0.059099566169499004,0.319,0
+Wassa Amenfi East Municipal,Western,Condom_Use_Women_pct,-0.23199714959871007,0.331,0
+Central Gonja,Savannah,Condom_Use_Women_pct,0.039836337589398974,0.481,0
+Tema West Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.308,0
+Ashaiman Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.308,0
+Pru East,Bono East,Condom_Use_Women_pct,-0.1051094891577445,0.295,0
+Kpone Katamanso Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.201,0
+Savelugu Municipal,Northern,Condom_Use_Women_pct,-2.2250495447755116,0.019,1
+Tamale Metropolitan Area (TMA)-Tamale Central & Tamale South,Northern,Condom_Use_Women_pct,-0.7409118002277271,0.162,0
+Sagnarigu Municipal,Northern,Condom_Use_Women_pct,-1.4428688415678956,0.069,0
+Karaga,Northern,Condom_Use_Women_pct,-2.7465033469139217,0.002,1
+North East Gonja,Savannah,Condom_Use_Women_pct,-0.19165320619207588,0.344,0
+South Dayi,Volta,Condom_Use_Women_pct,0.2615296070958011,0.122,0
+Tempane,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Bolgatanga East,Upper East,Condom_Use_Women_pct,-4.536772490184031,0.001,1
+Yunyoo Nasuan,North East,Condom_Use_Women_pct,-4.05013785225995,0.003,1
+Nanton,Northern,Condom_Use_Women_pct,-1.4428688415678956,0.075,0
+Assin Central Municipal,Central,Condom_Use_Women_pct,-0.016551619006331193,0.459,0
+Gomoa Central,Central,Condom_Use_Women_pct,-0.01655161900633119,0.457,0
+Pru West,Bono East,Condom_Use_Women_pct,-0.09866843628679851,0.295,0
+Berekum West,Bono,Condom_Use_Women_pct,-0.2044857334523392,0.088,0
+Ahafo Ano South West,Ashanti,Condom_Use_Women_pct,0.004267084333162634,0.012,1
+Amansie South,Ashanti,Condom_Use_Women_pct,0.0031319118297974046,0.096,0
+Atwima Nwabiagya North,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.004,1
+Akrofuom,Ashanti,Condom_Use_Women_pct,0.0030593869198601805,0.055,0
+Adansi North,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.004,1
+Obuasi East,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.012,1
+Afigya Kwabre North,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.012,1
+"Kumasi Metropolitan Area (KMA)-Bantama, Manhyia North, Manhyia South, Nhyiaeso, & Subin",Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.004,1
+Oforikrom Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.004,1
+Asokwa Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.012,1
+Old Tafo Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.004,1
+Suame Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987372,0.004,1
+Juaben Municipal,Ashanti,Condom_Use_Women_pct,0.004620249111987373,0.004,1
+Ablekuma Central Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.282,0
+Korle Klottey Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.197,0
+Ablekuma North Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.119,0
+Ayawaso North Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.197,0
+Ayawaso East Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.197,0
+Okaikoi North Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.165,0
+Ga North Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.282,0
+Weija Gbawe Municipal,Greater Accra,Condom_Use_Women_pct,-0.20842580309364905,0.274,0
+Krowor Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.309,0
+Tema Metropolitan Area (TMA)-Tema Central & Tema East,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.309,0
+East Gonja Municipal,Savannah,Condom_Use_Women_pct,0.5727506628517308,0.299,0
+Ablekuma West Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.241,0
+Ayawaso Central Municipal,Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.241,0
+"Accra Metropolitan Area (AMA)-Ablekuma South, Ashiedu Keteke & Okaikoi South",Greater Accra,Condom_Use_Women_pct,-0.28735332619799525,0.282,0
+Anloga,Volta,Condom_Use_Women_pct,0.143003182855548,0.183,0
+"Sekondi Takoradi Metropolitan Area (STMA)- Takoradi, Sekondi & Essikado-Ketan",Western,Condom_Use_Women_pct,-0.49568450848224715,0.102,0
+Kwahu South Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Asene Manso Akroso,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.229,0
+Upper Manya Krobo,Eastern,Condom_Use_Women_pct,-0.3694641372747409,0.189,0
+Achiase,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.437,0
+Okere,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.38,0
+Yilo Krobo Municipal,Eastern,Condom_Use_Women_pct,-0.3694641372747409,0.189,0
+Atiwa West,Eastern,Condom_Use_Women_pct,-0.3694641372747409,0.189,0
+New Juaben North Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Fanteakwa North,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Birim North,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.329,0
+Asuogyaman,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.38,0
+Kwahu East,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.38,0
+Kwahu West Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.329,0
+Lower Manya Krobo Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.38,0
+Nsawam Adoagyiri Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.38,0
+Akwapim South Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.38,0
+Denkyembuor,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.229,0
+Kwaebibirem Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Kwahu Afram Plains South,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Kwahu Afram Plains North,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.38,0
+Suhum Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Ayensuano,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.183,0
+Abuakwa South Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.229,0
+Upper West Akim,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.329,0
+West Akim Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Akyemansa,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Atiwa East,Eastern,Condom_Use_Women_pct,-0.3694641372747409,0.189,0
+New Juaben South Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Birim South,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.329,0
+Abuakwa North Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.329,0
+Akwapim North Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.269,0
+Fanteakwa South,Eastern,Condom_Use_Women_pct,-0.3694641372747409,0.189,0
+Birim Central Municipal,Eastern,Condom_Use_Women_pct,-0.369464137274741,0.329,0
+Adentan Municipal,Greater Accra,VCT_Women_pct,0.4093255821820398,0.164,0
+Ledzokuku Municipal,Greater Accra,VCT_Women_pct,0.4093255821820398,0.164,0
+Chereponi,North East,VCT_Women_pct,4.108941759924735,0.004,1
+Wa East,Upper West,VCT_Women_pct,3.084220057724852,0.001,1
+Wa Municipal,Upper West,VCT_Women_pct,1.6383743381171643,0.05,0
+Saboba,Northern,VCT_Women_pct,4.029076387599314,0.102,0
+Jirapa Municipal,Upper West,VCT_Women_pct,1.6383743381171643,0.043,1
+Gushegu Municipal,Northern,VCT_Women_pct,4.1355635506998745,0.001,1
+Sissala West,Upper West,VCT_Women_pct,1.6383743381171643,0.049,1
+Nanumba North Municipal,Northern,VCT_Women_pct,4.407866439199878,0.001,1
+Lambussie Karni,Upper West,VCT_Women_pct,1.6383743381171643,0.05,0
+Bolgatanga Municipal,Upper East,VCT_Women_pct,1.0681698022635169,0.088,0
+Nanumba South,Northern,VCT_Women_pct,3.5909577736998686,0.001,1
+Wenchi Municipal,Bono,VCT_Women_pct,-0.14476264744836648,0.152,0
+Bongo,Upper East,VCT_Women_pct,1.0681698022635169,0.108,0
+Tano South Municipal,Ahafo,VCT_Women_pct,0.17873065183962242,0.157,0
+Kasena Nankana West,Upper East,VCT_Women_pct,-0.0,0.001,1
+Wa West,Upper West,VCT_Women_pct,2.6173005362236386,0.008,1
+Sunyani Municipal,Bono,VCT_Women_pct,-0.0547289136659489,0.322,0
+Sawla Tuna Kalba,Savannah,VCT_Women_pct,4.252699430110491,0.001,1
+Asante Akim South Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.058,0
+Sissala East Municipal,Upper West,VCT_Women_pct,2.0149667115963763,0.022,1
+Ada East,Greater Accra,VCT_Women_pct,0.36988400236568475,0.211,0
+Shai-Osudoku,Greater Accra,VCT_Women_pct,0.3945349897509067,0.135,0
+Kasena Nankana Municipal,Upper East,VCT_Women_pct,1.5357438632222664,0.033,1
+Ada West,Greater Accra,VCT_Women_pct,0.38566063429222686,0.092,0
+Bunkpurugu Nakpanduri,North East,VCT_Women_pct,3.581830302576963,0.003,1
+Garu,Upper East,VCT_Women_pct,1.847459903861433,0.006,1
+Ningo-Prampram,Greater Accra,VCT_Women_pct,0.4093255821820398,0.166,0
+East Mamprusi Municipal,North East,VCT_Women_pct,3.0706919196942755,0.001,1
+La Dade-Kotopon Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.111,0
+Bawku West,Upper East,VCT_Women_pct,1.5357438632222664,0.033,1
+Aowin Municipal,Western North,VCT_Women_pct,0.28722870864408906,0.333,0
+Dormaa East,Bono,VCT_Women_pct,-0.09116116873139231,0.253,0
+Suaman,Western North,VCT_Women_pct,0.14039975594943996,0.477,0
+Berekum East Municipal,Bono,VCT_Women_pct,-0.11544933877502124,0.198,0
+Bia East,Western North,VCT_Women_pct,-0.003605563039542735,0.407,0
+Jaman South,Bono,VCT_Women_pct,-0.11544933877502124,0.26,0
+Bia West,Western North,VCT_Women_pct,0.14039975594943996,0.445,0
+Sunyani West Municipal,Bono,VCT_Women_pct,-0.06362759665607155,0.275,0
+Asunafo North Municipal,Ahafo,VCT_Women_pct,0.001105959997565917,0.436,0
+Bodi,Western North,VCT_Women_pct,0.14039975594943996,0.481,0
+Juaboso,Western North,VCT_Women_pct,0.10490264650677754,0.445,0
+Nkoranza North,Bono East,VCT_Women_pct,-0.1154493387750212,0.181,0
+Kintampo South,Bono East,VCT_Women_pct,-0.2877398060795812,0.033,1
+Shama,Western,VCT_Women_pct,0.329583214229084,0.288,0
+Tano North Municipal,Ahafo,VCT_Women_pct,0.03709951248422458,0.449,0
+Wassa East,Western,VCT_Women_pct,0.2549586091507595,0.262,0
+Ketu North Municipal,Volta,VCT_Women_pct,0.11460710575905472,0.168,0
+Mpohor,Western,VCT_Women_pct,0.4340576613387381,0.124,0
+Wassa Amenfi West Municipal,Western,VCT_Women_pct,0.28722870864408906,0.266,0
+Ketu South Municipal,Volta,VCT_Women_pct,0.11460710575905472,0.336,0
+Wassa Amenfi Central,Western,VCT_Women_pct,0.35015540265608147,0.176,0
+Keta Municipal,Volta,VCT_Women_pct,0.11460710575905474,0.127,0
+Kadjebi,Oti,VCT_Women_pct,0.006724070816907144,0.435,0
+Mfantsiman Municipal,Central,VCT_Women_pct,0.003957839151723832,0.393,0
+South Tongu,Volta,VCT_Women_pct,0.12013956908942129,0.068,0
+Ekumfi,Central,VCT_Women_pct,0.003957839151723832,0.393,0
+Twifo Heman Lower Denkyira,Central,VCT_Women_pct,0.02101626775368735,0.485,0
+Jasikan Municipal,Oti,VCT_Women_pct,0.04268508246428967,0.487,0
+Twifo Ati Morkwa,Central,VCT_Women_pct,0.042339303506141755,0.349,0
+Krachi East Municipal,Oti,VCT_Women_pct,-0.01356162806110351,0.4,0
+Awutu Senya West,Central,VCT_Women_pct,0.0364610612176273,0.474,0
+Nkwanta South Municipal,Oti,VCT_Women_pct,-0.092307022796654,0.181,0
+Awutu Senya East Municipal,Central,VCT_Women_pct,0.036461061217627294,0.474,0
+Afigya Kwabre South,Ashanti,VCT_Women_pct,-0.004318988399832825,0.016,1
+La Nkwantanang Madina Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.117,0
+Atwima Kwanwoma,Ashanti,VCT_Women_pct,-0.004318988399832825,0.033,1
+Sekyere South,Ashanti,VCT_Women_pct,-0.004318988399832826,0.011,1
+Ga East Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.116,0
+Ayawaso West Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.036,1
+Sekyere East,Ashanti,VCT_Women_pct,-0.004318988399832825,0.033,1
+Ga South Municipal,Greater Accra,VCT_Women_pct,0.3100173187158605,0.213,0
+Ga West Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.116,0
+Sekyere Central,Ashanti,VCT_Women_pct,-0.0028188817418756235,0.168,0
+Ga Central Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.116,0
+Offinso North,Ashanti,VCT_Women_pct,-0.0005878557684341733,0.442,0
+Krachi West Municipal,Oti,VCT_Women_pct,-0.033847326939114165,0.323,0
+Offinso Municipal,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+Obuasi Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.061,0
+Krachi Nchumuru,Oti,VCT_Women_pct,-0.216879655452074,0.028,1
+Kwabre East,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+Agortime-Ziope,Volta,VCT_Women_pct,0.11460710575905474,0.129,0
+Adaklu,Volta,VCT_Women_pct,0.11460710575905471,0.223,0
+Ejura Sekyedumase Municipal,Ashanti,VCT_Women_pct,-0.0018188106365708229,0.214,0
+Atwima Nwabiagya South Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.019,1
+Akatsi South Municipal,Volta,VCT_Women_pct,0.11460710575905472,0.103,0
+Atwima Mponua,Ashanti,VCT_Women_pct,-0.002635195212329844,0.108,0
+Akatsi North,Volta,VCT_Women_pct,0.11460710575905471,0.223,0
+Ho Municipal,Volta,VCT_Women_pct,0.11460710575905472,0.343,0
+Adansi South,Ashanti,VCT_Women_pct,-0.003266617657643462,0.163,0
+Hohoe Municipal,Volta,VCT_Women_pct,0.06066558828798094,0.366,0
+Adansi Asokwa,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+Ho West,Volta,VCT_Women_pct,0.0,0.001,1
+Bosome Freho,Ashanti,VCT_Women_pct,-0.004318988399832826,0.013,1
+Afadzato South,Volta,VCT_Women_pct,0.11460710575905472,0.17,0
+Ahafo Ano South East,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+North Dayi,Volta,VCT_Women_pct,0.11460710575905471,0.225,0
+Bekwai Municipal,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+Kpando Municipal,Volta,VCT_Women_pct,0.08763634702351783,0.26,0
+Bosomtwi,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+North Tongu,Volta,VCT_Women_pct,0.12428891658719622,0.148,0
+Central Tongu,Volta,VCT_Women_pct,0.11460710575905474,0.13,0
+Mampong Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.065,0
+Ajumako Enyan Essiam,Central,VCT_Women_pct,0.003957839151723833,0.446,0
+Gomoa West,Central,VCT_Women_pct,0.003957839151723833,0.446,0
+Agona West Municipal,Central,VCT_Women_pct,0.003957839151723833,0.424,0
+Agona East,Central,VCT_Women_pct,0.003957839151723832,0.391,0
+Assin North,Central,VCT_Women_pct,0.05467208634675048,0.341,0
+Assin South,Central,VCT_Women_pct,0.003957839151723833,0.446,0
+Asikuma Odoben Brakwa,Central,VCT_Women_pct,0.003957839151723833,0.446,0
+Effutu Municipal,Central,VCT_Women_pct,0.003957839151723832,0.391,0
+Gomoa East,Central,VCT_Women_pct,0.020209450184675567,0.452,0
+Abura Asebu Kwamankese,Central,VCT_Women_pct,0.003957839151723833,0.446,0
+Jomoro Municipal,Western,VCT_Women_pct,0.3361716928756387,0.35,0
+Ellembelle,Western,VCT_Women_pct,0.4340576613387381,0.186,0
+Dormaa Central Municipal,Bono,VCT_Women_pct,0.0,0.001,1
+Dormaa West,Bono,VCT_Women_pct,0.02902339682932333,0.416,0
+Nadowli Kaleo,Upper West,VCT_Women_pct,1.6383743381171643,0.05,0
+Prestea/Huni Valley Municipal,Western,VCT_Women_pct,0.364408029932302,0.191,0
+Ahanta West Municipal,Western,VCT_Women_pct,0.43405766133873813,0.157,0
+Daffiama Bussie Issa,Upper West,VCT_Women_pct,1.638374338117164,0.031,1
+Nzema East Municipal,Western,VCT_Women_pct,0.43405766133873813,0.157,0
+Lawra Municipal,Upper West,VCT_Women_pct,1.638374338117164,0.061,0
+Nandom,Upper West,VCT_Women_pct,1.6383743381171643,0.101,0
+Tarkwa-Nsuaem Municipal,Western,VCT_Women_pct,0.43405766133873813,0.156,0
+Talensi,Upper East,VCT_Women_pct,1.7361327464903018,0.009,1
+Sefwi Akontombra,Western North,VCT_Women_pct,0.19913133702729963,0.388,0
+Effia Kwesimintsim Municipal,Western,VCT_Women_pct,0.4340576613387381,0.249,0
+Nabdam,Upper East,VCT_Women_pct,1.0681698022635169,0.091,0
+Builsa South,Upper East,VCT_Women_pct,2.0738251238493994,0.007,1
+Builsa North Municipal,Upper East,VCT_Women_pct,1.0681698022635169,0.187,0
+Binduri,Upper East,VCT_Women_pct,1.0681698022635169,0.117,0
+Pusiga,Upper East,VCT_Women_pct,1.0681698022635169,0.187,0
+Bawku Municipal,Upper East,VCT_Women_pct,1.0681698022635169,0.091,0
+North Gonja,Savannah,VCT_Women_pct,4.306703634254346,0.001,1
+West Gonja,Savannah,VCT_Women_pct,5.923026645602129,0.001,1
+Mion,Northern,VCT_Women_pct,4.2658201698496665,0.001,1
+Yendi Municipal,Northern,VCT_Women_pct,4.029076387599314,0.004,1
+Tolon,Northern,VCT_Women_pct,4.786656490800441,0.001,1
+Kumbungu,Northern,VCT_Women_pct,4.397978345483397,0.001,1
+West Mamprusi Municipal,North East,VCT_Women_pct,3.050725576612921,0.001,1
+Mamprugu Moagduri,North East,VCT_Women_pct,3.1581635179554497,0.003,1
+Zabzugu,Northern,VCT_Women_pct,4.029076387599314,0.002,1
+Tatale Sanguli,Northern,VCT_Women_pct,4.029076387599314,0.1,0
+Sene East,Bono East,VCT_Women_pct,-0.14057503192360288,0.145,0
+Bibiani Anhwiaso Bekwai Municipal,Western North,VCT_Women_pct,0.3832322546367441,0.172,0
+Sene West,Bono East,VCT_Women_pct,-0.2745787287160385,0.067,0
+Upper Denkyira East Municipal,Central,VCT_Women_pct,0.05485650179109606,0.358,0
+Asutifi North,Ahafo,VCT_Women_pct,-0.04258482864413444,0.334,0
+Ahafo Ano North Municipal,Ashanti,VCT_Women_pct,-0.0011618761732647344,0.459,0
+Amansie Central,Ashanti,VCT_Women_pct,-0.0037176336900103316,0.048,1
+Amansie West,Ashanti,VCT_Women_pct,-0.004318988399832824,0.027,1
+Asutifi South,Ahafo,VCT_Women_pct,0.10469959166969431,0.242,0
+Techiman Municipal,Bono East,VCT_Women_pct,-0.08613603010167593,0.248,0
+Upper Denkyira West,Central,VCT_Women_pct,0.10215906326572999,0.148,0
+Techiman North,Bono East,VCT_Women_pct,-0.15941930178503913,0.165,0
+Cape Cape Metropolitan Area (CCMA)-Cape Coast South & Cape Coast North,Central,VCT_Women_pct,0.003957839151723832,0.396,0
+Komenda Edina Eguafo Abirem Municipal,Central,VCT_Women_pct,0.05513312495761441,0.404,0
+Banda,Bono,VCT_Women_pct,-0.321480022593391,0.041,1
+Sefwi Wiawso Municipal,Western North,VCT_Women_pct,0.2604041884402588,0.238,0
+Jaman North,Bono,VCT_Women_pct,-0.11544933877502124,0.228,0
+Asunafo South,Ahafo,VCT_Women_pct,0.07048079052448308,0.399,0
+Tain,Bono,VCT_Women_pct,-0.11544933877502125,0.204,0
+Nkoranza South Municipal,Bono East,VCT_Women_pct,0.031117204591705163,0.469,0
+Sekyere Kumawu,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+Bole,Savannah,VCT_Women_pct,3.382547183060201,0.003,1
+Sekyere Afram Plains,Ashanti,VCT_Women_pct,-0.0005687217549398215,0.483,0
+Asante Akim North Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.044,1
+Asante Akim Central Municipal,Ashanti,VCT_Women_pct,-0.004318988399832824,0.025,1
+Kintampo North Municipal,Bono East,VCT_Women_pct,-0.7218160667607921,0.002,1
+Asokore Mampong Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.043,1
+Atebubu Amantin Municipal,Bono East,VCT_Women_pct,0.0018038959183598873,0.454,0
+Kwadaso Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.044,1
+Kpandai,Northern,VCT_Women_pct,1.9571404426998495,0.03,1
+Ejisu Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.015,1
+Nkwanta North (Kpassa),Oti,VCT_Women_pct,-0.32337957456162997,0.026,1
+Biakoye,Oti,VCT_Women_pct,0.022399383586279017,0.487,0
+Wassa Amenfi East Municipal,Western,VCT_Women_pct,0.17616578288788007,0.396,0
+Central Gonja,Savannah,VCT_Women_pct,4.671259177317997,0.001,1
+Tema West Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.426,0
+Ashaiman Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.426,0
+Pru East,Bono East,VCT_Women_pct,-0.5392360298810988,0.004,1
+Kpone Katamanso Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.077,0
+Savelugu Municipal,Northern,VCT_Women_pct,4.061022536529483,0.001,1
+Tamale Metropolitan Area (TMA)-Tamale Central & Tamale South,Northern,VCT_Women_pct,4.660393140266919,0.001,1
+Sagnarigu Municipal,Northern,VCT_Women_pct,4.029076387599315,0.001,1
+Karaga,Northern,VCT_Women_pct,4.082319969149594,0.001,1
+North East Gonja,Savannah,VCT_Women_pct,3.161966630923327,0.001,1
+South Dayi,Volta,VCT_Women_pct,0.11460710575905472,0.338,0
+Tempane,Upper East,VCT_Women_pct,1.0681698022635169,0.125,0
+Bolgatanga East,Upper East,VCT_Women_pct,1.0681698022635169,0.091,0
+Yunyoo Nasuan,North East,VCT_Women_pct,4.1355635506998745,0.002,1
+Nanton,Northern,VCT_Women_pct,4.029076387599315,0.001,1
+Assin Central Municipal,Central,VCT_Women_pct,0.003957839151723833,0.443,0
+Gomoa Central,Central,VCT_Women_pct,0.003957839151723832,0.422,0
+Pru West,Bono East,VCT_Women_pct,-0.32622598685478965,0.026,1
+Berekum West,Bono,VCT_Women_pct,-0.11544933877502124,0.249,0
+Ahafo Ano South West,Ashanti,VCT_Women_pct,-0.0026351952123298433,0.187,0
+Amansie South,Ashanti,VCT_Women_pct,-0.002803574531080142,0.168,0
+Atwima Nwabiagya North,Ashanti,VCT_Women_pct,-0.004318988399832825,0.047,1
+Akrofuom,Ashanti,VCT_Women_pct,-0.002740432286548779,0.095,0
+Adansi North,Ashanti,VCT_Women_pct,-0.004318988399832824,0.021,1
+Obuasi East,Ashanti,VCT_Women_pct,-0.004318988399832825,0.074,0
+Afigya Kwabre North,Ashanti,VCT_Women_pct,-0.004318988399832825,0.074,0
+"Kumasi Metropolitan Area (KMA)-Bantama, Manhyia North, Manhyia South, Nhyiaeso, & Subin",Ashanti,VCT_Women_pct,-0.004318988399832824,0.021,1
+Oforikrom Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.047,1
+Asokwa Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.074,0
+Old Tafo Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.047,1
+Suame Municipal,Ashanti,VCT_Women_pct,-0.004318988399832824,0.021,1
+Juaben Municipal,Ashanti,VCT_Women_pct,-0.004318988399832825,0.047,1
+Ablekuma Central Municipal,Greater Accra,VCT_Women_pct,0.4093255821820398,0.159,0
+Korle Klottey Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.078,0
+Ablekuma North Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.032,1
+Ayawaso North Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.078,0
+Ayawaso East Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.078,0
+Okaikoi North Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.048,1
+Ga North Municipal,Greater Accra,VCT_Women_pct,0.4093255821820398,0.159,0
+Weija Gbawe Municipal,Greater Accra,VCT_Women_pct,0.276914564227134,0.187,0
+Krowor Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.419,0
+Tema Metropolitan Area (TMA)-Tema Central & Tema East,Greater Accra,VCT_Women_pct,0.4093255821820399,0.419,0
+East Gonja Municipal,Savannah,VCT_Women_pct,2.938343588412151,0.004,1
+Ablekuma West Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.122,0
+Ayawaso Central Municipal,Greater Accra,VCT_Women_pct,0.4093255821820399,0.122,0
+"Accra Metropolitan Area (AMA)-Ablekuma South, Ashiedu Keteke & Okaikoi South",Greater Accra,VCT_Women_pct,0.4093255821820398,0.156,0
+Anloga,Volta,VCT_Women_pct,0.12106164631114905,0.206,0
+"Sekondi Takoradi Metropolitan Area (STMA)- Takoradi, Sekondi & Essikado-Ketan",Western,VCT_Women_pct,0.4340576613387381,0.206,0
+Kwahu South Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Asene Manso Akroso,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Upper Manya Krobo,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Achiase,Eastern,VCT_Women_pct,1.137194389229138,0.023,1
+Okere,Eastern,VCT_Women_pct,1.137194389229138,0.003,1
+Yilo Krobo Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Atiwa West,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+New Juaben North Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Fanteakwa North,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Birim North,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Asuogyaman,Eastern,VCT_Women_pct,1.137194389229138,0.003,1
+Kwahu East,Eastern,VCT_Women_pct,1.137194389229138,0.003,1
+Kwahu West Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Lower Manya Krobo Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.003,1
+Nsawam Adoagyiri Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.003,1
+Akwapim South Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.003,1
+Denkyembuor,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Kwaebibirem Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Kwahu Afram Plains South,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Kwahu Afram Plains North,Eastern,VCT_Women_pct,1.137194389229138,0.003,1
+Suhum Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Ayensuano,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Abuakwa South Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Upper West Akim,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+West Akim Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Akyemansa,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Atiwa East,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+New Juaben South Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Birim South,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Abuakwa North Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Akwapim North Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Fanteakwa South,Eastern,VCT_Women_pct,1.137194389229138,0.001,1
+Birim Central Municipal,Eastern,VCT_Women_pct,1.137194389229138,0.001,1

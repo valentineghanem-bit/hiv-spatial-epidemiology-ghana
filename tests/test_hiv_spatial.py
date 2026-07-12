@@ -1,232 +1,233 @@
 #!/usr/bin/env python3
 """
-tests/test_hiv_spatial.py - Ghana HIV Spatial Epidemiology (260 Districts)
-Unit tests with canonical value assertions (QA-verified April 2026).
+tests/test_hiv_spatial.py - Ghana HIV Spatial Epidemiology (261 Districts)
 
 Run: pytest tests/ -v
-Tenet 8: SEED=42. Canonical values from manuscript FINAL.
-Data: Ghana DHS 2014/2022, Census 2021, 260-district framework.
+
+Corrected 2026-07-12 after a pre-publication data-integrity fix (see
+DATA_CORRECTION_NOTE.md): tests now load and assert against the actual
+output CSVs rather than comparing hardcoded constants to themselves, which
+was the previous file's defect -- the old canonical-value tests could never
+fail regardless of what the pipeline actually produced.
 """
 
 import os
-import pytest
-import numpy as np
 import pandas as pd
+import pytest
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MASTER_CSV = os.path.join(REPO_ROOT, "outputs", "data", "Ghana_HIV_Spatial_Analysis_MASTER.csv")
 MORANS_CSV = os.path.join(REPO_ROOT, "outputs", "data", "Morans_I_Results.csv")
 LISA_CSV = os.path.join(REPO_ROOT, "outputs", "data", "LISA_Results.csv")
+GETIS_CSV = os.path.join(REPO_ROOT, "outputs", "data", "Getis_Ord_Results.csv")
+LAG_CSV = os.path.join(REPO_ROOT, "outputs", "data", "Spatial_Lag_Regression_Results.csv")
 LASSO_CSV = os.path.join(REPO_ROOT, "outputs", "data", "lasso_results.csv")
 RF_CSV = os.path.join(REPO_ROOT, "outputs", "data", "rf_cv_results.csv")
+MODEL_COMP_CSV = os.path.join(REPO_ROOT, "outputs", "data", "model_comparison.csv")
+SHAP_SUMMARY_CSV = os.path.join(REPO_ROOT, "outputs", "data", "shap_summary.csv")
 SHAP_CSV = os.path.join(REPO_ROOT, "outputs", "data", "shap_values.csv")
 
-# CANONICAL VALUES (QA-verified 2026-04-30)
-N_DISTRICTS = 260
-MORANS_I_HIV = 0.907 # Global Moran's I, HIV prevalence, KNN k=4
-MORANS_Z_HIV = 22.34 # z-score (p<0.001)
-LISA_TOTAL_SIG = 110 # Total significant LISA clusters (p<0.05)
-LISA_LH_COUNT = 59 # Low-High clusters (boundary-transition)
-LISA_HL_COUNT = 51 # High-Low clusters
-SPATIAL_LAG_RHO = 0.596 # Spatial lag model rho
-SPATIAL_LAG_R2 = 0.927 # Spatial lag pseudo-R2
-LASSO_R2 = 0.933 # LASSO 10-fold CV R2
-RF_SPATIAL_CV_R2 = 0.611 # Random Forest leave-one-region-out CV R2
-TOP_SHAP_FEATURE = "vct_uptake" # or "vct_women_pct"
-TOP_SHAP_VALUE = 0.639
-SHAP2_FEATURE = "wife_beating_acceptance"
-SHAP2_VALUE = 0.241
-SHAP3_FEATURE = "female_edu_secondary"
-SHAP3_VALUE = 0.028
+N_DISTRICTS = 261
 
 
 def load_csv(path, name):
- if not os.path.exists(path):
- pytest.skip(f"{name} not found - run analysis pipeline first.")
- return pd.read_csv(path)
+    if not os.path.exists(path):
+        pytest.skip(f"{name} not found - run analysis/spatial_analysis_pipeline.py first.")
+    return pd.read_csv(path)
 
 
 class TestMasterDataset:
- """Master dataset structural integrity."""
+    """Master dataset structural integrity."""
 
- def test_district_count(self):
- """Dataset must contain exactly 260 districts."""
- df = load_csv(MASTER_CSV, "Master CSV")
- assert len(df) == N_DISTRICTS, \
- f"Expected {N_DISTRICTS} rows, got {len(df)}"
+    def test_district_count(self):
+        """Dataset must contain exactly 261 districts (the full census frame)."""
+        df = load_csv(MASTER_CSV, "Master CSV")
+        assert len(df) == N_DISTRICTS, f"Expected {N_DISTRICTS} rows, got {len(df)}"
 
- def test_no_duplicate_districts(self):
- """Each district must appear exactly once."""
- df = load_csv(MASTER_CSV, "Master CSV")
- dist_col = next((c for c in df.columns if "district" in c.lower()), None)
- if dist_col:
- assert df[dist_col].is_unique, \
- f"Duplicate districts found in '{dist_col}'"
+    def test_no_duplicate_districts(self):
+        """Each district must appear exactly once."""
+        df = load_csv(MASTER_CSV, "Master CSV")
+        assert df["District"].is_unique, "Duplicate districts found in 'District'"
 
- def test_hiv_prevalence_bounds(self):
- """HIV prevalence (%) must be in [0, 100]."""
- df = load_csv(MASTER_CSV, "Master CSV")
- hiv_col = next((c for c in df.columns if "hiv" in c.lower() and "prev" in c.lower()), None)
- if hiv_col is None:
- pytest.skip("HIV prevalence column not found")
- valid = df[hiv_col].dropna()
- assert (valid >= 0).all() and (valid <= 100).all(), \
- "HIV prevalence out of [0, 100]"
+    def test_hiv_prevalence_bounds(self):
+        """HIV prevalence (%) must be in [0, 100]."""
+        df = load_csv(MASTER_CSV, "Master CSV")
+        valid = df["HIV_Prev_Total_pct"].dropna()
+        assert (valid >= 0).all() and (valid <= 100).all(), "HIV prevalence out of [0, 100]"
 
- def test_required_columns_present(self):
- """Key analytical columns must be present."""
- df = load_csv(MASTER_CSV, "Master CSV")
- required_keywords = ["district", "hiv", "vct"]
- for kw in required_keywords:
- matches = [c for c in df.columns if kw in c.lower()]
- assert len(matches) > 0, f"No column with keyword '{kw}' found"
+    def test_required_columns_present(self):
+        """Key analytical columns must be present."""
+        df = load_csv(MASTER_CSV, "Master CSV")
+        required = ["District", "Region", "HIV_Prev_Total_pct", "VCT_Women_pct",
+                    "LISA_Cluster_Type", "LISA_Local_Morans_I", "Spatial_Unit_Note"]
+        missing = [c for c in required if c not in df.columns]
+        assert not missing, f"Missing required columns: {missing}"
 
- def test_missing_rate_hiv_col(self):
- """HIV prevalence column must have < 20% missing values."""
- df = load_csv(MASTER_CSV, "Master CSV")
- hiv_col = next((c for c in df.columns if "hiv" in c.lower() and "prev" in c.lower()), None)
- if hiv_col is None:
- pytest.skip("HIV prevalence column not found")
- miss_pct = df[hiv_col].isna().mean() * 100
- assert miss_pct < 20, \
- f"HIV prevalence column: {miss_pct:.1f}% missing (threshold 20%)"
+    def test_no_missing_hiv_prevalence(self):
+        """HIV prevalence must be populated for every district."""
+        df = load_csv(MASTER_CSV, "Master CSV")
+        assert df["HIV_Prev_Total_pct"].isna().sum() == 0
+
+    def test_shared_polygon_districts_documented(self):
+        """Guan and Krachi East Municipal (shared-geometry pair) must carry a Spatial_Unit_Note."""
+        df = load_csv(MASTER_CSV, "Master CSV")
+        for name in ("Guan", "Krachi East Municipal"):
+            row = df[df["District"] == name]
+            assert len(row) == 1, f"{name} missing or duplicated"
+            assert row.iloc[0]["Spatial_Unit_Note"].strip() != "", f"{name} missing Spatial_Unit_Note"
 
 
 class TestSpatialAutocorrelation:
- """Global Moran's I canonical assertions."""
+    """Global Moran's I -- read from the actual results file, not a hardcoded constant."""
 
- def test_morans_i_canonical(self):
- """Moran's I = 0.907 +/- 0.05 (KNN k=4, 999 permutations)."""
- assert abs(MORANS_I_HIV - 0.907) <= 0.05, \
- f"Moran's I = {MORANS_I_HIV}; canonical 0.907 +/- 0.05"
+    def test_morans_csv_exists(self):
+        df = load_csv(MORANS_CSV, "Morans_I_Results.csv")
+        assert len(df) > 0, "Moran's I results CSV is empty"
 
- def test_morans_i_positive_strong(self):
- """Moran's I must be strongly positive (> 0.50) — strong HIV clustering."""
- assert MORANS_I_HIV > 0.50, \
- f"Moran's I = {MORANS_I_HIV}; expected strong clustering > 0.50"
+    def test_morans_i_hiv_strong_positive(self):
+        """HIV prevalence Moran's I must be strongly positive (> 0.50)."""
+        df = load_csv(MORANS_CSV, "Morans_I_Results.csv")
+        row = df[df["Variable"] == "HIV_Prev_Total_pct"].iloc[0]
+        assert row["Morans_I"] > 0.50, f"Moran's I = {row['Morans_I']}; expected > 0.50"
 
- def test_morans_z_highly_significant(self):
- """z-score must exceed 3.291 (p < 0.001); canonical = 22.34."""
- assert MORANS_Z_HIV > 3.291, \
- f"Moran's I z-score = {MORANS_Z_HIV}; expected > 3.291 (p<0.001)"
+    def test_morans_i_valid_range(self):
+        df = load_csv(MORANS_CSV, "Morans_I_Results.csv")
+        assert (df["Morans_I"] >= -1).all() and (df["Morans_I"] <= 1).all()
 
- def test_morans_z_canonical(self):
- """z-score must equal canonical 22.34 +/- 2.0."""
- assert abs(MORANS_Z_HIV - 22.34) <= 2.0, \
- f"z-score = {MORANS_Z_HIV}; canonical 22.34 +/- 2.0"
-
- def test_morans_i_valid_range(self):
- """Moran's I must lie within [-1, 1]."""
- assert -1 <= MORANS_I_HIV <= 1
-
- def test_morans_csv_exists(self):
- """Moran's I results CSV must exist."""
- df = load_csv(MORANS_CSV, "Morans_I_Results.csv")
- assert len(df) > 0, "Moran's I results CSV is empty"
+    def test_morans_i_hiv_significant(self):
+        df = load_csv(MORANS_CSV, "Morans_I_Results.csv")
+        row = df[df["Variable"] == "HIV_Prev_Total_pct"].iloc[0]
+        assert row["Permutation_P"] <= 0.05, f"Permutation p={row['Permutation_P']}; expected <=0.05"
 
 
 class TestLISAClusters:
- """Bivariate LISA cluster canonical assertions."""
+    """LISA cluster assertions, read from the actual results file."""
 
- def test_total_significant_canonical(self):
- """Total significant LISA clusters must equal canonical 110 +/- 15."""
- assert abs(LISA_TOTAL_SIG - 110) <= 15, \
- f"Total LISA sig = {LISA_TOTAL_SIG}; canonical 110 +/- 15"
+    def test_lisa_csv_exists(self):
+        df = load_csv(LISA_CSV, "LISA_Results.csv")
+        assert len(df) > 0
 
- def test_lh_count_canonical(self):
- """Low-High clusters must equal canonical 59 +/- 10."""
- assert abs(LISA_LH_COUNT - 59) <= 10, \
- f"LH count = {LISA_LH_COUNT}; canonical 59 +/- 10"
+    def test_lisa_valid_cluster_labels(self):
+        df = load_csv(LISA_CSV, "LISA_Results.csv")
+        assert set(df["LISA_Cluster_Type"].unique()) <= {"HH", "LL", "HL", "LH", "NS"}
 
- def test_hl_count_canonical(self):
- """High-Low clusters must equal canonical 51 +/- 10."""
- assert abs(LISA_HL_COUNT - 51) <= 10, \
- f"HL count = {LISA_HL_COUNT}; canonical 51 +/- 10"
+    def test_lisa_significant_districts_present(self):
+        """At least some districts must show significant LISA clustering."""
+        df = load_csv(LISA_CSV, "LISA_Results.csv")
+        n_sig = (df["LISA_Significant_Flag"] == 1).sum()
+        assert n_sig > 0, "No significant LISA clusters found"
 
- def test_cluster_counts_positive(self):
- """LH and HL cluster counts must be positive."""
- assert LISA_LH_COUNT > 0 and LISA_HL_COUNT > 0
+    def test_lisa_hh_ll_own_value_direction(self):
+        """High-High districts must average higher HIV prevalence than Low-Low districts
+        (own-value sanity check -- catches a sign-flip or quadrant-mislabeling bug)."""
+        lisa = load_csv(LISA_CSV, "LISA_Results.csv")
+        master = load_csv(MASTER_CSV, "Master CSV")
+        merged = lisa.merge(master[["District", "HIV_Prev_Total_pct"]], on="District")
+        hh_mean = merged.loc[merged["LISA_Cluster_Type"] == "HH", "HIV_Prev_Total_pct"].mean()
+        ll_mean = merged.loc[merged["LISA_Cluster_Type"] == "LL", "HIV_Prev_Total_pct"].mean()
+        assert hh_mean > ll_mean, f"HH mean ({hh_mean}) must exceed LL mean ({ll_mean})"
 
- def test_lisa_csv_exists(self):
- """LISA results CSV must exist."""
- df = load_csv(LISA_CSV, "LISA_Results.csv")
- assert len(df) > 0
+
+class TestGetisOrd:
+    """Getis-Ord Gi* hotspot/coldspot assertions."""
+
+    def test_getis_csv_exists(self):
+        df = load_csv(GETIS_CSV, "Getis_Ord_Results.csv")
+        assert len(df) > 0
+
+    def test_getis_finds_both_hot_and_coldspots(self):
+        """A dataset with Moran's I > 0.5 should show both hotspots and coldspots,
+        not an all-non-significant result (regression guard for the pre-fix bug where
+        Getis-Ord returned zero hotspots and zero coldspots across all districts)."""
+        df = load_csv(GETIS_CSV, "Getis_Ord_Results.csv")
+        counts = df["Hotspot_Type"].value_counts()
+        assert counts.get("Hotspot", 0) > 0, "No Getis-Ord hotspots found"
+        assert counts.get("Coldspot", 0) > 0, "No Getis-Ord coldspots found"
 
 
 class TestRegressionModels:
- """Spatial lag model and LASSO regression canonical assertions."""
+    """Spatial lag, LASSO, and Random Forest assertions, read from actual results files."""
 
- def test_spatial_lag_rho_canonical(self):
- """Spatial lag rho must equal canonical 0.596 +/- 0.05."""
- assert abs(SPATIAL_LAG_RHO - 0.596) <= 0.05, \
- f"Spatial lag rho = {SPATIAL_LAG_RHO}; canonical 0.596 +/- 0.05"
+    def test_spatial_lag_csv_exists(self):
+        df = load_csv(LAG_CSV, "Spatial_Lag_Regression_Results.csv")
+        assert len(df) > 0
 
- def test_spatial_lag_r2_canonical(self):
- """Spatial lag pseudo-R2 must equal canonical 0.927 +/- 0.05."""
- assert abs(SPATIAL_LAG_R2 - 0.927) <= 0.05, \
- f"Pseudo-R2 = {SPATIAL_LAG_R2}; canonical 0.927 +/- 0.05"
+    def test_spatial_lag_rho_positive_and_significant(self):
+        df = load_csv(LAG_CSV, "Spatial_Lag_Regression_Results.csv")
+        row = df[df["Variable"] == "W_HIV_Prev_Total_pct"].iloc[0]
+        assert row["Coefficient"] > 0, "Spatial lag rho must be positive"
+        assert row["P_Value"] < 0.05, "Spatial lag rho must be statistically significant"
 
- def test_spatial_lag_r2_high(self):
- """Spatial lag pseudo-R2 must exceed 0.80 (high explanatory power)."""
- assert SPATIAL_LAG_R2 > 0.80
+    def test_lasso_r2_excellent(self):
+        df = load_csv(MODEL_COMP_CSV, "model_comparison.csv")
+        r2 = df.loc[df["Model"] == "LASSO", "R2"].iloc[0]
+        assert r2 > 0.85, f"LASSO R2 = {r2}; expected > 0.85"
 
- def test_lasso_r2_canonical(self):
- """LASSO R2 must equal canonical 0.933 +/- 0.05."""
- assert abs(LASSO_R2 - 0.933) <= 0.05, \
- f"LASSO R2 = {LASSO_R2}; canonical 0.933 +/- 0.05"
+    def test_rf_cv_r2_above_floor(self):
+        df = load_csv(MODEL_COMP_CSV, "model_comparison.csv")
+        r2 = df.loc[df["Model"] == "Random Forest (Spatial LOO-CV)", "R2"].iloc[0]
+        assert r2 > 0.50, f"RF spatial CV R2 = {r2}; expected > 0.50"
 
- def test_lasso_r2_excellent(self):
- """LASSO R2 must exceed 0.85 (excellent fit)."""
- assert LASSO_R2 > 0.85
+    def test_lasso_csv_exists(self):
+        df = load_csv(LASSO_CSV, "lasso_results.csv")
+        assert len(df) > 0
 
- def test_rf_spatial_cv_r2_canonical(self):
- """RF spatial CV R2 must equal canonical 0.611 +/- 0.08."""
- assert abs(RF_SPATIAL_CV_R2 - 0.611) <= 0.08, \
- f"RF CV R2 = {RF_SPATIAL_CV_R2}; canonical 0.611 +/- 0.08"
-
- def test_rf_cv_r2_above_floor(self):
- """RF spatial CV R2 must exceed 0.50 (acceptable spatial prediction)."""
- assert RF_SPATIAL_CV_R2 > 0.50
+    def test_rf_fold_csv_exists(self):
+        df = load_csv(RF_CSV, "rf_cv_results.csv")
+        assert len(df) > 0
 
 
 class TestSHAPInterpretability:
- """SHAP interpretability canonical assertions (Tenet 13)."""
+    """SHAP interpretability assertions, read from the actual results file."""
 
- def test_top_shap_feature_vct(self):
- """Top SHAP feature must be VCT-related (canonical: vct_uptake, |SHAP|=0.639)."""
- assert "vct" in TOP_SHAP_FEATURE.lower(), \
- f"Top SHAP feature should be VCT-related; got '{TOP_SHAP_FEATURE}'"
+    def test_shap_summary_csv_exists(self):
+        df = load_csv(SHAP_SUMMARY_CSV, "shap_summary.csv")
+        assert len(df) > 0
 
- def test_top_shap_value_canonical(self):
- """Top SHAP |value| must equal canonical 0.639 +/- 0.10."""
- assert abs(TOP_SHAP_VALUE - 0.639) <= 0.10, \
- f"Top SHAP |value| = {TOP_SHAP_VALUE}; canonical 0.639 +/- 0.10"
+    def test_top_shap_feature_vct(self):
+        """Top SHAP feature must be VCT-related."""
+        df = load_csv(SHAP_SUMMARY_CSV, "shap_summary.csv")
+        top = df.iloc[0]["Feature"]
+        assert "vct" in top.lower(), f"Top SHAP feature should be VCT-related; got '{top}'"
 
- def test_shap2_wife_beating(self):
- """SHAP rank 2 must be wife-beating acceptance (gender equity determinant)."""
- assert "beat" in SHAP2_FEATURE.lower() or "wife" in SHAP2_FEATURE.lower() or "gender" in SHAP2_FEATURE.lower(), \
- f"SHAP rank 2 should be wife-beating-related; got '{SHAP2_FEATURE}'"
+    def test_shap_values_descending(self):
+        """SHAP importances must be sorted in descending order."""
+        df = load_csv(SHAP_SUMMARY_CSV, "shap_summary.csv")
+        vals = df["Mean_Abs_SHAP"].tolist()
+        assert vals == sorted(vals, reverse=True), "SHAP values must be in descending order"
 
- def test_shap3_female_education(self):
- """SHAP rank 3 must be female education (upstream structural determinant)."""
- assert "edu" in SHAP3_FEATURE.lower() or "female" in SHAP3_FEATURE.lower(), \
- f"SHAP rank 3 should be education-related; got '{SHAP3_FEATURE}'"
+    def test_shap_plots_exist(self):
+        """SHAP summary, waterfall, and dependence plots must be present."""
+        figures_dir = os.path.join(REPO_ROOT, "outputs", "figures")
+        if not os.path.exists(figures_dir):
+            pytest.skip("Figures directory not found")
+        shap_files = [f for f in os.listdir(figures_dir) if "shap" in f.lower()]
+        assert len(shap_files) >= 2, f"Expected >= 2 SHAP figures; found {len(shap_files)}: {shap_files}"
 
- def test_shap_hierarchy(self):
- """SHAP values must be in descending order: rank1 > rank2 > rank3."""
- assert TOP_SHAP_VALUE > SHAP2_VALUE > SHAP3_VALUE, \
- "SHAP values must be in descending order by rank"
+    def test_shap_csv_exists(self):
+        df = load_csv(SHAP_CSV, "shap_values.csv")
+        assert len(df) > 0, "SHAP values CSV is empty"
 
- def test_shap_plots_exist(self):
- """SHAP summary, waterfall, and dependence plots must be present (Tenet 13)."""
- figures_dir = os.path.join(REPO_ROOT, "outputs", "figures")
- if not os.path.exists(figures_dir):
- pytest.skip("Figures directory not found")
- shap_files = [f for f in os.listdir(figures_dir) if "shap" in f.lower()]
- assert len(shap_files) >= 2, \
- f"Expected >= 2 SHAP figures; found {len(shap_files)}: {shap_files}"
+    def test_shap_csv_row_count_matches_districts(self):
+        shap_df = load_csv(SHAP_CSV, "shap_values.csv")
+        assert len(shap_df) == N_DISTRICTS, \
+            f"shap_values.csv has {len(shap_df)} rows, expected {N_DISTRICTS}"
 
- def test_shap_csv_exists(self):
- """SHAP values CSV must exist after running analysis pipeline."""
- df = load_csv(SHAP_CSV, "shap_values.csv")
- assert len(df) > 0, "SHAP values CSV is empty"
+
+class TestRegionLevelGranularityDisclosure:
+    """Guards for the region-level-outcome limitation surfaced by the 2026-07-12
+    epid-council review (COUNCIL-141) -- these variables are DHS regional estimates,
+    not independent district measurements, and must stay recognizably low-cardinality
+    so the limitation is not silently 'fixed away' by a future data refresh without
+    someone noticing the underlying granularity changed."""
+
+    def test_hiv_prevalence_is_region_level_cardinality(self):
+        df = load_csv(MASTER_CSV, "Master CSV")
+        n_regions = df["Region"].nunique()
+        n_unique_hiv = df["HIV_Prev_Total_pct"].nunique()
+        assert n_unique_hiv <= n_regions + 2, (
+            f"HIV_Prev_Total_pct now has {n_unique_hiv} unique values across "
+            f"{n_regions} regions -- if this increased because district-level DHS "
+            f"biomarker data is now available, update DATA_CORRECTION_NOTE.md and "
+            f"README to remove the regional-granularity caveat."
+        )

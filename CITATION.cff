@@ -1,28 +1,30 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "Subnational Spatial Epidemiology of HIV Prevalence and Socioeconomic Determinants in Ghana: 260-District Analysis"
+title: "Subnational Spatial Epidemiology of HIV Prevalence and Socioeconomic Determinants in Ghana: 261-District Analysis"
 abstract: >
  Reproducible analysis pipeline for a spatial epidemiological study of HIV
- prevalence and its socioeconomic determinants across Ghana's 260 administrative
- districts. Methods include Global Moran's I, Bivariate LISA, Getis-Ord Gi*,
+ prevalence and its socioeconomic determinants across all 261 of Ghana's
+ census districts (261 districts share 260 unique GSS 2023 boundary
+ polygons). Methods include Global Moran's I, Bivariate LISA, Getis-Ord Gi*,
  spatial lag regression, LASSO, and Random Forest with SHAP interpretability.
- Top predictor: VCT uptake (|SHAP|=0.639); Moran's I=0.907 (p<0.001).
+ Top predictor: VCT uptake (|SHAP|=0.639); Global Moran's I=0.920 (KNN k=4,
+ p=0.001).
 authors:
  - family-names: Ghanem
  given-names: Valentine Golden
  orcid: "https://orcid.org/0009-0002-8332-0220"
  affiliation: "Ghana COCOBOD Cocoa Clinic, Accra, Ghana"
  email: valentineghanem@gmail.com
-version: "1.0.0"
-date-released: "2026-04-30"
+version: "1.0.1"
+date-released: "2026-07-12"
 license: MIT
-repository-code: "https://github.com/[author]/ghana-hiv-spatial-260district"
+repository-code: "https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana"
 keywords:
  - HIV
  - spatial epidemiology
  - Ghana
- - 260 districts
+ - 261 districts
  - LISA
  - SHAP
  - spatial lag model
@@ -32,7 +34,7 @@ keywords:
  - STROBE
 references:
  - type: article
- title: "Subnational spatial epidemiology of HIV prevalence and socioeconomic determinants in Ghana: Bivariate LISA, GWR, and Random Forest analysis across 260 districts"
+ title: "Subnational spatial epidemiology of HIV prevalence and socioeconomic determinants in Ghana: Bivariate LISA, spatial lag regression, and Random Forest analysis across 261 districts"
  authors:
  - family-names: Ghanem
  given-names: Valentine Golden

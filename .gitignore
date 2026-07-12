@@ -8,3 +8,6 @@ node_modules/
 .ipynb_checkpoints/
 
 *.docx
+*.pdf
+manuscript/
+submission_package/
