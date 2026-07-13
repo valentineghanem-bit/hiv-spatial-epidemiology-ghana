@@ -39,12 +39,19 @@ def shortname(name):
     return n
 
 out = []
-skipped = 0
+mapless = 0
 for _, row in merged.iterrows():
     geoname = row["geojson_district"]
+    # Districts with no geojson_district (e.g. Guan, which shares Krachi East
+    # Municipal's display geometry) still get a real R entry -- own v/lisa/x,
+    # own region -- so they count correctly everywhere except the map itself
+    # (map rendering iterates GEO.features, not R, so a name with no matching
+    # polygon simply never draws a shape; it does NOT create a phantom one).
+    # This keeps "districts in view", the ranking chart, and the scatter plot
+    # at the true analytical N=261 instead of silently dropping these rows.
     if pd.isna(geoname):
-        skipped += 1
-        continue
+        mapless += 1
+        geoname = row["District"].upper()
     out.append({
         "name": geoname,
         "short": shortname(row["District"]),
@@ -54,7 +61,7 @@ for _, row in merged.iterrows():
         "region": row["geojson_region"] if pd.notna(row["geojson_region"]) else row["Region"].upper(),
     })
 
-print("total analytical districts:", len(merged), "| mapped (geojson-matched):", len(out), "| skipped (no polygon):", skipped)
+print("total analytical districts:", len(merged), "| R entries:", len(out), "| mapless (no polygon, still counted):", mapless)
 
 cluster_counts = {}
 for r in out:
