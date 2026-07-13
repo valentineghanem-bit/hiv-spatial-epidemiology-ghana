@@ -122,8 +122,9 @@ var vr=rng('v');
 // stale N (this badge used to always read "16 regions - 260+ districts" regardless of
 // what the actual dataset was).
 var UNIT=C.unitName||'region',UNIT_CAP=UNIT.charAt(0).toUpperCase()+UNIT.slice(1),UNITS=UNIT+'s',UNITS_CAP=UNIT_CAP+'s';
+var ANALYTIC_N=(function(){for(var i=0;i<KPIS.length;i++){if(KPIS[i].l==='Districts analysed')return parseInt(KPIS[i].v,10)||R.length;}return R.length;})();
 document.getElementById('pTag').textContent=C.tag;
-document.getElementById('pDist').textContent=R.length+' '+UNITS;
+document.getElementById('pDist').textContent=ANALYTIC_N+' '+UNITS;
 document.getElementById('pKick').textContent=N.kicker||(C.tag+' · Ghana');
 document.getElementById('pTitle').textContent=C.title;document.title=C.title+' — Conference Poster';
 document.getElementById('pSub').textContent=C.sub;
@@ -135,7 +136,7 @@ document.getElementById('t1').innerHTML='The burden is <span class="hl">spatiall
 document.getElementById('cap1').textContent=UNIT_CAP+' '+C.outcome+', coloured by value (colourblind-safe scale).';
 document.getElementById('t2').innerHTML='A clear <span class="hl">north–south gradient</span> separates the most- and least-affected '+UNITS+', the signature of structural inequity.';
 document.getElementById('t3').innerHTML=C.hasX?('Across '+UNITS+', '+C.outcome+' tracks <span class="hl">'+C.cov+'</span> — the social-determinant pathway the analysis isolates.'):('Mean <span class="hl">'+C.outcome+'</span> differs sharply across spatial-cluster classes — high-high '+UNITS+' carry the heaviest burden.');
-document.getElementById('cap3').textContent=C.hasX?(C.outcome+' vs '+C.cov+', '+R.length+' '+UNITS+', with OLS fit.'):('Mean '+C.outcome+' by LISA cluster class (HH/HL/LH/LL/NS).');
+document.getElementById('cap3').textContent=C.hasX?(C.outcome+' vs '+C.cov+', '+ANALYTIC_N+' '+UNITS+', with OLS fit.'):('Mean '+C.outcome+' by LISA cluster class (HH/HL/LH/LL/NS).');
 (function(){
   var hhCount=R.filter(function(d){return d.lisa==='HH';}).length;
   var llCount=R.filter(function(d){return d.lisa==='LL';}).length;
@@ -169,7 +170,7 @@ var POSTER_CAP=15;
 var rkFull=R.slice();
 var rkCapped=rkFull.length>POSTER_CAP*2;
 var rk=(rkCapped?rkFull.slice().sort(function(a,b){return b.v-a.v;}).slice(0,POSTER_CAP).concat(rkFull.slice().sort(function(a,b){return b.v-a.v;}).slice(-POSTER_CAP)):rkFull).sort(function(a,b){return a.v-b.v;});
-document.getElementById('capRank').textContent=(rkCapped?('Top+bottom '+POSTER_CAP+' of '+rkFull.length+' '+UNITS+' by '+C.outcome+'; colour = spatial-cluster class.'):(UNITS_CAP+' ranked; colour = spatial-cluster class.'))+(C.caveat?' Identical values across many '+UNITS+' reflect the data granularity described above, not a rendering error.':'');
+document.getElementById('capRank').textContent=(rkCapped?('Top+bottom '+POSTER_CAP+' of '+ANALYTIC_N+' '+UNITS+' by '+C.outcome+'; colour = spatial-cluster class.'):(UNITS_CAP+' ranked; colour = spatial-cluster class.'))+(C.caveat?' Identical values across many '+UNITS+' reflect the data granularity described above, not a rendering error.':'');
 document.getElementById('h2gradient').textContent='The '+UNIT+' gradient';
 init('cRank',{grid:{left:120,right:60,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:16}},yAxis:{type:'category',data:rk.map(function(x){return x.short;}),axisLabel:{fontSize:15}},
  series:[{type:'bar',data:rk.map(function(x){return{value:x.v,itemStyle:{color:LISA[x.lisa]}};}),barWidth:'64%',label:{show:true,position:'right',formatter:'{c}'+C.unit,fontSize:14}}]});

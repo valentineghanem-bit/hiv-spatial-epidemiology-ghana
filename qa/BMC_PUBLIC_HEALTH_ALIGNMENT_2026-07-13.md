@@ -37,7 +37,17 @@ Status: PASS
 - Tables are rebuilt as editable Word table objects in the BMC DOCX.
 - Table titles are short and placed above the tables.
 - Dashboard and poster now state 261 district records and name spatial error/GWR sensitivity checks.
-- Figure files in `outputs/figures/` are suitable for review-stage use; final production upload should preserve legibility at BMC final widths.
+- Figure files in `outputs/figures/` and `outputs/figures_cambridge/` are numbered Figure 1 to Figure 9 to match the manuscript legends and upload order.
+
+## Submission Companion Materials
+
+Status: PASS
+
+- BMC-specific cover letter prepared in human editor-facing language: `submission_package/BMC_PUBLIC_HEALTH_SUBMISSION_2026-07-13/BMC_COVER_LETTER_TO_EDITOR_2026-07-13.md` and `.docx`.
+- STROBE cross-sectional/ecological checklist completed and mapped to stable manuscript sections: `submission_package/BMC_PUBLIC_HEALTH_SUBMISSION_2026-07-13/STROBE_CROSS_SECTIONAL_CHECKLIST_2026-07-13.md` and `.docx`.
+- BMC portal checklist prepared: `submission_package/BMC_PUBLIC_HEALTH_SUBMISSION_2026-07-13/BMC_PORTAL_SUBMISSION_CHECKLIST_2026-07-13.md` and `.docx`.
+- Humanised BMC submission-readiness verdict prepared in the same folder.
+- The companion files are BMC-specific and no longer rely on Cambridge-branded wording.
 
 ## Data Availability
 

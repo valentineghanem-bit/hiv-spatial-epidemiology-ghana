@@ -170,6 +170,7 @@ function tb(){return{feature:{saveAsImage:{title:'PNG',pixelRatio:2,iconStyle:{b
 // (e.g. 'district' for 261-district datasets) so copy doesn't misdescribe the geography.
 if(C.caveat){var _ll=document.getElementById('legLisa');if(_ll){var _note=document.createElement('div');_note.style.cssText='font-size:11px;color:#888;margin-top:4px';_note.textContent='Grey = genuinely Not Significant (largest class here), not missing data.';_ll.parentNode.appendChild(_note);}}
 var UNIT=C.unitName||'region',UNIT_CAP=UNIT.charAt(0).toUpperCase()+UNIT.slice(1),UNITS=UNIT+'s',UNITS_CAP=UNIT_CAP+'s';
+var ANALYTIC_N=(function(){for(var i=0;i<KPIS.length;i++){if(KPIS[i].l==='Districts analysed')return parseInt(KPIS[i].v,10)||R.length;}return R.length;})();
 // header
 document.getElementById('ttl').innerHTML=C.title+' <span class="tag">'+C.tag+'</span>';
 document.getElementById('sub').textContent=C.sub+' · V. Ghanem · ORCID 0009-0002-8332-0220';
@@ -177,7 +178,7 @@ if(C.caveat){var cb=document.getElementById('caveatBox');cb.style.display='block
 document.getElementById('foot').innerHTML='Interactive single-file HI-EI dashboard — works offline. Smart controls: metric switch, cluster toggles, focus filter, sort, threshold slider, '+(C.hasX?'what-if predictor (OLS), ':'')+'zoomable maps, live summary, CSV/PNG/self-download. Data: published '+UNIT+' values for this study.';
 document.getElementById('focusLabel').textContent='Focus '+UNIT;
 document.getElementById('allRegionsOpt').textContent='All '+UNITS;
-(function(){var classified=R.filter(function(d){return d.lisa;}).length,excluded=R.length-classified;document.getElementById('tiersCap').textContent=UNITS_CAP+' per '+(C.clusterLabel||'LISA')+' class ('+classified+' of '+R.length+' classified'+(excluded>0?'; '+excluded+' excluded from spatial statistics':'')+').';})();
+(function(){var excluded=R.filter(function(d){return !d.lisa;}).length;document.getElementById('tiersCap').textContent=UNITS_CAP+' per '+(C.clusterLabel||'LISA')+' class ('+ANALYTIC_N+' district records; Guan shares display geometry'+(excluded>0?'; '+excluded+' excluded from spatial statistics':'')+').';})();
 document.getElementById('lisaMapTitle').textContent='Spatial cluster typology ('+(C.clusterLabel||'LISA')+')';
 document.getElementById('lisaMapCap').textContent=(C.clusterLabel||'Local Moran\'s I')+' clusters · scroll/drag to zoom & pan · click to filter.';
 document.getElementById('boxCap').textContent='Distribution of the outcome across '+UNITS+', grouped by spatial-cluster class.';
@@ -193,12 +194,12 @@ document.getElementById('thrLab').childNodes[0].nodeValue=(aboveBad?'Flag '+PRIM
 if(C.hasX){var xr=rng('x');S.wf=+( (xr[0]+xr[1])/2 ).toFixed(1);var wf=document.getElementById('wf');wf.min=Math.floor(xr[0]);wf.max=Math.ceil(xr[1]);wf.step=(xr[1]-xr[0]>20?1:.1);wf.value=S.wf;
  document.getElementById('wfVal').textContent=COV.label+' '+S.wf;}else{document.getElementById('wfCtl').style.display='none';}
 
-function summary(){var act=R.filter(active),n=act.length;
+function summary(){var act=R.filter(active),n=act.length,showN=(!S.focus&&n===R.length?ANALYTIC_N:n);
  var mean=function(k){var a=act.filter(function(d){return d[k]!=null;});return a.length?a.reduce(function(s,d){return s+d[k];},0)/a.length:0;};
  var vs=act.map(function(d){return d.v;});
  var flag=act.filter(function(d){return aboveBad?d.v>=S.thr:d.v<=S.thr;}).length;
  document.getElementById('summary').innerHTML=
-  '<div class="s"><b>'+n+'</b><span>'+UNITS+' in view</span></div>'+
+  '<div class="s"><b>'+showN+'</b><span>'+UNITS+' in view</span></div>'+
   '<div class="s"><b>'+mean('v').toFixed(1)+PRIM.unit+'</b><span>mean '+PRIM.label+'</span></div>'+
   (C.hasX?'<div class="s"><b>'+mean('x').toFixed(1)+'</b><span>mean '+COV.label+'</span></div>':'')+
   '<div class="s"><b>'+(n?Math.min.apply(null,vs).toFixed(1):'–')+'–'+(n?Math.max.apply(null,vs).toFixed(1):'–')+'</b><span>'+PRIM.label+' range</span></div>'+
@@ -341,8 +342,8 @@ function get(id){if(!charts[id]){charts[id]=echarts.init(document.getElementById
  if(id==='mapP'||id==='mapLisa')charts[id].on('click',function(p){var r=regFromMap(p.name);if(r)setFocus(r===S.focus?'':r);});
  else charts[id].on('click',function(p){if(p.data&&p.data.region)setFocus(p.data.region===S.focus?'':p.data.region);});}return charts[id];}
 function titles(){document.getElementById('mapTitle').textContent=metricOf(S.metric).label+' by '+UNIT;
- var capNote=R.length>CAP_N*2?(' (top+bottom '+CAP_N+' of '+R.length+' '+UNITS+' shown)'):'';
- var treeNote=R.length>TREE_N*2?(' (top+bottom '+TREE_N+' of '+R.length+' '+UNITS+' by magnitude)'):'';
+ var capNote=R.length>CAP_N*2?(' (top+bottom '+CAP_N+' of '+ANALYTIC_N+' '+UNITS+' shown)'):'';
+ var treeNote=R.length>TREE_N*2?(' (top+bottom '+TREE_N+' of '+ANALYTIC_N+' '+UNITS+' by magnitude)'):'';
  document.getElementById('rankTitle').textContent=UNIT_CAP+' ranking — '+metricOf(S.metric).label;
  document.getElementById('rankCap').textContent='Colour = LISA cluster · dashed line = threshold · click a bar to filter.'+capNote+(C.caveat?' Identical values across many '+UNITS+' reflect the data granularity described above, not a rendering error.':'');
  document.getElementById('scTitle').textContent=PRIM.label+' vs '+COV.label;
