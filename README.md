@@ -1,6 +1,8 @@
-# Subnational Spatial Epidemiology of HIV Prevalence and Socioeconomic Determinants in Ghana
+# Regional HIV Spatial Patterns Mapped Across Ghanaian District Boundaries
 
-**Bivariate LISA, Spatial Lag Regression, and Random Forest — 261-District DHS Analysis**
+**Bivariate LISA, Spatial Lag/Error Regression, Geographically Weighted Regression, and Random Forest — 261-District DHS Analysis**
+
+*Formerly titled "Subnational Spatial Epidemiology of HIV Prevalence and Socioeconomic Determinants in Ghana"; retitled 2026-07-13 so the repository name matches the analysis's actual resolution — see the methodological limitation below.*
 
 ## Author
 
@@ -29,8 +31,10 @@ This is a data-availability constraint inherent to the DHS source, not an error 
 - **LISA clusters**: 114 significant districts — classic hotspot/coldspot pattern (59 High-High, 51 Low-Low, 4 High-Low outliers), not a boundary-transition pattern. High-High districts average 2.73% HIV prevalence vs. a 1.91% national mean; Low-Low districts average 0.41%
 - **Getis-Ord Gi\***: 53 hotspots and 53 coldspots (KNN k=4); directionally consistent with the LISA hot/coldspot pattern, though not independent statistical corroboration since both are computed on the same region-block-structured outcome variable
 - **Spatial lag model**: rho = 0.606, pseudo-R² = 0.926; VCT uptake, modern contraception, condom use, and PMTCT knowledge all significant predictors (Queen contiguity, ML estimation)
-- **LASSO regression**: R² = 0.933; latitude and wife-beating acceptance as strongest predictors (13 of 19 features selected, 10-fold CV)
-- **Random Forest (leave-one-region-out spatial CV)**: R² = 0.611; SHAP top 3: VCT uptake, wife-beating acceptance, female secondary education
+- **Spatial error model**: lambda = 0.923, pseudo-R² = 0.808 (same predictors as spatial lag). Lagrange multiplier diagnostics favour this specification over the spatial lag model (robust LM-error = 182.4, p < 0.001 vs. robust LM-lag = 4.6, p = 0.032), consistent with — not proof of — spatial dependence residing substantially in region-block-correlated residual structure
+- **Geographically weighted regression (GWR)**: did not converge on the region-level predictor set (singular local design matrices — a numerical artefact directly illustrating the granularity limitation below, not a formal test of it). Restricted to the 7 genuinely district-level predictors, GWR converged (adaptive bandwidth 58 nearest neighbours, AICc-selected; cross-checked against an independent leave-one-out CV bandwidth search at 57 neighbours, R² = 0.957) and outperformed global OLS on the same predictors (R² = 0.956 vs. 0.840); local coefficients for latitude/longitude reversed sign across the country, with some negative local R² values flagging local-fit instability in sparse neighbourhoods
+- **LASSO regression**: R² = 0.933; latitude and wife-beating acceptance as strongest predictors (13 of 19 features selected, 10-fold CV). District-only sensitivity model: R² = 0.840, leading predictor shifts to latitude
+- **Random Forest (leave-one-region-out spatial CV)**: R² = 0.611; SHAP top 3: VCT uptake, wife-beating acceptance, female secondary education. District-only sensitivity model: R² = 0.677
 
 ## Data Sources
 
@@ -56,7 +60,9 @@ HIV_Spatial_Ghana_261District/
 │ └── raw/
 │ └── Ghana_New_260_District.geojson # Canonical GSS 2023 boundary file
 ├── analysis/
-│ └── spatial_analysis_pipeline.py # Produces the master CSV + all spatial/ML outputs from raw data
+│ ├── spatial_analysis_pipeline.py # Produces the master CSV + all spatial/ML outputs from raw data
+│ └── gwr_spatial_error_analysis.py # GWR + spatial error model + LM specification diagnostics
+├── qa/ # Editorial/council audit trail (Q1/Cambridge alignment, final verdict)
 ├── dashboard/
 │ ├── app.py # Python Dash interactive app
 │ ├── HIV_Spatial_Ghana_Dashboard.html # Self-contained HTML dashboard
@@ -81,7 +87,11 @@ HIV_Spatial_Ghana_261District/
  │ ├── shap_values.csv
  │ ├── shap_summary.csv
  │ ├── spatial_analysis_results.json
- │ └── ml_analysis_results.json
+ │ ├── ml_analysis_results.json
+ │ ├── spatial_error_model_results.csv
+ │ ├── gwr_coefficient_summary.csv
+ │ ├── gwr_local_r2.csv
+ │ └── gwr_spatial_error_metadata.txt
  └── figures/
  ├── fig1_study_area_map.png
  ├── fig2_hiv_poverty_choropleth.png
@@ -100,6 +110,7 @@ HIV_Spatial_Ghana_261District/
 ```bash
 pip install -r requirements.txt
 python analysis/spatial_analysis_pipeline.py
+python analysis/gwr_spatial_error_analysis.py
 ```
 
 ### Dashboard
@@ -113,8 +124,9 @@ cd dashboard && python app.py
 - **District-geometry reconciliation**: 261 census districts joined to 260 unique GSS 2023 boundary polygons via a vetted crosswalk (`docs/district_crosswalk_261_to_260.csv`); the one structural gap (Guan, split from Krachi East Municipal in 2018) shares its parent polygon and is combined by population-weighted mean for geometry-dependent statistics only — see [DATA_CORRECTION_NOTE.md](DATA_CORRECTION_NOTE.md)
 - **Spatial autocorrelation**: Global Moran's I (KNN k=4), LISA (Rook contiguity, 999 permutations)
 - **Hotspot analysis**: Getis-Ord Gi* (KNN k=4)
-- **Spatial regression**: Spatial lag model (ML estimation, Queen contiguity)
-- **Machine learning**: LASSO (10-fold CV), Random Forest (leave-one-region-out spatial CV)
+- **Spatial regression**: Spatial lag and spatial error models (ML estimation, Queen contiguity); specification choice justified by Lagrange multiplier diagnostics (standard and robust, both forms) computed from an OLS baseline
+- **Local non-stationarity**: Geographically weighted regression (adaptive bisquare kernel; bandwidth selected by AICc and cross-checked against leave-one-out CV)
+- **Machine learning**: LASSO (10-fold CV), Random Forest (leave-one-region-out spatial CV); both re-fitted on a district-only predictor subset as a sensitivity analysis
 - **Interpretability**: SHAP values (TreeExplainer)
 - **Reporting**: STROBE guidelines
 - **Reproducibility**: fixed random seed (42) throughout
@@ -122,9 +134,10 @@ cd dashboard && python app.py
 ## Citation
 
 ```
-Ghanem VG (2026). Subnational spatial epidemiology of HIV prevalence and
-socioeconomic determinants in Ghana: Bivariate LISA, spatial lag regression,
-and Random Forest analysis across 261 districts.
+Ghanem VG (2026). Regional HIV spatial patterns mapped across Ghanaian
+district boundaries: Bivariate LISA, spatial lag/error regression,
+geographically weighted regression, and Random Forest analysis across
+261 districts.
 ```
 
 ## License
