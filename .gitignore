@@ -11,3 +11,8 @@ node_modules/
 *.pdf
 manuscript/
 submission_package/
+
+# Process/planning working files -- not part of the published deliverable
+task_plan.md
+progress.md
+findings.md

@@ -1,0 +1,8 @@
+# Auto-generated interactive dashboard/poster (built by _system/bespoke/bespoke_gen.js)
+# -- exclude from GitHub's language detection so the repo shows as Python.
+dashboard/HIV_Spatial_Ghana_Dashboard.html linguist-generated=true
+poster/HIV_Spatial_Ghana_Poster.html linguist-generated=true
+
+# Reproducible line endings for text files
+*.py text eol=lf
+*.md text eol=lf
