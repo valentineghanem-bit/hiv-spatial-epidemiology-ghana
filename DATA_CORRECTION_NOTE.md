@@ -23,7 +23,7 @@ boundary file's polygon labels. This produced two compounding defects:
    string-match the boundary file's polygon labels.
 
 The Master CSV, README, CITATION.cff, sync-manifest, dashboard, and poster
-all separately claimed "260 districts" as if this were a deliberate,
+all separately carried stale 260-count wording as if this were a deliberate,
 documented scope — it was not. The true resolved count in the pre-fix
 `LISA_Results.csv` was 250 unique districts, 10 of them internally
 contradictory.

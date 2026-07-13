@@ -39,7 +39,7 @@ The aims are to quantify HIV spatial autocorrelation, compare spatial lag and sp
 | Ghana DHS HIV biomarker table | 2014 | Regional, 10-region structure | `hiv-prevalence_subnational_gha.csv` |
 | Ghana DHS behavioural indicators | 2022 | Regional, 16-region structure | `hiv-behavior_*`, `hiv-knowledge_*`, `hiv-counseling-and-testing_*`, `hiv-attitudes_*` |
 | Ghana Population and Housing Census | 2021 | District | `Master Sheet.xlsx` |
-| Ghana Statistical Service boundaries | 2023 | 261 district records; one shared display polygon | `Ghana_New_260_District.geojson` |
+| Ghana Statistical Service boundaries | 2023 | 261 district records; Guan shares display geometry for map rendering | `Ghana_New_260_District.geojson` |
 
 ## 5. Key Findings
 
