@@ -1,6 +1,6 @@
 # Regional HIV Spatial Patterns Mapped Across Ghanaian District Boundaries
 
-[![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--8332--0220-green.svg)](https://orcid.org/0009-0002-8332-0220)
+[![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--8332--0220-green.svg)](https://orcid.org/0009-0002-8332-0220) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21341247.svg)](https://doi.org/10.5281/zenodo.21341247)
 
 **Author:** Valentine Golden Ghanem, MSc Public Health, MSc Data Science  
 **Affiliation:** Ghana COCOBOD Cocoa Clinic, Accra, Ghana  
@@ -156,16 +156,17 @@ The study uses publicly available, de-identified, aggregate secondary data. No i
 
 ## 11. Citation
 
-Ghanem VG. Regional HIV spatial patterns mapped across Ghanaian district boundaries: an ecological spatial analysis. 2026.
+Ghanem VG. Regional HIV spatial patterns mapped across Ghanaian district boundaries: an ecological spatial analysis. 2026. doi:10.5281/zenodo.21341247
 
 ```bibtex
 @misc{ghanem2026hivspatialghana,
   author = {Ghanem, Valentine Golden},
   title = {Regional HIV spatial patterns mapped across Ghanaian district boundaries},
   year = {2026},
-  publisher = {GitHub},
-  url = {https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana},
-  note = {STROBE-aligned ecological spatial analysis}
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.21341247},
+  url = {https://doi.org/10.5281/zenodo.21341247},
+  note = {STROBE-aligned ecological spatial analysis; code archived on GitHub at https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana}
 }
 ```
 

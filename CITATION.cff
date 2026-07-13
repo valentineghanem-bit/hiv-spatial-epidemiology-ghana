@@ -20,6 +20,7 @@ authors:
    email: valentineghanem@gmail.com
 version: "1.0.4"
 date-released: "2026-07-13"
+doi: "10.5281/zenodo.21341247"
 license: MIT
 repository-code: "https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana"
 keywords:
