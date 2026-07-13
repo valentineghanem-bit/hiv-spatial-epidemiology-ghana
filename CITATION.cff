@@ -14,11 +14,11 @@ abstract: >
  VCT uptake (|SHAP|=0.639); Global Moran's I=0.920 (KNN k=4, p=0.001).
 authors:
  - family-names: Ghanem
- given-names: Valentine Golden
- orcid: "https://orcid.org/0009-0002-8332-0220"
- affiliation: "Ghana COCOBOD Cocoa Clinic, Accra, Ghana"
- email: valentineghanem@gmail.com
-version: "1.0.2"
+   given-names: Valentine Golden
+   orcid: "https://orcid.org/0009-0002-8332-0220"
+   affiliation: "Ghana COCOBOD Cocoa Clinic, Accra, Ghana"
+   email: valentineghanem@gmail.com
+version: "1.0.4"
 date-released: "2026-07-13"
 license: MIT
 repository-code: "https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana"
@@ -38,9 +38,9 @@ keywords:
  - STROBE
 references:
  - type: article
- title: "Regional HIV spatial patterns mapped across Ghanaian district boundaries: an ecological spatial analysis"
- authors:
- - family-names: Ghanem
- given-names: Valentine Golden
- year: 2026
- notes: "Target journal: BMC Public Health. Manuscript in preparation."
+   title: "Regional HIV spatial patterns mapped across Ghanaian district boundaries: an ecological spatial analysis"
+   authors:
+     - family-names: Ghanem
+       given-names: Valentine Golden
+   year: 2026
+   notes: "Target journal: BMC Public Health. Manuscript in preparation."
