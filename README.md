@@ -6,7 +6,8 @@
 **Affiliation:** Ghana COCOBOD Cocoa Clinic, Accra, Ghana  
 **ORCID:** [0009-0002-8332-0220](https://orcid.org/0009-0002-8332-0220)  
 **Reporting standard:** STROBE; ecological cross-sectional spatial analysis  
-**Status:** Manuscript in preparation for infectious-disease epidemiology peer review  
+**Target journal:** BMC Public Health
+**Status:** Manuscript in preparation as a BMC Public Health Research article
 **Repository:** `hiv-spatial-epidemiology-ghana`
 
 ## 1. Abstract
@@ -134,8 +135,8 @@ Open `dashboard/HIV_Spatial_Ghana_Dashboard.html` directly in a browser. No exte
 | `outputs/data/gwr_coefficient_summary.csv` | GWR local coefficient summary |
 | `outputs/data/gwr_local_r2.csv` | District-level local R2 values from district-only GWR |
 | `outputs/data/gwr_spatial_error_metadata.txt` | GWR feasibility and spatial error summary |
-| `outputs/figures/` | PNG manuscript figures, 300 dpi — acceptable for initial submission per Cambridge policy |
-| `outputs/figures_cambridge/` | TIFF re-encodes of the same 9 figures, 300 dpi — format-compliant for revised submission; not yet upsampled to Cambridge's 1000–1200 dpi line-art target, which is only required once a revision is requested |
+| `outputs/figures/` | PNG manuscript figures prepared at publication-readable scale for BMC review |
+| `outputs/figures_cambridge/` | TIFF exports retained from an earlier journal-formatting pass; BMC accepts TIFF, PNG, PDF, EPS and other standard figure formats at legible final size |
 | `qa/` | Editorial, guideline, and submission-readiness audits |
 
 ## 8a. Downloadable Artefacts (HTML)
@@ -147,7 +148,7 @@ Open `dashboard/HIV_Spatial_Ghana_Dashboard.html` directly in a browser. No exte
 
 ## 9. Reporting Standard
 
-The manuscript follows STROBE principles for observational research and reports the work as a cross-sectional ecological spatial analysis. The manuscript repeatedly states the core limitation: regional DHS HIV and behavioural estimates are displayed across district boundaries but are not independent district measurements.
+The manuscript follows STROBE principles for observational research and is structured for a BMC Public Health Research article: structured abstract, Background, Methods, Results, Discussion, Conclusions, List of abbreviations, and Declarations. The core limitation is stated plainly throughout: regional DHS HIV and behavioural estimates are displayed across district boundaries but are not independent district measurements.
 
 ## 10. Ethical Statement
 
@@ -155,7 +156,7 @@ The study uses publicly available, de-identified, aggregate secondary data. No i
 
 ## 11. Citation
 
-Ghanem VG. Regional HIV spatial patterns mapped across Ghanaian district boundaries: bivariate LISA, spatial lag/error regression, geographically weighted regression, and Random Forest analysis across 261 districts. 2026.
+Ghanem VG. Regional HIV spatial patterns mapped across Ghanaian district boundaries: an ecological spatial analysis. 2026.
 
 ```bibtex
 @misc{ghanem2026hivspatialghana,

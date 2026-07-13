@@ -1,12 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "Regional HIV Spatial Patterns Mapped Across Ghanaian District Boundaries: 261-District Analysis"
+title: "Regional HIV Spatial Patterns Mapped Across Ghanaian District Boundaries: An Ecological Spatial Analysis"
 abstract: >
  Reproducible analysis pipeline for a spatial epidemiological study of HIV
  prevalence and its socioeconomic determinants across all 261 of Ghana's
- census districts (261 districts share 260 unique GSS 2023 boundary
- polygons). Methods include Global Moran's I, Bivariate LISA, Getis-Ord Gi*,
+ census districts. Guan shares display geometry with Krachi East Municipal in
+ the public GSS boundary file, but the analytical dataset retains 261 district
+ records. Methods include Global Moran's I, Bivariate LISA, Getis-Ord Gi*,
  spatial lag and spatial error regression (specification chosen via
  Lagrange multiplier diagnostics), geographically weighted regression
  (GWR), LASSO, and Random Forest with SHAP interpretability. Top predictor:
@@ -37,9 +38,9 @@ keywords:
  - STROBE
 references:
  - type: article
- title: "Regional HIV spatial patterns mapped across Ghanaian district boundaries: Bivariate LISA, spatial lag/error regression, geographically weighted regression, and Random Forest analysis across 261 districts"
+ title: "Regional HIV spatial patterns mapped across Ghanaian district boundaries: an ecological spatial analysis"
  authors:
  - family-names: Ghanem
  given-names: Valentine Golden
  year: 2026
- notes: "Target journal: Epidemiology & Infection (Cambridge University Press). Manuscript in preparation."
+ notes: "Target journal: BMC Public Health. Manuscript in preparation."
