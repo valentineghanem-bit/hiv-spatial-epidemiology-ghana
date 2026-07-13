@@ -168,6 +168,7 @@ var charts={};var mapZoom={mapP:1,mapLisa:1};echarts.registerMap('ghana',GEO);
 function tb(){return{feature:{saveAsImage:{title:'PNG',pixelRatio:2,iconStyle:{borderColor:ax()}}},right:6,top:2};}
 // spatial-unit label -- 'region' by default (16-region configs), overridden per-config
 // (e.g. 'district' for 261-district datasets) so copy doesn't misdescribe the geography.
+if(C.caveat){var _ll=document.getElementById('legLisa');if(_ll){var _note=document.createElement('div');_note.style.cssText='font-size:11px;color:#888;margin-top:4px';_note.textContent='Grey = genuinely Not Significant (largest class here), not missing data.';_ll.parentNode.appendChild(_note);}}
 var UNIT=C.unitName||'region',UNIT_CAP=UNIT.charAt(0).toUpperCase()+UNIT.slice(1),UNITS=UNIT+'s',UNITS_CAP=UNIT_CAP+'s';
 // header
 document.getElementById('ttl').innerHTML=C.title+' <span class="tag">'+C.tag+'</span>';
@@ -343,7 +344,7 @@ function titles(){document.getElementById('mapTitle').textContent=metricOf(S.met
  var capNote=R.length>CAP_N*2?(' (top+bottom '+CAP_N+' of '+R.length+' '+UNITS+' shown)'):'';
  var treeNote=R.length>TREE_N*2?(' (top+bottom '+TREE_N+' of '+R.length+' '+UNITS+' by magnitude)'):'';
  document.getElementById('rankTitle').textContent=UNIT_CAP+' ranking — '+metricOf(S.metric).label;
- document.getElementById('rankCap').textContent='Colour = LISA cluster · dashed line = threshold · click a bar to filter.'+capNote;
+ document.getElementById('rankCap').textContent='Colour = LISA cluster · dashed line = threshold · click a bar to filter.'+capNote+(C.caveat?' Identical values across many '+UNITS+' reflect the data granularity described above, not a rendering error.':'');
  document.getElementById('scTitle').textContent=PRIM.label+' vs '+COV.label;
  document.getElementById('lolTitle').textContent=(C.hasX?COV.label:PRIM.label)+' by '+UNIT;
  document.getElementById('lolCap').textContent='Sorted; dashed line = national mean.'+capNote;

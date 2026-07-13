@@ -150,7 +150,7 @@ document.getElementById('cap3').textContent=C.hasX?(C.outcome+' vs '+C.cov+', '+
   }else{
     t4text=stat+' found no significant high-high or low-low clusters at this threshold.';
   }
-  document.getElementById('t4').innerHTML=t4text;
+  document.getElementById('t4').innerHTML=t4text+(C.caveat?' Most '+UNITS+' fall in the grey Not-Significant class here because that is the genuine plurality outcome, not missing data.':'');
 })();
 var big=KPIS.slice(0,4);
 document.getElementById('pBig').innerHTML=big.map(function(k){return'<div class="bn"><div class="v">'+k.v+'</div><div class="l">'+k.l+'</div><div class="s">'+k.s+'</div></div>';}).join('');
@@ -169,7 +169,7 @@ var POSTER_CAP=15;
 var rkFull=R.slice();
 var rkCapped=rkFull.length>POSTER_CAP*2;
 var rk=(rkCapped?rkFull.slice().sort(function(a,b){return b.v-a.v;}).slice(0,POSTER_CAP).concat(rkFull.slice().sort(function(a,b){return b.v-a.v;}).slice(-POSTER_CAP)):rkFull).sort(function(a,b){return a.v-b.v;});
-document.getElementById('capRank').textContent=rkCapped?('Top+bottom '+POSTER_CAP+' of '+rkFull.length+' '+UNITS+' by '+C.outcome+'; colour = spatial-cluster class.'):(UNITS_CAP+' ranked; colour = spatial-cluster class.');
+document.getElementById('capRank').textContent=(rkCapped?('Top+bottom '+POSTER_CAP+' of '+rkFull.length+' '+UNITS+' by '+C.outcome+'; colour = spatial-cluster class.'):(UNITS_CAP+' ranked; colour = spatial-cluster class.'))+(C.caveat?' Identical values across many '+UNITS+' reflect the data granularity described above, not a rendering error.':'');
 document.getElementById('h2gradient').textContent='The '+UNIT+' gradient';
 init('cRank',{grid:{left:120,right:60,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:16}},yAxis:{type:'category',data:rk.map(function(x){return x.short;}),axisLabel:{fontSize:15}},
  series:[{type:'bar',data:rk.map(function(x){return{value:x.v,itemStyle:{color:LISA[x.lisa]}};}),barWidth:'64%',label:{show:true,position:'right',formatter:'{c}'+C.unit,fontSize:14}}]});
