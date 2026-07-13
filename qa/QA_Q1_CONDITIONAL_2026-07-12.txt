@@ -1,0 +1,7 @@
+﻿Q1 EDITORIAL QA: CONDITIONAL PASS, NOT SUBMIT-TODAY READY
+Project: HIV_Spatial_Ghana
+Date: 2026-07-12
+Status: Borderline Q1. Run one targeted revision round before submission.
+Primary target: PLOS Global Public Health.
+Reason: scientifically defensible as ecological regional-pattern mapping, not district-level determinant discovery.
+See: qa/Q1_EDITORIAL_REVIEW_2026-07-12.md and qa/EPID_COUNCIL_VERDICT_2026-07-12.md

@@ -1,0 +1,12 @@
+GWR (DHS-regional predictors) singular-matrix failure: True
+Reason: condom use/VCT/PMTCT knowledge/modern contraception are constant within each DHS region, so small local GWR neighbourhoods contain zero within-window predictor variance, making the local design matrix singular.
+
+GWR (district-level predictors) bandwidth (adaptive, nearest neighbours): 58.0
+GWR global R2: 0.9563
+GWR AICc: 26.92
+Global OLS R2 (same district-level predictors): 0.8400
+Global OLS AIC: 182.77
+GWR local R2 range: -0.0879 to 0.8802
+GWR local R2 mean (SD): 0.6624 (0.1914)
+Spatial Error Model (DHS-regional predictors) pseudo-R2: 0.8077
+Spatial Error Model lambda: 0.9232
