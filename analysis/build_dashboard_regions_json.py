@@ -13,7 +13,7 @@ merged = mc[["District", "Region", "HIV_Prev_Total_pct", "Poverty_Incidence_pct"
 merged["LISA_Cluster_Type"] = merged["LISA_Cluster_Type"].fillna("NS")
 
 merged = merged.merge(
-    cw[["master_sheet_district", "geojson_district"]],
+    cw[["master_sheet_district", "geojson_district", "geojson_region"]],
     left_on="District", right_on="master_sheet_district", how="left"
 )
 
@@ -51,6 +51,7 @@ for _, row in merged.iterrows():
         "v": round(float(row["HIV_Prev_Total_pct"]), 2),
         "lisa": row["LISA_Cluster_Type"],
         "x": round(float(row["Poverty_Incidence_pct"]), 2) if pd.notna(row["Poverty_Incidence_pct"]) else None,
+        "region": row["geojson_region"] if pd.notna(row["geojson_region"]) else row["Region"].upper(),
     })
 
 print("total analytical districts:", len(merged), "| mapped (geojson-matched):", len(out), "| skipped (no polygon):", skipped)
