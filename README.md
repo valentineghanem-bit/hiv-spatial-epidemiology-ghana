@@ -1,145 +1,183 @@
 # Regional HIV Spatial Patterns Mapped Across Ghanaian District Boundaries
 
-**Bivariate LISA, Spatial Lag/Error Regression, Geographically Weighted Regression, and Random Forest — 261-District DHS Analysis**
+[![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--8332--0220-green.svg)](https://orcid.org/0009-0002-8332-0220)
 
-*Formerly titled "Subnational Spatial Epidemiology of HIV Prevalence and Socioeconomic Determinants in Ghana"; retitled 2026-07-13 so the repository name matches the analysis's actual resolution — see the methodological limitation below.*
+**Author:** Valentine Golden Ghanem, MSc Public Health, MSc Data Science  
+**Affiliation:** Ghana COCOBOD Cocoa Clinic, Accra, Ghana  
+**ORCID:** [0009-0002-8332-0220](https://orcid.org/0009-0002-8332-0220)  
+**Reporting standard:** STROBE; ecological cross-sectional spatial analysis  
+**Status:** Manuscript in preparation for infectious-disease epidemiology peer review  
+**Repository:** `hiv-spatial-epidemiology-ghana`
 
-## Author
+## 1. Abstract
 
-Valentine Golden Ghanem, MSc Public Health, MSc Data Science 
-Ghana COCOBOD Cocoa Clinic, Accra, Ghana 
-ORCID: [0009-0002-8332-0220](https://orcid.org/0009-0002-8332-0220)
+This repository contains the reproducible analysis for a Ghana HIV spatial epidemiology study using Ghana DHS regional HIV estimates, DHS behavioural indicators, 2021 Census socioeconomic covariates, and GSS district boundaries. The central finding is a strong south-north HIV prevalence gradient when regional DHS estimates are mapped across district boundaries. The manuscript is deliberately conservative: HIV prevalence, VCT uptake, and wife-beating acceptance are regional estimates, not direct district measurements. District maps are therefore communication geometry, not proof of district-resolved HIV differences.
 
-## Overview
+## 2. Research Question & Aims
 
-This repository contains the complete analytical pipeline, interactive dashboard, conference poster, and reproducible datasets for a spatial epidemiological analysis of HIV prevalence across all 261 of Ghana's census districts (261 districts share 260 unique GSS 2023 boundary polygons — see [DATA_CORRECTION_NOTE.md](DATA_CORRECTION_NOTE.md) for the district-geometry reconciliation and a full before/after audit of a pre-publication data-join defect that was caught and corrected on 2026-07-12).
+The study asks how HIV prevalence varies geographically in Ghana when public regional DHS estimates are linked to district boundaries, and how far the observed pattern is explained by behavioural, socioeconomic, and spatial structure.
 
-### ⚠ Important methodological limitation: outcome and top predictors are region-level, not district-level
+The aims are to quantify HIV spatial autocorrelation, compare spatial lag and spatial error regression, test GWR feasibility under regional predictor granularity, compare LASSO and Random Forest/SHAP sensitivity models, and define what public aggregate DHS/Census data can support without overclaiming district inference.
 
-HIV prevalence (the outcome variable) is the 2014 Ghana DHS **regional** (10-region) biomarker estimate, and the two strongest predictors below — VCT uptake and wife-beating acceptance — are 2022 DHS **regional** (16-region) estimates. Ghana's DHS survey design does not produce district-level HIV biomarker or behavioural data; every district within a region is assigned its region's value for these three variables. Only the Census-derived socioeconomic covariates (poverty, literacy, insurance, etc.) carry genuine district-level variation. This means:
+## 3. Methods Summary
 
-- The district "choropleth" for HIV prevalence, VCT uptake, and wife-beating acceptance is a regional pattern rendered at district resolution, not an independently-measured district-level survey.
-- Spatial autocorrelation statistics (Global Moran's I, LISA, Getis-Ord Gi\*) computed on these three variables are substantially inflated by this region-to-district disaggregation, since neighboring districts in the same region share identical values by construction — their permutation-based p-values should be read as anti-conservative (true effective N is closer to 10–16 than 261).
-- LASSO/Random Forest R² driven by these region-level predictors likely reflects regional grouping rather than genuine district-level covariate–outcome relationships.
-- **Policy targeting implications**: interventions (e.g. VCT scale-up) should be prioritized at the *region* level using these findings, not directed at individually-named districts — no district in this dataset has been shown to differ from its regional neighbors on HIV prevalence, VCT uptake, or wife-beating acceptance.
+| Method | Tool | Purpose |
+|---|---|---|
+| Global Moran's I | PySAL/esda | National spatial autocorrelation |
+| LISA and bivariate LISA | PySAL/esda | Local clustering and local covariate association |
+| Getis-Ord Gi* | PySAL/esda | Hotspot and coldspot cross-check |
+| Spatial lag model | spreg | Spatial dependence model |
+| Spatial error model | spreg | LM-preferred residual spatial dependence model |
+| GWR | mgwr | Local non-stationarity among district-varying predictors |
+| LASSO | scikit-learn | Regularised feature selection |
+| Random Forest + SHAP | scikit-learn, shap | Predictive sensitivity and interpretability |
 
-This is a data-availability constraint inherent to the DHS source, not an error in the analysis pipeline; disaggregating regional survey estimates to district level for GIS/policy mapping is a recognized practice in LMIC subnational health mapping, provided (as here) it is disclosed.
+## 4. Data Sources
 
-### Key Findings
+| Source | Year | Level | Local file |
+|---|---:|---|---|
+| Ghana DHS HIV biomarker table | 2014 | Regional, 10-region structure | `hiv-prevalence_subnational_gha.csv` |
+| Ghana DHS behavioural indicators | 2022 | Regional, 16-region structure | `hiv-behavior_*`, `hiv-knowledge_*`, `hiv-counseling-and-testing_*`, `hiv-attitudes_*` |
+| Ghana Population and Housing Census | 2021 | District | `Master Sheet.xlsx` |
+| Ghana Statistical Service boundaries | 2023 | 261 district records; one shared display polygon | `Ghana_New_260_District.geojson` |
 
-- **Strong spatial clustering**: Global Moran's I = 0.920 (KNN k=4, p=0.001) for HIV prevalence — read against the regional-granularity caveat above
-- **LISA clusters**: 114 significant districts — classic hotspot/coldspot pattern (59 High-High, 51 Low-Low, 4 High-Low outliers), not a boundary-transition pattern. High-High districts average 2.73% HIV prevalence vs. a 1.91% national mean; Low-Low districts average 0.41%
-- **Getis-Ord Gi\***: 53 hotspots and 53 coldspots (KNN k=4); directionally consistent with the LISA hot/coldspot pattern, though not independent statistical corroboration since both are computed on the same region-block-structured outcome variable
-- **Spatial lag model**: rho = 0.606, pseudo-R² = 0.926; VCT uptake, modern contraception, condom use, and PMTCT knowledge all significant predictors (Queen contiguity, ML estimation)
-- **Spatial error model**: lambda = 0.923, pseudo-R² = 0.808 (same predictors as spatial lag). Lagrange multiplier diagnostics favour this specification over the spatial lag model (robust LM-error = 182.4, p < 0.001 vs. robust LM-lag = 4.6, p = 0.032), consistent with — not proof of — spatial dependence residing substantially in region-block-correlated residual structure
-- **Geographically weighted regression (GWR)**: did not converge on the region-level predictor set (singular local design matrices — a numerical artefact directly illustrating the granularity limitation below, not a formal test of it). Restricted to the 7 genuinely district-level predictors, GWR converged (adaptive bandwidth 58 nearest neighbours, AICc-selected; cross-checked against an independent leave-one-out CV bandwidth search at 57 neighbours, R² = 0.957) and outperformed global OLS on the same predictors (R² = 0.956 vs. 0.840); local coefficients for latitude/longitude reversed sign across the country, with some negative local R² values flagging local-fit instability in sparse neighbourhoods
-- **LASSO regression**: R² = 0.933; latitude and wife-beating acceptance as strongest predictors (13 of 19 features selected, 10-fold CV). District-only sensitivity model: R² = 0.840, leading predictor shifts to latitude
-- **Random Forest (leave-one-region-out spatial CV)**: R² = 0.611; SHAP top 3: VCT uptake, wife-beating acceptance, female secondary education. District-only sensitivity model: R² = 0.677
+## 5. Key Findings
 
-## Data Sources
+| Metric | Value |
+|---|---:|
+| Analytical records | 261 census districts |
+| HIV prevalence granularity | 9 distinct DHS regional values |
+| Global Moran's I for HIV prevalence | 0.920, permutation p = 0.001 |
+| LISA High-High mapped units | 59 |
+| LISA Low-Low mapped units | 51 |
+| Getis-Ord Gi* hotspots/coldspots | 53 / 53 |
+| Spatial lag pseudo-R2 | 0.926 |
+| Spatial error lambda | 0.923 |
+| Spatial error pseudo-R2 | 0.808 |
+| Robust LM-error vs LM-lag | 182.4 vs 4.6 |
+| District-only GWR R2 | 0.956; CV bandwidth check R2 = 0.957 |
+| Random Forest leave-one-region-out R2 | 0.611 |
 
-| Source | Year | Level | File |
-|--------|------|-------|------|
-| Ghana DHS (HIV biomarker) | 2014 | Regional (10 regions) | hiv-prevalence_subnational_gha.csv |
-| Ghana DHS (behavioural) | 2022 | Regional (16 regions) | hiv-behavior/knowledge/counseling/attitudes |
-| Ghana Census | 2021 | District (261 units) | Master Sheet.xlsx |
-| Ghana Statistical Service | 2023 | District (260 unique boundary polygons; 1 district shares its parent's polygon — see Data Correction Note) | Ghana_New_260_District.geojson |
+## 6. Repository Structure
 
-## Repository Structure
-
-```
-HIV_Spatial_Ghana_261District/
-├── README.md
-├── DATA_CORRECTION_NOTE.md # Pre-publication join-defect audit and fix (2026-07-12)
-├── requirements.txt
-├── .gitignore
-├── LICENSE
-├── docs/
-│ └── district_crosswalk_261_to_260.csv # Vetted 261 census district <-> 260 polygon crosswalk
-├── data/
-│ └── raw/
-│ └── Ghana_New_260_District.geojson # Canonical GSS 2023 boundary file
-├── analysis/
-│ ├── spatial_analysis_pipeline.py # Produces the master CSV + all spatial/ML outputs from raw data
-│ └── gwr_spatial_error_analysis.py # GWR + spatial error model + LM specification diagnostics
-├── qa/ # Editorial/council audit trail (Q1/Cambridge alignment, final verdict)
-├── dashboard/
-│ ├── app.py # Python Dash interactive app
-│ ├── HIV_Spatial_Ghana_Dashboard.html # Self-contained HTML dashboard
-│ ├── run_dashboard.command # macOS launcher
-│ ├── run_dashboard.bat # Windows launcher
-│ └── run_dashboard.sh # Linux launcher
-├── poster/
-│ └── HIV_Spatial_Ghana_Poster.html # A0 conference poster
-└── outputs/
- ├── data/
- │ ├── Ghana_HIV_Spatial_Analysis_MASTER.csv # FINAL analytical dataset (261 districts)
- │ ├── Ghana_HIV_Analysis_Dataset_260districts.csv # Raw census attribute input (261 rows; retains legacy filename)
- │ ├── LISA_Results.csv
- │ ├── Bivariate_LISA_Results.csv
- │ ├── Bivariate_LISA_Local_Results.csv
- │ ├── Getis_Ord_Results.csv
- │ ├── Morans_I_Results.csv
- │ ├── Spatial_Lag_Regression_Results.csv
- │ ├── lasso_results.csv
- │ ├── rf_cv_results.csv
- │ ├── model_comparison.csv
- │ ├── shap_values.csv
- │ ├── shap_summary.csv
- │ ├── spatial_analysis_results.json
- │ ├── ml_analysis_results.json
- │ ├── spatial_error_model_results.csv
- │ ├── gwr_coefficient_summary.csv
- │ ├── gwr_local_r2.csv
- │ └── gwr_spatial_error_metadata.txt
- └── figures/
- ├── fig1_study_area_map.png
- ├── fig2_hiv_poverty_choropleth.png
- ├── fig3_determinants_choropleth.png
- ├── fig4_lisa_cluster_map.png
- ├── fig5_morans_scatterplot.png
- ├── fig6_correlation_heatmap.png
- ├── fig_shap_summary.png
- ├── fig_shap_dependence.png
- └── fig_shap_waterfall.png
+```text
+hiv-spatial-epidemiology-ghana/
+  README.md
+  CITATION.cff
+  DATA_CORRECTION_NOTE.md
+  LICENSE
+  requirements.txt
+  analysis/
+    spatial_analysis_pipeline.py
+    gwr_spatial_error_analysis.py
+  dashboard/
+    HIV_Spatial_Ghana_Dashboard.html
+    app.py
+  poster/
+    HIV_Spatial_Ghana_Poster.html
+  docs/
+    district_crosswalk_261_to_260.csv
+  outputs/
+    data/
+    figures/
+    figures_cambridge/
+  qa/
+  tests/
 ```
 
-## Reproduction
+## 7. Reproducibility
 
-### Python analysis
+### 7.1 Requirements
+
+Install the Python packages in `requirements.txt`. The analysis was developed with Python 3.13 locally; Python 3.12+ is expected to work if geospatial wheels are available.
+
+### 7.2 Clone & Install
+
 ```bash
+git clone https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana.git
+cd hiv-spatial-epidemiology-ghana
 pip install -r requirements.txt
+```
+
+### 7.3 Run The Analytical Pipeline
+
+```bash
 python analysis/spatial_analysis_pipeline.py
 python analysis/gwr_spatial_error_analysis.py
 ```
 
-### Dashboard
+### 7.4 Run The Test Suite
+
 ```bash
-cd dashboard && python app.py
-# Or open HIV_Spatial_Ghana_Dashboard.html directly in a browser
+python -m pytest -q
 ```
 
-## Methods
+Current local QA result: `29 passed`.
 
-- **District-geometry reconciliation**: 261 census districts joined to 260 unique GSS 2023 boundary polygons via a vetted crosswalk (`docs/district_crosswalk_261_to_260.csv`); the one structural gap (Guan, split from Krachi East Municipal in 2018) shares its parent polygon and is combined by population-weighted mean for geometry-dependent statistics only — see [DATA_CORRECTION_NOTE.md](DATA_CORRECTION_NOTE.md)
-- **Spatial autocorrelation**: Global Moran's I (KNN k=4), LISA (Rook contiguity, 999 permutations)
-- **Hotspot analysis**: Getis-Ord Gi* (KNN k=4)
-- **Spatial regression**: Spatial lag and spatial error models (ML estimation, Queen contiguity); specification choice justified by Lagrange multiplier diagnostics (standard and robust, both forms) computed from an OLS baseline
-- **Local non-stationarity**: Geographically weighted regression (adaptive bisquare kernel; bandwidth selected by AICc and cross-checked against leave-one-out CV)
-- **Machine learning**: LASSO (10-fold CV), Random Forest (leave-one-region-out spatial CV); both re-fitted on a district-only predictor subset as a sensitivity analysis
-- **Interpretability**: SHAP values (TreeExplainer)
-- **Reporting**: STROBE guidelines
-- **Reproducibility**: fixed random seed (42) throughout
+### 7.5 Launch The Interactive Dash Application
 
-## Citation
-
-```
-Ghanem VG (2026). Regional HIV spatial patterns mapped across Ghanaian
-district boundaries: Bivariate LISA, spatial lag/error regression,
-geographically weighted regression, and Random Forest analysis across
-261 districts.
+```bash
+cd dashboard
+python app.py
 ```
 
-## License
+### 7.6 Open The Static HTML Dashboard
 
-MIT License — see LICENSE file.
+Open `dashboard/HIV_Spatial_Ghana_Dashboard.html` directly in a browser. No external JavaScript library is required.
+
+## 8. Outputs
+
+| Output | Description |
+|---|---|
+| `outputs/data/Ghana_HIV_Spatial_Analysis_MASTER.csv` | Final analytical dataset |
+| `outputs/data/spatial_error_model_results.csv` | Spatial error model coefficients |
+| `outputs/data/gwr_coefficient_summary.csv` | GWR local coefficient summary |
+| `outputs/data/gwr_local_r2.csv` | District-level local R2 values from district-only GWR |
+| `outputs/data/gwr_spatial_error_metadata.txt` | GWR feasibility and spatial error summary |
+| `outputs/figures/` | PNG manuscript figures, 300 dpi — acceptable for initial submission per Cambridge policy |
+| `outputs/figures_cambridge/` | TIFF re-encodes of the same 9 figures, 300 dpi — format-compliant for revised submission; not yet upsampled to Cambridge's 1000–1200 dpi line-art target, which is only required once a revision is requested |
+| `qa/` | Editorial, guideline, and submission-readiness audits |
+
+## 8a. Downloadable Artefacts (HTML)
+
+| Artefact | View on GitHub | Live preview | Direct download |
+|---|---|---|---|
+| Interactive dashboard | [View](https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana/blob/main/dashboard/HIV_Spatial_Ghana_Dashboard.html) | [Preview](https://htmlpreview.github.io/?https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana/blob/main/dashboard/HIV_Spatial_Ghana_Dashboard.html) | [Download](https://raw.githubusercontent.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana/main/dashboard/HIV_Spatial_Ghana_Dashboard.html) |
+| Conference poster | [View](https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana/blob/main/poster/HIV_Spatial_Ghana_Poster.html) | [Preview](https://htmlpreview.github.io/?https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana/blob/main/poster/HIV_Spatial_Ghana_Poster.html) | [Download](https://raw.githubusercontent.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana/main/poster/HIV_Spatial_Ghana_Poster.html) |
+
+## 9. Reporting Standard
+
+The manuscript follows STROBE principles for observational research and reports the work as a cross-sectional ecological spatial analysis. The manuscript repeatedly states the core limitation: regional DHS HIV and behavioural estimates are displayed across district boundaries but are not independent district measurements.
+
+## 10. Ethical Statement
+
+The study uses publicly available, de-identified, aggregate secondary data. No individual-level records were accessed. No primary data were collected. No ethics approval was required for the repository analysis.
+
+## 11. Citation
+
+Ghanem VG. Regional HIV spatial patterns mapped across Ghanaian district boundaries: bivariate LISA, spatial lag/error regression, geographically weighted regression, and Random Forest analysis across 261 districts. 2026.
+
+```bibtex
+@misc{ghanem2026hivspatialghana,
+  author = {Ghanem, Valentine Golden},
+  title = {Regional HIV spatial patterns mapped across Ghanaian district boundaries},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/valentineghanem-bit/hiv-spatial-epidemiology-ghana},
+  note = {STROBE-aligned ecological spatial analysis}
+}
+```
+
+## 12. License
+
+Code is released under the MIT License. Figures and public-facing outputs should be cited to the repository and underlying public data sources.
+
+## 13. Author & Contact
+
+Valentine Golden Ghanem  
+Ghana COCOBOD Cocoa Clinic, Accra, Ghana  
+ORCID: [0009-0002-8332-0220](https://orcid.org/0009-0002-8332-0220)
+
+## 14. Acknowledgements
+
+This repository depends on public data infrastructure from the Ghana Statistical Service, the Ghana Demographic and Health Survey programme, and open-source geospatial and statistical software communities.

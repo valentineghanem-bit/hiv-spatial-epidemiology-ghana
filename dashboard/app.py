@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HIV Spatial Epidemiology Dashboard — Ghana 260 Districts
+HIV Spatial Epidemiology Dashboard — Ghana 261 Districts
 Interactive Dash application with spatial analysis and ML feature importance
 """
 
@@ -230,7 +230,7 @@ def create_scatter_plot(selected_region=None):
 app.layout = dbc.Container([
  dbc.Row([
  dbc.Col([
- html.H1("HIV Spatial Epidemiology Dashboard — Ghana 260 Districts",
+            html.H1("HIV Spatial Epidemiology Dashboard — Ghana 261 Districts",
  className="text-center mb-4 mt-4",
  style={'color': color_primary, 'fontWeight': 'bold'})
  ])
